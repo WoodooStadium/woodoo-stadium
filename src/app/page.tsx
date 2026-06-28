@@ -327,6 +327,38 @@ export default function Home() {
               </div>
             </div>
           </a>
+
+          <a className="cell-photo" href="/gallery">
+            <Image
+              src="/uploads/foosball_table_concrete_3.jpg"
+              alt="Rods and mechanics from the side"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+            />
+            <div className="overlay">
+              <div className="overlay__label">
+                Mechanics in Amber<span className="meta">Rods · Studio</span>
+              </div>
+            </div>
+          </a>
+
+          <a className="cell-photo" href="/gallery">
+            <Image
+              src="/uploads/hero.jpg"
+              alt="Stadium 11-11 — full front view"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+            />
+            <div className="overlay">
+              <div className="overlay__label">
+                Front View<span className="meta">Stadium 11-11 · Full Overview</span>
+              </div>
+            </div>
+          </a>
         </div>
       </section>
 
