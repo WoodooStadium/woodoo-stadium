@@ -16,7 +16,7 @@ export default function Home() {
       <section className="hero-bleed">
         <div className="hero-bleed__media">
           <Image
-            src="/uploads/hero.png"
+            src="/uploads/foosball_table_concrete.jpg"
             alt="Woodoo Stadium 11-11 — sculptural profile"
             fill
             sizes="100vw"
@@ -165,8 +165,8 @@ export default function Home() {
         </figure>
         <figure className="photo">
           <Image
-            src="/uploads/woodoo_scoring_slider.jpg"
-            alt="Scoring slider — amber detail"
+            src="/uploads/woodoo_stadium_top.png"
+            alt="Playing field — top view"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             loading="lazy"
@@ -299,8 +299,8 @@ export default function Home() {
           </a>
           <a className="cell-photo" href="/gallery">
             <Image
-              src="/uploads/foosball_table_concrete_1.jpg"
-              alt="Side view — full table"
+              src="/uploads/woodoo_stadium_top.png"
+              alt="Playing field — top view"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               loading="lazy"
@@ -314,7 +314,7 @@ export default function Home() {
           </a>
           <a className="cell-photo" href="/gallery">
             <Image
-              src="/uploads/working_hands_pressing_an_angle_grinder_woodoo_stadium.png"
+              src="/uploads/woodoo_stadium_11_11_raindrops.png"
               alt="Rain on steel"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

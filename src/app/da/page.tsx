@@ -70,7 +70,7 @@ export default function DaHome() {
         <div className="tt__media">
           <Image
             src="/uploads/graded_made_in_denmark.jpg"
-            alt="Ætset stålrist — Made in Denmark"
+            alt="Laseskåret stålrist — Made in Denmark"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             priority
@@ -299,8 +299,8 @@ export default function DaHome() {
           </a>
           <a className="cell-photo" href="/da/galleri">
             <Image
-              src="/uploads/foosball_table_concrete_1.jpg"
-              alt="Sidevisning — helt bord"
+              src="/uploads/woodoo_stadium_top.png"
+              alt="Spilleflade"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               loading="lazy"
@@ -308,7 +308,7 @@ export default function DaHome() {
             />
             <div className="overlay">
               <div className="overlay__label">
-                I profil<span className="meta">Side · Studie</span>
+                Spilleflade<span className="meta">Set fra toppen</span>
               </div>
             </div>
           </a>
@@ -324,6 +324,36 @@ export default function DaHome() {
             <div className="overlay">
               <div className="overlay__label">
                 Regn på stål<span className="meta">Alle forhold</span>
+              </div>
+            </div>
+          </a><a className="cell-photo" href="/da/galleri">
+            <Image
+              src="/uploads/foosball_table_concrete_3.jpg"
+              alt="Din beskrivelse"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+            />
+            <div className="overlay">
+              <div className="overlay__label">
+               Stænger fra siden <span className="meta">Uovertruffen præcision</span>
+              </div>
+            </div>
+          </a>
+
+          <a className="cell-photo" href="/da/galleri">
+            <Image
+              src="/uploads/hero.png"
+              alt="Din beskrivelse"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+            />
+            <div className="overlay">
+              <div className="overlay__label">
+                Frontvisning<span className="meta">Stadium 11-11</span>
               </div>
             </div>
           </a>
