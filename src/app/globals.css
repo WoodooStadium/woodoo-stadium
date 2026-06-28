@@ -317,6 +317,7 @@ h1, h2, h3, h4 {
 
 .nav__toggle {
   display: none;
+  flex-direction: column;
   border: 0;
   background: transparent;
   padding: 0;
