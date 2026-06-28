@@ -1240,3 +1240,68 @@ h1, h2, h3, h4 {
 .faq-item a:hover {
   opacity: 0.6;
 }
+@media (max-width: 768px) {
+  /* Split sections stack vertically */
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .tt__media {
+    min-height: 400px;
+  }
+  .tt-section .tt__media {
+    min-height: 420px;
+  }
+
+  /* Double image band stacks */
+  .double {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .double .photo {
+    min-height: 280px;
+  }
+
+  /* Hero bottom collapses */
+  .hero-bleed__bottom {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .hero-bleed__cta {
+    justify-content: flex-start;
+  }
+
+  /* Footer grid stacks */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer__wordmark {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .footer__wordmark .tag {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  /* Form cols stack */
+  .form__cols {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* Reduce cell padding on mobile */
+  .ruled-grid > .cell {
+    padding: 36px 24px 44px;
+  }
+
+  /* Section padding tighter */
+  .section,
+  .cta-row,
+  .manifesto,
+  .eleven {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
