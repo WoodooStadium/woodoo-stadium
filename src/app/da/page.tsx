@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Woodoo Stadium 11–11 | Luksus bordfodboldbord håndbygget i København",
-  description: "Stadium 11–11 er et håndbygget luksus bordfodboldbord i børstet rustfrit stål. 732 komponenter. Inde og ude, året rundt. Designet og bygget i København.",
+  description: "Luksus bordfodboldbord håndbygget i København. Børstet rustfrit stål — indendørs & udendørs, året rundt. Stadium 11–11 fra Woodoo Stadium.",
   alternates: {
     canonical: "https://woodoo-stadium.com/da",
     languages: { en: "https://woodoo-stadium.com/" },

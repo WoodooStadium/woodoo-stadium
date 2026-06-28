@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Woodoo Stadium 11–11 | Luxury Foosball Table Handbuilt in Copenhagen",
-  description: "Stadium 11–11 is a handbuilt luxury foosball table in brushed stainless steel. 732 components. Indoor and outdoor, all year round. Designed and built in Copenhagen.",
+  description: "Luxury foosball table handbuilt in Copenhagen. Brushed stainless steel — indoor & outdoor, all year round. Stadium 11–11 by Woodoo Stadium.",
   alternates: {
     canonical: "https://woodoo-stadium.com/",
     languages: { da: "https://woodoo-stadium.com/da" },
