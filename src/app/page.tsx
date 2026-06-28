@@ -1,4 +1,14 @@
 ﻿import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Woodoo Stadium 11–11 | Luxury Foosball Table Handbuilt in Copenhagen",
+  description: "Stadium 11–11 is a handbuilt luxury foosball table in brushed stainless steel. 732 components. Indoor and outdoor, all year round. Designed and built in Copenhagen.",
+  alternates: {
+    canonical: "https://woodoo-stadium.com/",
+    languages: { da: "https://woodoo-stadium.com/da" },
+  },
+};
 
 export default function Home() {
   return (
@@ -6,8 +16,8 @@ export default function Home() {
       <section className="hero-bleed">
         <div className="hero-bleed__media">
           <Image
-            src="/uploads/foosball_table_concrete_1-50694ac5.jpg"
-            alt="WooDoo Stadium 11-11 — sculptural profile"
+            src="/uploads/hero.png"
+            alt="Woodoo Stadium 11-11 — sculptural profile"
             fill
             sizes="100vw"
             priority
@@ -59,12 +69,12 @@ export default function Home() {
       <section className="tt-section split section--no-top section--dark" style={{ borderTop: "1px solid var(--rule)" }}>
         <div className="tt__media">
           <Image
-            src="/uploads/foosball_table_concrete.jpg"
-            alt="Stadium 11-11 — three-quarter, atelier"
+            src="/uploads/graded_made_in_denmark.jpg"
+            alt="Etched steel grille — Made in Denmark"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             priority
-            style={{ objectFit: "cover", objectPosition: "center center" }}
+            style={{ objectFit: "cover", objectPosition: "center 55%" }}
           />
         </div>
         <div className="tt__content">
@@ -95,7 +105,7 @@ export default function Home() {
             The last screen-free sport.
           </h1>
           <p className="body" style={{ color: "#f2eee5", margin: "0 auto", maxWidth: "60ch" }}>
-            You cannot doomscroll while engaged in play. You cannot answer emails. You cannot think about tomorrow. The ball moves. You move. Everyone else in the room stops what they are doing and watches. For a few minutes — or a few hours — nothing else is available. That is not a side effect. That is the architecture of the object.
+            You cannot be thinking about life's obstacles while genuinely engaged in play. You cannot doomscroll. You cannot answer emails. The ball moves. You move. Everyone in the room stops what they are doing and watches. For a few minutes — or a few hours — nothing else is available. That is not a side effect. That is the architecture of the object.
           </p>
         </div>
       </section>
@@ -145,7 +155,7 @@ export default function Home() {
       <section className="double" aria-hidden="true">
         <figure className="photo">
           <Image
-            src="/uploads/foosball_table_2.jpg"
+            src="/uploads/woodoo_stadium_side.png"
             alt="X-frame — profile"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -155,8 +165,8 @@ export default function Home() {
         </figure>
         <figure className="photo">
           <Image
-            src="/uploads/foosball_table_concrete_3.jpg"
-            alt="Detail — corner with wordmark"
+            src="/uploads/woodoo_scoring_slider.jpg"
+            alt="Scoring slider — amber detail"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             loading="lazy"
@@ -183,7 +193,7 @@ export default function Home() {
           <div className="cell">
             <span className="num">02.</span>
             <h3>Plays like <span className="serif-it">nothing else.</span></h3>
-            <p className="body">Ceramic bearings, calibrated rods, a strike that is felt in the room before it is heard.</p>
+            <p className="body">Custom-engineered bearings, calibrated rods, a strike that is felt in the room before it is heard.</p>
           </div>
           <div className="cell">
             <span className="num">03.</span>
@@ -304,7 +314,7 @@ export default function Home() {
           </a>
           <a className="cell-photo" href="/gallery">
             <Image
-              src="/uploads/foosball_table_rain.jpg"
+              src="/uploads/working_hands_pressing_an_angle_grinder_woodoo_stadium.png"
               alt="Rain on steel"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -324,7 +334,7 @@ export default function Home() {
         <div className="fade-up" style={{ display: "flex", justifyContent: "space-between", alignItems: "end", gap: "64px", flexWrap: "wrap", marginBottom: "64px" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
             <span className="kicker" data-index="N° 06">For Business</span>
-            <h2 className="h2">An object that <span className="serif-it">earns its room.</span></h2>
+            <h2 className="h2">Play shouldn't be limited <span className="serif-it">by where the table stands.</span></h2>
           </div>
           <p className="lead">A signature piece for the spaces that ask for one.</p>
         </div>
@@ -370,7 +380,6 @@ export default function Home() {
         <div className="cta-actions fade-up" data-delay="2">
           <div className="cta-actions__row">
             <a className="btn btn--filled" href="/atelier#contact">Request a Quote <span className="arrow">→</span></a>
-            <a className="tlink tlink--quiet" href="#">Download the brochure <span className="arrow">↓</span></a>
           </div>
         </div>
       </section>

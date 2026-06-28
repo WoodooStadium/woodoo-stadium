@@ -1,7 +1,20 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const systemPrompt = `You are a copywriter for WooDoo Stadium — a Copenhagen atelier that handbuilds a single luxury foosball table called the Stadium 11-11. The brand voice is understated Nordic luxury: declarative sentences, no marketing adjectives, dry confidence. Think Bang & Olufsen meets Vipp. Write in English unless instructed otherwise.`;
+const systemPrompt = `You are a copywriter for Woodoo Stadium — a Copenhagen atelier that handbuilds a single luxury foosball table called the Stadium 11-11. The brand voice is understated Nordic luxury: declarative sentences, no marketing adjectives, dry confidence. Think Bang & Olufsen meets Vipp. Write in English unless instructed otherwise.
+
+Brand facts:
+- The table is called the Stadium 11–11
+- 732 individual components
+- 130 engineering drawings
+- 150 kilograms
+- Brushed stainless steel 304
+- Made in Copenhagen, Denmark
+- Indoor and outdoor, all seasons
+- One table, made to order
+- Showroom in Ishøj, south of Copenhagen
+
+Always return ONLY valid JSON. No explanation, no markdown code blocks, no surrounding text. Just the raw JSON object.`;
 
 function extractJson(text: string) {
   const match = text.match(/\{[\s\S]*\}/);
@@ -18,10 +31,7 @@ function normalizeTags(tags: unknown) {
     return tags.filter((tag) => typeof tag === "string").map((tag) => tag.trim()).filter(Boolean);
   }
   if (typeof tags === "string") {
-    return tags
-      .split(/[;,]/)
-      .map((tag) => tag.trim())
-      .filter(Boolean);
+    return tags.split(/[;,]/).map((tag) => tag.trim()).filter(Boolean);
   }
   return [];
 }
@@ -46,33 +56,55 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: "Claude API key is not configured." }, { status: 500 });
   }
 
-  const prompt = `${systemPrompt}\n\nHuman: Generate a complete SEO-optimised blog post in the WooDoo brand voice. Use the following inputs:
+  const userMessage = `Generate a complete SEO-optimised blog post for Woodoo Stadium in the brand voice described.
+
+Inputs:
 - Focus keyword: ${focusKeyword || "(none)"}
 - Notes: ${notes || "No additional notes."}
-- Admin title: ${referenceTitle || "(not provided)"}
+- Admin title hint: ${referenceTitle || "(not provided)"}
 
-Return only valid JSON with these keys: title, h1, body, excerpt, meta_title, meta_description, tags. The body should include a complete article with proper H2 and H3 headings, and use markdown formatting. Suggested tags should be an array of short terms. Do not include any explanation or surrounding text.`;
+Requirements:
+- Page title: 50-60 characters, keyword-rich
+- H1: Different from title, compelling, keyword-rich
+- Body: 350-500 words, markdown with ## H2 and ### H3 headings, brand voice throughout, 1-2 internal links to /the-table or /for-business or /atelier#contact, 1 external source link where relevant
+- Excerpt: 1-2 sentences, compelling summary
+- Meta title: 50-60 characters
+- Meta description: 150-160 characters, includes focus keyword, compelling
+- Tags: 4-6 short keyword tags as array
 
-  const response = await fetch("https://api.anthropic.com/v1/complete", {
+Return ONLY this JSON object, nothing else:
+{
+  "title": "...",
+  "h1": "...",
+  "body": "...",
+  "excerpt": "...",
+  "meta_title": "...",
+  "meta_description": "...",
+  "tags": ["...", "..."]
+}`;
+
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "x-api-key": claudeKey,
+      "anthropic-version": "2023-06-01",
     },
     body: JSON.stringify({
       model: "claude-sonnet-4-20250514",
-      prompt,
-      max_tokens_to_sample: 1300,
-      temperature: 0.2,
-      stop_sequences: ["\n\nHuman:"],
+      max_tokens: 2000,
+      system: systemPrompt,
+      messages: [
+        { role: "user", content: userMessage }
+      ],
     }),
   });
 
   const apiResult = await response.json().catch(() => null);
-  const completion = String(apiResult?.completion ?? apiResult?.text ?? "").trim();
+  const completion = String(apiResult?.content?.[0]?.text ?? "").trim();
 
   if (!response.ok || !completion) {
-    const errorMessage = apiResult?.error?.message || apiResult?.message || "Claude generation failed.";
+    const errorMessage = apiResult?.error?.message || "Claude generation failed.";
     return NextResponse.json({ message: errorMessage }, { status: response.status || 500 });
   }
 

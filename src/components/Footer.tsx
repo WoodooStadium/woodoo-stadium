@@ -13,8 +13,13 @@ export default function Footer() {
     return () => clearTimeout(timer);
   }, [submitted]);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    await fetch("/api/newsletter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
     setEmail("");
     setSubmitted(true);
   };
@@ -24,7 +29,7 @@ export default function Footer() {
       <div className="footer__wordmark">
         <Image
           src="/uploads/logo-dark.png"
-          alt="WooDoo Stadium"
+          alt="Woodoo Stadium"
           width={200}
           height={64}
           priority
@@ -37,14 +42,14 @@ export default function Footer() {
       <div className="footer__grid">
         <div className="footer__brand">
           <p className="footer__legal">
-            WooDoo ApS · Copenhagen, Denmark<br />
-            CVR 41 11 11 11<br />
+            Woodoo · Copenhagen, Denmark<br />
+            CVR 41 21 36 63<br />
             Registered Design · Denmark &amp; European Union
           </p>
           <div className="footer__newsletter">
             <h5>Atelier Journal</h5>
             <p>
-              A short letter, four times a year, from the workshop on Refshaleøen.
+              A short letter, four times a year, from the workshop.
             </p>
             <form className="news-row" onSubmit={handleSubmit}>
               <input
@@ -94,11 +99,25 @@ export default function Footer() {
             <li><a href="/atelier#contact">Contact</a></li>
             <li><a href="#">Press</a></li>
           </ul>
+          <a href="mailto:contact@woodoo-stadium.com" className="footer__email">contact@woodoo-stadium.com</a>
         </div>
       </div>
 
       <div className="footer__bottom">
-        <span>© MMXXVI · WooDoo · Copenhagen</span>
+        <span>© MMXXVI · Woodoo · Copenhagen</span>
+        <a
+          href="/privacy"
+          style={{
+            fontFamily: "var(--sans)",
+            fontSize: "11px",
+            letterSpacing: "0.14em",
+            color: "var(--faint-on-dark)",
+            textDecoration: "none",
+            transition: "color 0.2s",
+          }}
+        >
+          Privacy &amp; Cookies
+        </a>
         <div className="social">
           <a href="#">Instagram</a>
           <a href="#">LinkedIn</a>

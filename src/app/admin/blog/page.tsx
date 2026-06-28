@@ -102,7 +102,9 @@ export default function AdminBlogPage() {
   };
 
   useEffect(() => {
-    fetch("/api/admin/resource?resource=blog_posts").then((res) => res.json()).then((data) => setPosts(data || []));
+    fetch("/api/admin/resource?resource=blog_posts")
+  .then((res) => res.json())
+  .then((data) => setPosts(Array.isArray(data) ? data : data?.data || []));
   }, []);
 
   const loadPost = (post: BlogPostRecord) => {
@@ -239,9 +241,6 @@ export default function AdminBlogPage() {
       <div className="admin-actions admin-actions-inline">
         <button className="btn btn--filled" type="button" onClick={createNewPost}>
           Create new post
-        </button>
-        <button className="btn btn--filled" type="button" onClick={generateFromAi} disabled={loading || aiLoading}>
-          {aiLoading ? "Generating…" : "Generate with AI"}
         </button>
       </div>
 
@@ -423,6 +422,9 @@ export default function AdminBlogPage() {
           <div className="admin-actions admin-actions-inline">
             <button className="btn btn--filled" type="button" onClick={handleSave} disabled={loading}>
               {loading ? "Saving…" : "Save post"}
+            </button>
+            <button className="btn btn--filled" type="button" onClick={generateFromAi} disabled={loading || aiLoading}>
+              {aiLoading ? "Generating…" : "Generate with AI"}
             </button>
             {message && <span className="admin-note">{message}</span>}
           </div>

@@ -6,8 +6,12 @@ import type { BlogPost } from "@/lib/supabase-types";
 import { supabaseServerClient } from "@/lib/supabase";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+export const revalidate = 0;
+
 interface BlogPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 async function getPost(slug: string) {
@@ -39,30 +43,32 @@ function formatDate(date: string | null) {
 }
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
-  const { data } = await getPost(params.slug);
+  const { slug } = await params;
+  const { data } = await getPost(slug);
   if (!data) {
     return {
-      title: "Post not found | WooDoo Stadium",
+      title: "Post not found | Woodoo Stadium",
       description: "The requested blog post does not exist.",
     };
   }
 
   return {
     title: data.meta_title ?? data.title,
-    description: data.meta_description ?? data.excerpt ?? "Notes from WooDoo Stadium workshop.",
+    description: data.meta_description ?? data.excerpt ?? "Notes from Woodoo Stadium workshop.",
     openGraph: {
       title: data.meta_title ?? data.title,
-      description: data.meta_description ?? data.excerpt ?? "Notes from WooDoo Stadium workshop.",
+      description: data.meta_description ?? data.excerpt ?? "Notes from Woodoo Stadium workshop.",
       images: data.featured_image ? [{ url: data.featured_image }] : [],
     },
   };
 }
 
 export default async function BlogPostPage({ params }: BlogPageProps) {
-  const { data: post } = await getPost(params.slug);
+  const { slug } = await params;
+  const { data: post } = await getPost(slug);
   if (!post) notFound();
 
-  const relatedPosts = await getRelated(params.slug);
+  const relatedPosts = await getRelated(slug);
 
   return (
     <>
@@ -70,7 +76,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
         <div className="fade-up" style={{ maxWidth: "72ch", margin: "0 auto" }}>
           <span className="kicker">Atelier Journal</span>
           <h1 className="h1">{post.title}</h1>
-          <p className="caption">{formatDate(post.published_at)} · {post.author ?? "WooDoo"} · {(post.tags || []).join(", ")}</p>
+          <p className="caption">{formatDate(post.published_at)} · {post.author ?? "Woodoo"} · {(post.tags || []).join(", ")}</p>
         </div>
       </section>
 

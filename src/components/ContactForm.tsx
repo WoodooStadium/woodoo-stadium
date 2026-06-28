@@ -13,6 +13,8 @@ const initialForm = {
 export default function ContactForm() {
   const [form, setForm] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -21,10 +23,28 @@ export default function ContactForm() {
     setForm((current) => ({ ...current, [name]: value }));
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setForm(initialForm);
-    setSubmitted(true);
+    setError(null);
+    setLoading(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        setError(data?.message || "Something went wrong. Please try again.");
+        return;
+      }
+      setForm(initialForm);
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -90,14 +110,20 @@ export default function ContactForm() {
           />
         </div>
 
-        <button className="btn btn--filled" type="submit">
-          Send enquiry →
+        <button className="btn btn--filled" type="submit" disabled={loading}>
+          {loading ? "Sending…" : "Send enquiry →"}
         </button>
       </form>
 
+      {error && (
+        <p className="caption" style={{ marginTop: "32px", color: "red" }}>
+          {error}
+        </p>
+      )}
+
       {submitted && (
         <p className="caption" style={{ marginTop: "32px" }}>
-          Thank you. Your enquiry has been received.
+          Thank you. Your enquiry has been received. We will be in touch within two working days.
         </p>
       )}
     </div>

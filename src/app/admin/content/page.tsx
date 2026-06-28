@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ImagePicker from "@/components/ImagePicker";
 
 interface SiteSettingRecord {
   id: number;
@@ -197,14 +198,13 @@ export default function AdminContentPage() {
                   />
                   {sectionErrors[section.id]?.body && <p className="admin-error">{sectionErrors[section.id].body}</p>}
                 </label>
-                <label className="admin-field">
-                  <span>Image URL</span>
-                  <input
-                    type="text"
-                    value={section.image_url ?? ""}
-                    onChange={(event) => updateSection(section.id, "image_url", event.target.value)}
+                <div className="admin-field">
+                  <span>Image</span>
+                  <ImagePicker
+                    value={section.image_url}
+                    onChange={(url) => updateSection(section.id, "image_url", url || null)}
                   />
-                </label>
+                </div>
                 <label className="admin-field">
                   <span>Video URL</span>
                   <input

@@ -174,6 +174,6 @@ function makeLogo(text, hexColor, path) {
 }
 
 if (!fs.existsSync("public/uploads")) fs.mkdirSync("public/uploads", { recursive: true });
-makeLogo("WooDoo", "#1A1814", "public/uploads/logo-light.png");
-makeLogo("WooDoo", "#F2EEE5", "public/uploads/logo-dark.png");
+makeLogo("Woodoo", "#1A1814", "public/uploads/logo-light.png");
+makeLogo("Woodoo", "#F2EEE5", "public/uploads/logo-dark.png");
 console.log("Generated PNG logo placeholders.");

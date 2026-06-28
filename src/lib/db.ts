@@ -42,6 +42,24 @@ export async function getBlogPosts() {
   return supabaseServerClient.from("blog_posts").select("*").order("published_at", { ascending: false });
 }
 
+export async function getBlogPostsByLanguage(language: string) {
+  return supabaseServerClient
+    .from("blog_posts")
+    .select("*")
+    .eq("language", language)
+    .eq("status", "published")
+    .order("published_at", { ascending: false });
+}
+
+export async function getBlogPostBySlugAndLanguage(slug: string, language: string) {
+  return supabaseServerClient
+    .from("blog_posts")
+    .select("*")
+    .eq("slug", slug)
+    .eq("language", language)
+    .single();
+}
+
 export async function getBlogKeywords() {
   return supabaseServerClient.from("blog_keywords").select("*");
 }

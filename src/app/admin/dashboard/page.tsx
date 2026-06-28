@@ -37,7 +37,7 @@ export default async function AdminDashboardPage() {
     <div className="admin-page">
       <div className="admin-header">
         <span className="admin-label">Dashboard</span>
-        <h1>WooDoo Control Center</h1>
+        <h1>Woodoo Control Center</h1>
         <p>View key metrics and quickly jump into every admin section for content, leads, media, and settings.</p>
       </div>
 

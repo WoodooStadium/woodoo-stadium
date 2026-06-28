@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Customise | WooDoo Stadium",
+  title: "Customise | Woodoo Stadium",
   description: "Discover the configurable elements of the Stadium 11–11 and begin your own expression.",
 };
 
@@ -17,24 +17,80 @@ const categories = [
 export default function CustomisePage() {
   return (
     <>
-      <section className="section section--dark section--no-top" style={{ paddingTop: "140px", paddingBottom: "80px" }}>
-        <div className="fade-up" style={{ maxWidth: "72ch", margin: "0 auto", textAlign: "center" }}>
-          <span className="kicker" style={{ color: "rgba(242,238,229,0.4)" }}>CUSTOMISE</span>
-          <h1 className="h1" style={{ marginTop: "16px" }}>Your mark. Your table.</h1>
-          <p className="body fade-up" data-delay="1" style={{ color: "rgba(242,238,229,0.62)", marginTop: "24px", maxWidth: "56ch", marginLeft: "auto", marginRight: "auto" }}>
-            One table. Many expressions. The Stadium 11–11 is one object — but it is yours to define. Every element that can carry your identity, will.
-          </p>
+      <section className="hero-bleed">
+        <div className="hero-bleed__media">
+          <Image
+            src="/uploads/woodoo_customise_hero.jpg"
+            alt="Stadium 11-11 — configurable detail"
+            fill
+            sizes="100vw"
+            priority
+            style={{
+              objectFit: "cover",
+              objectPosition: "center center",
+              filter: "brightness(1.08) contrast(1.06) saturate(1.05)",
+            }}
+          />
         </div>
-      </section>
-
-      <section style={{ position: "relative", height: "60vh", minHeight: "400px" }}>
-        <Image
-          src="/uploads/woodoo_stadium_side_bespoke.jfif"
-          alt="Stadium 11-11 bespoke configuration"
-          fill
-          sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "center" }}
+        <div
+          className="hero-bleed__veil"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(11,10,8,0.6) 0%, rgba(11,10,8,0.15) 30%, rgba(11,10,8,0.25) 60%, rgba(11,10,8,0.88) 100%)",
+          }}
         />
+        <div className="hero-bleed__inner" style={{ paddingTop: "140px" }}>
+          <div className="hero-bleed__title fade-up" data-delay="1">
+            <span
+              style={{
+                display: "block",
+                fontFamily: "Inter Tight, sans-serif",
+                fontSize: "11px",
+                letterSpacing: "0.32em",
+                textTransform: "uppercase",
+                color: "rgba(242,238,229,0.65)",
+                marginBottom: "20px",
+              }}
+            >
+              Customise
+            </span>
+            <h1 className="h1" style={{ fontSize: "clamp(48px, 6vw, 96px)", lineHeight: 1.02 }}>
+              Your mark. Your table.
+            </h1>
+          </div>
+          <div className="hero-bleed__bottom fade-up" data-delay="2" style={{ marginTop: "48px" }}>
+            <div className="col-meta">
+              <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>Customise</span>
+              <span className="val" style={{ color: "#F2EEE5" }}>One object. Yours to define.</span>
+            </div>
+            <div />
+            <div className="hero-bleed__cta">
+              <a
+                href="/atelier#contact"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "10px",
+                  padding: "0 36px",
+                  height: "56px",
+                  border: "1px solid #F2EEE5",
+                  background: "#F2EEE5",
+                  color: "#0B0A08",
+                  fontFamily: "Inter Tight, sans-serif",
+                  fontWeight: 500,
+                  fontSize: "11px",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.28em",
+                  textDecoration: "none",
+                  transition: "opacity 0.2s ease",
+                }}
+              >
+                Start a bespoke enquiry
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="section section--alt">
@@ -59,7 +115,7 @@ export default function CustomisePage() {
           <a
             className="btn btn--filled-on-dark"
             href="/atelier#contact"
-            style={{ marginTop: "32px", display: "inline-flex", textDecoration: "none" }}
+            style={{ marginTop: "32px", display: "inline-flex" }}
           >
             Start a bespoke enquiry →
           </a>

@@ -2,11 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { BlogPost } from "@/lib/supabase-types";
-import { getBlogPosts } from "@/lib/db";
+import { getBlogPostsByLanguage } from "@/lib/db";
 
 export const metadata: Metadata = {
-  title: "Atelier Journal | WooDoo Stadium",
-  description: "Notes from the WooDoo Stadium workshop and stories from the production of the Stadium 11–11.",
+  title: "Atelier Journal | Woodoo Stadium",
+  description: "Notes from the Woodoo Stadium workshop and stories from the production of the Stadium 11–11.",
+  alternates: {
+    canonical: "https://woodoo-stadium.com/blog",
+    languages: { "da": "https://woodoo-stadium.com/da/blog" },
+  },
 };
 
 function formatDate(date: string | null) {
@@ -15,8 +19,8 @@ function formatDate(date: string | null) {
 }
 
 export default async function BlogPage() {
-  const response = (await getBlogPosts()) as { data: BlogPost[] | null; error: unknown };
-  const posts = response.data?.filter((post) => post.status === "published") ?? [];
+  const response = (await getBlogPostsByLanguage("en")) as { data: BlogPost[] | null; error: unknown };
+const posts = response.data ?? [];
 
   return (
     <>

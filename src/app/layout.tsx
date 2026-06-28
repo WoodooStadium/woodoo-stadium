@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
+import CookieNotice from "@/components/CookieNotice";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -26,11 +27,11 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WooDoo Stadium",
+  title: "Woodoo Stadium",
   description: "Dark Nordic luxury handbuilt foosball table.",
   metadataBase: new URL("https://www.woodoostadium.com"),
   openGraph: {
-    title: "WooDoo Stadium",
+    title: "Woodoo Stadium",
     description: "Dark Nordic luxury handbuilt foosball table.",
     type: "website",
   },
@@ -48,6 +49,7 @@ export default function RootLayout({
     <html lang="en" className={`${cormorant.variable} ${inter.variable} ${jetbrains.variable}`}>
       <body className="app-shell">
         <ClientLayout>{children}</ClientLayout>
+        <CookieNotice />
       </body>
     </html>
   );

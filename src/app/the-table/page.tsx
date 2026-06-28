@@ -1,19 +1,38 @@
+﻿import DrawingViewer from "@/components/DrawingViewer";
 import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Stadium 11–11 | WooDoo Stadium — Luxury Stainless Steel Foosball Table",
-  description:
-    "The Stadium 11–11 is a precision-engineered luxury foosball table. Handbuilt in Copenhagen from brushed stainless steel. 732 components. Indoor and outdoor. Made to order.",
+  title: "The Stadium 11–11 | Woodoo Stadium — Luxury Stainless Steel Foosball Table",
+  description: "The Stadium 11–11 is a precision-engineered luxury foosball table. Handbuilt in Copenhagen from brushed stainless steel. 732 components. Indoor and outdoor. Made to order.",
 };
 
 const anatomyItems = [
   { title: "Frame", description: "A welded monocoque. One body, not assembled. The structure is the object." },
-  { title: "Playing field", description: "Illuminated from within. The surface reads in a room before you approach it." },
-  { title: "Rods", description: "Calibrated steel. Ceramic bearings. The strike of the ball carries forty metres." },
-  { title: "Players", description: "Cast with intention. Balanced for play, designed for presence." },
-  { title: "Lighting", description: "Integrated into the body. Field and plate. Visible when lit, invisible at rest." },
-  { title: "Brand plates", description: "Recessed and etched. Your identity made permanent — not applied." },
+  { title: "Playing field", description: "Brushed stainless steel, or painted to a colour of your choosing. Illuminated from within either way." },
+  { title: "Rods", description: "Calibrated steel. Custom-engineered bearings. The strike of the ball carries forty metres." },
+  { title: "Players", description: "Standard cast, CNC-machined, or built to a custom design. Balanced for play, designed for presence." },
+  { title: "Power", description: "Rechargeable battery, or hardwired to a cable socket. Your call." },
+  { title: "Lighting", description: "Integrated into the body. Field and plate. White, or any colour in the spectrum." },
+  { title: "Brand plates", description: "Recessed and etched. Changeable to any identity you choose to carry." },
+  { title: "Foil print", description: "An optional layer. Printed, applied, removable." },
+];
+
+const specRows: [string, string][] = [
+  ["MATERIAL", "Brushed stainless steel, 304"],
+  ["WEIGHT", "150 kilograms"],
+  ["HABITAT", "Indoor & outdoor, all seasons"],
+  ["LIGHT", "Integrated LED — field & plate"],
+  ["COMPONENTS", "732 individual parts"],
+  ["ENGINEERING", "130 technical drawings"],
+  ["FINISH", "Brushed, not polished"],
+  ["DIMENSIONS", "Confirmed at enquiry"],
+];
+
+const keyFigures = [
+  { number: "732", label: "Individual components" },
+  { number: "130", label: "Technical drawings" },
+  { number: "150kg", label: "Brushed stainless steel" },
 ];
 
 export default function TheTablePage() {
@@ -22,257 +41,193 @@ export default function TheTablePage() {
       <section className="hero-bleed">
         <div className="hero-bleed__media">
           <Image
-            src="/uploads/woodoo_foosball_original_58ab0836.jfif"
-            alt="Stadium 11-11 side profile"
+            src="/uploads/foosball_table.jpg"
+            alt="Stadium 11-11 — X-frame profile"
             fill
             sizes="100vw"
             priority
-            style={{ objectFit: "cover", objectPosition: "center" }}
+            style={{ objectFit: "cover", objectPosition: "center 15%", filter: "brightness(1.08) contrast(1.06) saturate(1.05)" }}
           />
         </div>
-        <div className="hero-bleed__veil" />
-        <div className="hero-bleed__inner" style={{ paddingTop: "120px" }}>
+        <div
+          className="hero-bleed__veil"
+          style={{
+            background: "linear-gradient(180deg, rgba(11,10,8,0.55) 0%, rgba(11,10,8,0.15) 30%, rgba(11,10,8,0.25) 60%, rgba(11,10,8,0.85) 100%)",
+          }}
+        />
+        <div className="hero-bleed__inner" style={{ paddingTop: "140px" }}>
           <div className="hero-bleed__title fade-up" data-delay="1">
-            <h1 className="h1" style={{ fontSize: "clamp(48px, 6vw, 96px)" }}>The Stadium 11–11</h1>
+            <span
+              style={{
+                display: "block",
+                fontFamily: "Inter Tight, sans-serif",
+                fontSize: "11px",
+                letterSpacing: "0.32em",
+                textTransform: "uppercase",
+                color: "rgba(242,238,229,0.65)",
+                marginBottom: "20px",
+              }}
+            >
+              Handbuilt in Copenhagen
+            </span>
+            <h1 className="h1" style={{ fontSize: "clamp(48px, 6vw, 96px)", lineHeight: 1.02 }}>The Stadium 11–11</h1>
           </div>
-          <div className="hero-bleed__bottom fade-up" data-delay="2">
+          <div className="hero-bleed__bottom fade-up" data-delay="2" style={{ marginTop: "48px" }}>
             <div className="col-meta">
               <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>The Object</span>
               <span className="val" style={{ color: "#F2EEE5" }}>One object. Decided upon.</span>
             </div>
             <div className="hero-bleed__cta">
               <a
-                className="btn btn--filled-on-dark"
                 href="/atelier#contact"
                 style={{
-                  width: "auto",
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  alignSelf: "flex-start",
-                  padding: "0 32px",
+                  gap: "10px",
+                  padding: "0 36px",
                   height: "56px",
                   border: "1px solid #F2EEE5",
-                  background: "transparent",
-                  color: "#F2EEE5",
+                  background: "#F2EEE5",
+                  color: "#0B0A08",
                   fontFamily: "Inter Tight, sans-serif",
-                  fontWeight: 400,
+                  fontWeight: 500,
                   fontSize: "11px",
                   textTransform: "uppercase",
                   letterSpacing: "0.28em",
                   textDecoration: "none",
+                  transition: "opacity 0.2s ease",
                 }}
               >
-                ENQUIRE ABOUT YOURS <span style={{ marginLeft: "8px" }}>→</span>
+                Enquire about yours
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Spec + Drawing section */}
       <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
-        <div
-          className="fade-up"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "64px",
-            alignItems: "start",
-            maxWidth: "1400px",
-            margin: "0 auto",
-          }}
-        >
-          {/* Specs column */}
-          <div style={{ display: "grid", gap: "24px" }}>
-            <div>
-              <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>SPECIFICATION</span>
-              <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(28px, 3vw, 42px)", color: "#F2EEE5", marginTop: "16px" }}>The Specification</h2>
-            </div>
-            <div style={{ border: "1px solid rgba(242,238,229,0.15)", overflow: "hidden" }}>
-              {[
-                ["MATERIAL", "Brushed stainless steel, 304"],
-                ["WEIGHT", "150 kilograms"],
-                ["HABITAT", "Indoor & outdoor, all seasons"],
-                ["LIGHT", "Integrated LED — field & plate"],
-                ["COMPONENTS", "732 individual parts"],
-                ["ENGINEERING", "130 technical drawings"],
-                ["FINISH", "Brushed, not polished"],
-                ["DIMENSIONS", "Confirmed at enquiry"],
-              ].map(([label, value], i, arr) => (
-                <div
-                  key={label}
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: "18px 24px",
-                    borderBottom: i < arr.length - 1 ? "1px solid rgba(242,238,229,0.1)" : "none",
-                    gap: "16px",
-                  }}
-                >
-                  <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", flexShrink: 0 }}>{label}</span>
-                  <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "#F2EEE5", textAlign: "right" }}>{value}</span>
-                </div>
-              ))}
-            </div>
+        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+          <div>
+            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>SPECIFICATION</span>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(28px, 3vw, 42px)", color: "#F2EEE5", marginTop: "16px" }}>The Specification</h2>
           </div>
+          <div style={{ border: "1px solid rgba(242,238,229,0.15)", overflow: "hidden", marginTop: "24px" }}>
+            {specRows.map(([label, value], i) => (
+              <div key={label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "18px 24px", borderBottom: i < specRows.length - 1 ? "1px solid rgba(242,238,229,0.1)" : "none", gap: "16px" }}>
+                <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", flexShrink: 0 }}>{label}</span>
+                <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "#F2EEE5", textAlign: "right" }}>{value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
 
-          {/* Drawing column */}
-          <div style={{ display: "grid", gap: "24px" }}>
-            <div>
-              <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>TECHNICAL DRAWING</span>
-              <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(28px, 3vw, 42px)", color: "#F2EEE5", marginTop: "16px" }}>The Drawing.</h2>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.62)", marginTop: "16px", lineHeight: "1.7", maxWidth: "480px" }}>
-                130 technical drawings. Exact dimensions and full documentation shared at enquiry.
-              </p>
-            </div>
-            <a
-              href="/uploads/WooDoo_Spec.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: "block", border: "1px solid rgba(242,238,229,0.15)", textDecoration: "none", overflow: "hidden" }}
+        <div style={{ maxWidth: "1400px", margin: "96px auto 0" }}>
+          <div style={{ marginBottom: "32px" }}>
+            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>TECHNICAL DRAWING</span>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(28px, 3vw, 42px)", color: "#F2EEE5", marginTop: "16px" }}>The Drawing.</h2>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.62)", marginTop: "16px", lineHeight: "1.7", maxWidth: "480px" }}>
+              130 technical drawings. Exact dimensions and full documentation shared at enquiry.
+            </p>
+          </div>
+          <DrawingViewer />
+        </div>
+
+        <div style={{ maxWidth: "1400px", margin: "64px auto 0" }}>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            borderTop: "1px solid rgba(242,238,229,0.12)",
+            borderBottom: "1px solid rgba(242,238,229,0.12)",
+            marginBottom: "48px",
+          }}>
+            {keyFigures.map((item, i) => (
+              <div key={item.number} style={{ padding: "40px 32px", borderRight: i < keyFigures.length - 1 ? "1px solid rgba(242,238,229,0.12)" : "none", textAlign: "center" }}>
+                <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "72px", color: "#F2EEE5", lineHeight: 1, marginBottom: "12px" }}>{item.number}</div>
+                <div style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>{item.label}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            
+              <a 
+              href="/atelier#contact"
+              style={{
+                width: "100%",
+                maxWidth: "520px",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "0 32px",
+                height: "56px",
+                border: "1px solid rgba(242,238,229,0.3)",
+                background: "transparent",
+                color: "#F2EEE5",
+                fontFamily: "Inter Tight, sans-serif",
+                fontSize: "11px",
+                textTransform: "uppercase",
+                letterSpacing: "0.28em",
+                textDecoration: "none",
+              }}
             >
-              {/* Blueprint SVG */}
-              <svg viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
-                <rect width="560" height="320" fill="#0D0C0A" />
-                {/* Grid lines */}
-                {Array.from({ length: 12 }).map((_, i) => (
-                  <line key={`v${i}`} x1={i * 50} y1="0" x2={i * 50} y2="320" stroke="rgba(242,238,229,0.04)" strokeWidth="1" />
-                ))}
-                {Array.from({ length: 7 }).map((_, i) => (
-                  <line key={`h${i}`} x1="0" y1={i * 50} x2="560" y2={i * 50} stroke="rgba(242,238,229,0.04)" strokeWidth="1" />
-                ))}
-                {/* Table silhouette — side profile */}
-                {/* Main body */}
-                <rect x="80" y="110" width="400" height="80" fill="none" stroke="rgba(242,238,229,0.25)" strokeWidth="1.5" />
-                {/* Playing field inset */}
-                <rect x="100" y="120" width="360" height="60" fill="none" stroke="rgba(242,238,229,0.12)" strokeWidth="1" />
-                {/* Left leg */}
-                <rect x="100" y="190" width="24" height="70" fill="none" stroke="rgba(242,238,229,0.25)" strokeWidth="1.5" />
-                {/* Right leg */}
-                <rect x="436" y="190" width="24" height="70" fill="none" stroke="rgba(242,238,229,0.25)" strokeWidth="1.5" />
-                {/* Cross brace */}
-                <line x1="124" y1="240" x2="436" y2="240" stroke="rgba(242,238,229,0.15)" strokeWidth="1" />
-                {/* Rods — 8 of them */}
-                {[130, 165, 200, 235, 285, 325, 375, 420].map((x, i) => (
-                  <g key={i}>
-                    <line x1={x} y1="100" x2={x} y2="210" stroke="rgba(242,238,229,0.18)" strokeWidth="1" strokeDasharray="2,3" />
-                    <circle cx={x} cy="150" r="5" fill="none" stroke="rgba(242,238,229,0.3)" strokeWidth="1" />
-                  </g>
-                ))}
-                {/* Dimension lines */}
-                <line x1="80" y1="290" x2="480" y2="290" stroke="rgba(242,238,229,0.2)" strokeWidth="0.75" />
-                <line x1="80" y1="285" x2="80" y2="295" stroke="rgba(242,238,229,0.2)" strokeWidth="0.75" />
-                <line x1="480" y1="285" x2="480" y2="295" stroke="rgba(242,238,229,0.2)" strokeWidth="0.75" />
-                <line x1="50" y1="110" x2="50" y2="190" stroke="rgba(242,238,229,0.2)" strokeWidth="0.75" />
-                <line x1="45" y1="110" x2="55" y2="110" stroke="rgba(242,238,229,0.2)" strokeWidth="0.75" />
-                <line x1="45" y1="190" x2="55" y2="190" stroke="rgba(242,238,229,0.2)" strokeWidth="0.75" />
-                {/* Labels */}
-                <text x="280" y="308" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="rgba(242,238,229,0.35)" letterSpacing="2">WIDTH — CONFIRMED AT ENQUIRY</text>
-                <text x="32" y="155" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="rgba(242,238,229,0.35)" letterSpacing="1" transform="rotate(-90, 32, 155)">HEIGHT</text>
-                {/* Document label */}
-                <text x="280" y="52" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="22" fill="rgba(242,238,229,0.7)" fontWeight="300">Stadium 11–11</text>
-                <text x="280" y="70" textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="rgba(242,238,229,0.3)" letterSpacing="3">TS–S11 · SIDE ELEVATION</text>
-                {/* Open document hint */}
-                <text x="480" y="308" textAnchor="end" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="rgba(242,238,229,0.25)" letterSpacing="1">OPEN →</text>
-              </svg>
+              ENQUIRE ABOUT YOURS
             </a>
           </div>
         </div>
-
-        {/* CTA */}
-        <div className="fade-up" style={{ marginTop: "64px", display: "flex", justifyContent: "center" }}>
-          <a
-            href="/atelier#contact"
-            style={{
-              width: "100%",
-              maxWidth: "520px",
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "0 32px",
-              height: "56px",
-              border: "1px solid rgba(242,238,229,0.3)",
-              background: "transparent",
-              color: "#F2EEE5",
-              fontFamily: "Inter Tight, sans-serif",
-              fontSize: "11px",
-              textTransform: "uppercase",
-              letterSpacing: "0.28em",
-              textDecoration: "none",
-            }}
-          >
-            ENQUIRE ABOUT YOURS →
-          </a>
-        </div>
       </section>
 
-      {/* Rain image */}
-      <section style={{ position: "relative", minHeight: "70vh" }}>
-        <Image
-          src="/uploads/foosball_table_rain.jpg"
-          alt="Stadium 11-11 in the rain"
-          fill
-          sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "center" }}
-        />
-      </section>
-
-      {/* Six elements */}
-      <section className="section section--alt">
-        <div className="fade-up" style={{ maxWidth: "72ch", margin: "0 auto 40px" }}>
-          <span className="kicker">THE OBJECT</span>
-          <h2 className="h2">One body. Six elements.</h2>
-        </div>
-        <div className="photo fade-up" data-delay="1" style={{ minHeight: "520px", marginBottom: "40px", position: "relative" }}>
+      <section style={{ background: "#0B0A08" }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "3fr 2fr",
+          minHeight: "500px",
+        }}>
+          <div style={{ position: "relative", minHeight: "400px" }}>
           <Image
-            src="/uploads/woodoo_stadium_top.png"
-            alt="Stadium 11-11 top view"
+            src="/uploads/woodoo_stadium_side.png"
+            alt="Rain detail on stainless steel"
             fill
             sizes="100vw"
-            style={{ objectFit: "cover", objectPosition: "center" }}
+            style={{ objectFit: "cover", objectPosition: "center 60%" }}
           />
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "64px 48px" }}>
+            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "16px" }}>THE OBJECT</span>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(36px, 4vw, 64px)", color: "#F2EEE5", lineHeight: 1.05, margin: "0 0 24px" }}>One body.<br /><em>Made to order.</em></h2>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", margin: 0, maxWidth: "42ch" }}>A welded monocoque in brushed stainless steel. Every element considered, every element yours to specify.</p>
+          </div>
         </div>
-        <div className="ruled-grid ruled-grid--3 fade-up" data-delay="2">
+        <div className="elements-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid rgba(242,238,229,0.1)" }}>
           {anatomyItems.map((item, index) => (
-            <div className="cell" key={item.title}>
-              <span className="num">0{index + 1}</span>
-              <h3>{item.title}</h3>
-              <p className="body">{item.description}</p>
+            <div
+              key={item.title}
+              className="fade-up"
+              style={{
+                padding: "48px 36px",
+                borderRight: index % 4 !== 3 ? "1px solid rgba(242,238,229,0.1)" : "none",
+                borderBottom: index < 4 ? "1px solid rgba(242,238,229,0.1)" : "none",
+              }}
+            >
+              <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", display: "block", marginBottom: "24px", letterSpacing: "0.1em" }}>0{index + 1}</span>
+              <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "26px", color: "#F2EEE5", margin: "0 0 16px" }}>{item.title}</h3>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.55)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA row */}
       <section className="cta-row">
         <div className="cta-copy">
           <div className="fade-up"><span className="kicker">Ready</span></div>
-          <h2 className="h2 fade-up" data-delay="1">Ready to know more?</h2>
+          <h2 className="h2 fade-up" data-delay="1">Every enquiry answered by hand.</h2>
           <p className="body fade-up" data-delay="2" style={{ maxWidth: "560px" }}>
-            Every enquiry is answered by hand within two working days. We will send you the full specification, lead time, and a first proposal.
+            We will send you the full specification, lead time, and a first proposal within two working days.
           </p>
         </div>
         <div className="cta-actions fade-up" data-delay="2">
-          <a className="btn btn--filled" href="/atelier#contact">Enquire about yours <span className="arrow">→</span></a>
+          <a className="btn btn--filled" href="/atelier#contact">Enquire about yours</a>
         </div>
       </section>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              { "@type": "Question", name: "What is the WooDoo Stadium 11–11?", acceptedAnswer: { "@type": "Answer", text: "A precision-engineered luxury foosball table, handbuilt in Copenhagen from brushed stainless steel 304. It weighs 150 kilograms, contains 732 individual components, and is built for permanent indoor and outdoor use." } },
-              { "@type": "Question", name: "What materials is the Stadium 11–11 made from?", acceptedAnswer: { "@type": "Answer", text: "Brushed stainless steel 304, welded into a single monocoque body. The finish is brushed, not polished." } },
-              { "@type": "Question", name: "Can the Stadium 11–11 be used outdoors?", acceptedAnswer: { "@type": "Answer", text: "Yes. It is sealed for permanent outdoor use in all weather conditions including rain, salt air, heat, and cold." } },
-            ],
-          }),
-        }}
-      />
     </>
   );
 }

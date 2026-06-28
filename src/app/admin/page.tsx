@@ -34,7 +34,7 @@ export default function AdminLoginPage() {
     <div className="admin-card admin-login-card">
       <div className="admin-card-header">
         <span className="admin-label">Admin</span>
-        <h1>WooDoo Control</h1>
+        <h1>Woodoo Control</h1>
         <p>Enter the admin password to manage content, leads, bookings, media, and settings.</p>
       </div>
       <form className="admin-form" onSubmit={handleSubmit}>

@@ -1,4 +1,4 @@
--- Supabase schema for WooDoo Stadium
+-- Supabase schema for Woodoo Stadium
 
 create table if not exists site_settings (
   id serial primary key,

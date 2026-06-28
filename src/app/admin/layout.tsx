@@ -33,7 +33,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <div className="admin-sidebar-brand">
-          <img src="/uploads/logo-dark.png" alt="WooDoo logo" />
+          <img src="/uploads/logo-dark.png" alt="Woodoo logo" />
         </div>
 
         <nav className="admin-sidebar-nav" aria-label="Administration">
@@ -58,8 +58,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <div className="admin-main">
         <div className="admin-mobile-top">
           <div className="admin-mobile-brand">
-            <img src="/uploads/logo-dark.png" alt="WooDoo logo" />
-            <span>WooDoo Admin</span>
+            <img src="/uploads/logo-dark.png" alt="Woodoo logo" />
+            <span>Woodoo Admin</span>
           </div>
 
           <details className="admin-mobile-menu">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import ImagePicker from "@/components/ImagePicker";
 
 interface Category {
   id: number;
@@ -337,14 +338,13 @@ export default function AdminConfiguratorPage() {
                         onChange={(event) => setOptions((current) => current.map((item) => (item.id === option.id ? { ...item, description: event.target.value } : item)))}
                       />
                     </label>
-                    <label className="admin-field">
-                      <span>Image URL</span>
-                      <input
-                        type="text"
-                        value={option.image_url ?? ""}
-                        onChange={(event) => setOptions((current) => current.map((item) => (item.id === option.id ? { ...item, image_url: event.target.value } : item)))}
+                    <div className="admin-field">
+                      <span>Image</span>
+                      <ImagePicker
+                        value={option.image_url}
+                        onChange={(url) => setOptions((current) => current.map((item) => (item.id === option.id ? { ...item, image_url: url || null } : item)))}
                       />
-                    </label>
+                    </div>
                     <div className="admin-field-inline-grid">
                       <label className="admin-field admin-field-inline">
                         <span>Price modifier</span>
