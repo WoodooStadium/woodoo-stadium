@@ -155,7 +155,7 @@ export default function Home() {
       <section className="double" aria-hidden="true">
         <figure className="photo">
           <Image
-            src="/uploads/woodoo_stadium_side.png"
+            src="/uploads/woodoo_stadium_side.jpg"
             alt="X-frame — profile"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -165,7 +165,7 @@ export default function Home() {
         </figure>
         <figure className="photo">
           <Image
-            src="/uploads/woodoo_stadium_top.png"
+            src="/uploads/woodoo_stadium_top.jpg"
             alt="Playing field — top view"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -299,7 +299,7 @@ export default function Home() {
           </a>
           <a className="cell-photo" href="/gallery">
             <Image
-              src="/uploads/woodoo_stadium_top.png"
+              src="/uploads/woodoo_stadium_top.jpg"
               alt="Playing field — top view"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -314,7 +314,7 @@ export default function Home() {
           </a>
           <a className="cell-photo" href="/gallery">
             <Image
-              src="/uploads/woodoo_stadium_11_11_raindrops.png"
+              src="/uploads/woodoo_stadium_11_11_raindrops.jpg"
               alt="Rain on steel"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

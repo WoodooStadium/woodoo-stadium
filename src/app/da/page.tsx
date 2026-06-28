@@ -155,7 +155,7 @@ export default function DaHome() {
       <section className="double" aria-hidden="true">
         <figure className="photo">
           <Image
-            src="/uploads/woodoo_stadium_side.png"
+            src="/uploads/woodoo_stadium_side.jpg"
             alt="X-ramme — profil"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -165,7 +165,7 @@ export default function DaHome() {
         </figure>
         <figure className="photo">
           <Image
-            src="/uploads/woodoo_stadium_top.png"
+            src="/uploads/woodoo_stadium_top.jpg"
             alt="Scoreviser — detalje i rav"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -299,7 +299,7 @@ export default function DaHome() {
           </a>
           <a className="cell-photo" href="/da/galleri">
             <Image
-              src="/uploads/woodoo_stadium_top.png"
+              src="/uploads/woodoo_stadium_top.jpg"
               alt="Spilleflade"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -314,7 +314,7 @@ export default function DaHome() {
           </a>
           <a className="cell-photo" href="/da/galleri">
             <Image
-              src="/uploads/woodoo_stadium_11_11_raindrops.png"
+              src="/uploads/woodoo_stadium_11_11_raindrops.jpg"
               alt="Regn på stål"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -344,7 +344,7 @@ export default function DaHome() {
 
           <a className="cell-photo" href="/da/galleri">
             <Image
-              src="/uploads/hero.png"
+              src="/uploads/hero.jpg"
               alt="Din beskrivelse"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
