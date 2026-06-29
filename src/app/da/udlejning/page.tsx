@@ -247,13 +247,7 @@ export default function UdlejningPage() {
           >
             Adgang til objektet. <em>Uden binding.</em>
           </h2>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "48px",
-            }}
-          >
+          <div className="two-col">
             <p
               style={{
                 fontFamily: "Inter Tight, sans-serif",
@@ -283,13 +277,7 @@ export default function UdlejningPage() {
       {/* ── To lejeformer ──────────────────────────────────────── */}
       <section style={{ background: "#0B0A08", padding: "0 48px 96px" }}>
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "32px",
-            }}
-          >
+          <div className="two-col">
             {/* Kort A — Eventleje */}
             <div
               className="fade-up"
@@ -420,14 +408,7 @@ export default function UdlejningPage() {
       {/* ── Inkluderet i lejen ─────────────────────────────────── */}
       <section style={{ background: "#0B0A08", padding: "0 48px 96px" }}>
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "80px",
-              alignItems: "start",
-            }}
-          >
+          <div className="two-col two-col--start">
             <div>
               <span style={kicker}>Inkluderet</span>
               <h2
@@ -667,16 +648,7 @@ export default function UdlejningPage() {
         style={{ background: "#E6E3DA", padding: "96px 48px" }}
         id="kontakt"
       >
-        <div
-          style={{
-            maxWidth: "1000px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "96px",
-            alignItems: "start",
-          }}
-        >
+        <div className="two-col two-col--start" style={{ maxWidth: "1000px" }}>
           <div>
             <span style={kickerLight}>Kontakt</span>
             <h2

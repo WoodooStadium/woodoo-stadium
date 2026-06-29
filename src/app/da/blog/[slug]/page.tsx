@@ -54,7 +54,7 @@ export default async function DaBlogPostPage({ params }: BlogPageProps) {
       <section className="section section--alt section--no-top">
         <div className="fade-up" style={{ maxWidth: "72ch", margin: "0 auto" }}>
           <span className="kicker">Atelier Journal</span>
-          <h1 className="h1">{post.title}</h1>
+          <h1 className="h1 post-title">{post.title}</h1>
           <p className="caption">{formatDate(post.published_at)} · {post.author ?? "Woodoo"} · {(post.tags || []).join(", ")}</p>
         </div>
       </section>

@@ -1322,6 +1322,13 @@ h1, h2, h3, h4 {
     gap: 0;
   }
 
+  /* Blog post titles: prevent long titles from overflowing */
+  .post-title {
+    font-size: clamp(28px, 8vw, 44px) !important;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
   /* Reduce cell padding on mobile */
   .ruled-grid > .cell {
     padding: 36px 24px 44px;
