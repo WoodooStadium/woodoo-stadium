@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Atelier | Woodoo Stadium",
-  description: "The Woodoo Stadium atelier in Copenhagen — design, production and showroom by appointment.",
+  description: "The Woodoo Stadium atelier in Copenhagen — design and production of the Stadium 11–11.",
 };
 
 export default function AtelierPage() {
@@ -30,7 +30,7 @@ export default function AtelierPage() {
           <div className="hero-bleed__bottom fade-up" data-delay="2">
             <div className="col-meta">
               <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>The Atelier</span>
-              <span className="val" style={{ color: "#F2EEE5" }}>Design · Production · Showroom</span>
+              <span className="val" style={{ color: "#F2EEE5" }}>Design · Production</span>
             </div>
           </div>
         </div>
@@ -156,53 +156,6 @@ export default function AtelierPage() {
               <div style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>{item.label}</div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Showroom */}
-      <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "center" }}>
-          <div style={{ position: "relative", height: "500px" }}>
-            <Image
-              src="/uploads/woodoo_foosball_original_66369433.jfif"
-              alt="Woodoo Stadium — dramatic angle"
-              fill
-              sizes="50vw"
-              style={{ objectFit: "cover", objectPosition: "center" }}
-            />
-          </div>
-          <div>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>SHOWROOM</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Visit the<br /><em>showroom.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "16px" }}>
-              The showroom is in Ishøj, south of Copenhagen. The table is there. You can see it, touch it, and play it.
-            </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "32px" }}>
-              Visits are by appointment. Every visit is answered by the people who build it.
-            </p>
-            <a
-              href="https://www.google.com/maps/search/Ishoj+Denmark"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "0 32px",
-                height: "52px",
-                background: "transparent",
-                border: "1px solid rgba(242,238,229,0.4)",
-                color: "#F2EEE5",
-                fontFamily: "Inter Tight, sans-serif",
-                fontSize: "11px",
-                textTransform: "uppercase",
-                letterSpacing: "0.28em",
-                textDecoration: "none",
-              }}
-            >
-              GET DIRECTIONS
-            </a>
-          </div>
         </div>
       </section>
 
