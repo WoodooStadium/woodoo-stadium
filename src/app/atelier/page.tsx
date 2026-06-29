@@ -159,6 +159,24 @@ export default function AtelierPage() {
         </div>
       </section>
 
+{/* Private viewing */}
+      <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
+          <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.55)", display: "block", marginBottom: "24px" }}>PRIVATE VIEWING</span>
+          <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>See the table <em>in person.</em></h2>
+          <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.72)", lineHeight: "1.8", maxWidth: "52ch", margin: "0 auto 32px" }}>
+            For serious enquiries, we can arrange a private viewing — bringing the Stadium 11–11 to your space, so you can see it, touch it, and play it before you decide.
+          </p>
+          <a 
+            className="btn btn--filled-on-dark"
+            href="#contact"
+            style={{ justifyContent: "center" }}
+          >
+            Book a viewing <span className="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
       {/* Contact */}
       <section style={{ background: "#E6E3DA", padding: "96px 48px" }} id="contact">
         <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "start" }}>

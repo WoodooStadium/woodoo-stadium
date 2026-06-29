@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Showroom | Woodoo Stadium",
-  description: "Woodoo Stadium atelier og showroom i København — design, produktion og showroom efter aftale.",
+  description: "Woodoo Stadium atelier i København — design og produktion af Stadium 11–11.",
   alternates: {
     canonical: "https://woodoo-stadium.com/da/showroom",
     languages: { en: "https://woodoo-stadium.com/atelier" },
@@ -160,6 +160,24 @@ export default function DaShowroomPage() {
               <div style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>{item.label}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Privat fremvisning */}
+      <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
+          <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.55)", display: "block", marginBottom: "24px" }}>PRIVAT FREMVISNING</span>
+          <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Se bordet <em>i virkeligheden.</em></h2>
+          <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.72)", lineHeight: "1.8", maxWidth: "52ch", margin: "0 auto 32px" }}>
+            Ved seriøse forespørgsler kan vi arrangere en privat fremvisning — vi bringer Stadium 11–11 ud til jeres lokale, så I kan se det, røre ved det og spille på det, før I beslutter jer.
+          </p>
+          <a
+            className="btn btn--filled-on-dark"
+            href="#kontakt"
+            style={{ justifyContent: "center" }}
+          >
+            Book en fremvisning <span className="arrow">→</span>
+          </a>
         </div>
       </section>
 
