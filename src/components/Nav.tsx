@@ -204,6 +204,7 @@ export default function Nav() {
   }, [drawerOpen]);
 
   return (
+    <>
     <header className="nav">
       <div className="nav__inner">
         <a href={isDanish ? "/da" : "/"} className="logo" aria-label="Woodoo Stadium">
@@ -250,37 +251,38 @@ export default function Nav() {
         </button>
       </div>
 
-      <div className={`nav__drawer ${drawerOpen ? "nav__drawer--open" : ""}`}>
-        <div className="nav__drawer-backdrop" onClick={() => setDrawerOpen(false)} />
-        <div className="nav__drawer-panel">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <LangSwitcher
-              pathname={pathname ?? "/"}
-              onNavigate={() => setDrawerOpen(false)}
-              isDark
-            />
-            <button
-              className="nav__drawer-close"
-              type="button"
+    </header>
+    <div className={`nav__drawer ${drawerOpen ? "nav__drawer--open" : ""}`}>
+      <div className="nav__drawer-backdrop" onClick={() => setDrawerOpen(false)} />
+      <div className="nav__drawer-panel">
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <LangSwitcher
+            pathname={pathname ?? "/"}
+            onNavigate={() => setDrawerOpen(false)}
+            isDark
+          />
+          <button
+            className="nav__drawer-close"
+            type="button"
+            onClick={() => setDrawerOpen(false)}
+          >
+            {isDanish ? "Luk" : "Close"}
+          </button>
+        </div>
+        <nav className="nav__drawer-links" aria-label="Mobile primary">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              data-nav={link.href}
               onClick={() => setDrawerOpen(false)}
             >
-              {isDanish ? "Luk" : "Close"}
-            </button>
-          </div>
-          <nav className="nav__drawer-links" aria-label="Mobile primary">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                data-nav={link.href}
-                onClick={() => setDrawerOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-        </div>
+              {link.label}
+            </a>
+          ))}
+        </nav>
       </div>
-    </header>
+    </div>
+    </>
   );
 }
