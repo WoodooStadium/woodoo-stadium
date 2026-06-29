@@ -77,6 +77,11 @@ const faqItems = [
     category: "Om Spillet",
   },
   {
+    question: "Hvor stammer bordfodbold fra?",
+    answer: "Oprindelsen er omdiskuteret — spillet ser ud til at være opstået flere steder i Europa nogenlunde samtidig. Det første patent på et spil med de kernefunktioner, vi kender i dag, blev indgivet i 1921 af Harold Searles Thornton i Storbritannien, efter sigende inspireret af en tændstikæske. Spanieren Alejandro Finisterre patenterede sin \"futbolín\" i Madrid i 1937, og netop den version ligner mest det moderne spil. Frankrig gør krav på arven gennem ingeniøren Lucien Rosengart, der byggede et bord i 1930'erne for at underholde sine børnebørn gennem vinteren. Navnet \"foosball\" kom senere, fra det tyske Fußball, ført til USA gennem tysk-producerede borde. Fra en stuekuriositet blev det et fast indslag i barer og billardhaller — og med tiden en konkurrencesport med egne verdensmesterskaber. Stadium 11–11 er vores videreførelse af den hundredårige arv: det samme enkle spil, bygget som et permanent objekt.",
+    category: "Om Spillet",
+  },
+  {
     question: "Er bordfodbold en officiel sport?",
     answer: "Ja. <a href='https://www.itsf.net' target='_blank' rel='noopener noreferrer'>International Table Soccer Federation (ITSF)</a> har anerkendt bordfodbold som en officiel konkurrencesport siden 2002. Det spilles i over 75 lande med verdensmesterskaber afholdt hvert år. Der er professionelle spillere, nationale hold og rangerede turneringer over hele verden.",
     category: "Om Spillet",

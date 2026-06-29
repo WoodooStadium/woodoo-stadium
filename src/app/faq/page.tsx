@@ -80,6 +80,11 @@ const fallbackFaq = [
     category: "About the Sport",
   },
   {
+    question: "Where does foosball come from?",
+    answer: "Its origins are genuinely contested — the game seems to have emerged across Europe around the same time. The first patent for a game with the core features we recognise today was filed in 1921 by Harold Searles Thornton in the United Kingdom, reportedly inspired by a box of matches. Spain's Alejandro Finisterre patented his \"futbolín\" in Madrid in 1937, and that version most closely resembles the modern game. France lays claim through engineer Lucien Rosengart, who built a table in the 1930s to entertain his grandchildren through the winter. The name \"foosball\" came later, from the German Fußball, carried into the US through German-made tables. From a parlour curiosity it became a fixture of bars and pool halls — and, eventually, a competitive sport with its own world championships. The Stadium 11–11 is our continuation of that century-long lineage: the same simple game, built as a permanent object.",
+    category: "About the Sport",
+  },
+  {
     question: "Is foosball an official sport?",
     answer: "Yes. The <a href='https://www.itsf.net' target='_blank' rel='noopener noreferrer'>International Table Soccer Federation (ITSF)</a> has recognised table football as an official competitive sport since 2002. It is played in over 75 countries, with world championships held annually. There are professional players, national teams, and ranked tournaments across Europe, the Americas, and Asia.",
     category: "About the Sport",
