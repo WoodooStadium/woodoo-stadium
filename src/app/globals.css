@@ -46,6 +46,8 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
+  max-width: 100%;
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--sans);
@@ -342,28 +344,31 @@ h1, h2, h3, h4 {
   position: fixed;
   inset: 0;
   display: none;
-  z-index: 50;
+  z-index: 1000;
 }
 .nav__drawer--open {
   display: block;
 }
 .nav__drawer-backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  background: rgba(11, 10, 8, 0.95);
+  background: rgba(11, 10, 8, 0.6);
 }
 .nav__drawer-panel {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
   background: #0B0A08;
-  color: var(--ink-on-dark);
-  padding: 32px 28px;
+  color: #F2EEE5;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 28px;
+  overflow-y: auto;
 }
 .nav__drawer-close {
   margin-left: auto;
@@ -1301,9 +1306,26 @@ h1, h2, h3, h4 {
   /* Section padding tighter */
   .section,
   .cta-row,
-  .manifesto,
+  .manifesto {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* eleven section needs tighter padding to prevent overflow */
   .eleven {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* eleven__big overflows at mobile — scale down */
+  .eleven__big {
+    font-size: clamp(120px, 40vw, 240px);
+    overflow: hidden;
+  }
+
+  /* specs rows: drop fixed 180px column, stack label above value */
+  .specs__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }

@@ -198,6 +198,11 @@ export default function Nav() {
   const isDanish = pathname?.startsWith("/da") ?? false;
   const links = isDanish ? daLinks : enLinks;
 
+  useEffect(() => {
+    document.body.style.overflow = drawerOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [drawerOpen]);
+
   return (
     <header className="nav">
       <div className="nav__inner">
