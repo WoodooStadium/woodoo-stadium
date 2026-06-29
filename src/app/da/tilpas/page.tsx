@@ -64,7 +64,6 @@ export default function DaTilpasPage() {
           </div>
           <div className="hero-bleed__bottom fade-up" data-delay="2" style={{ marginTop: "48px" }}>
             <div className="col-meta">
-              <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>Tilpas</span>
               <span className="val" style={{ color: "#F2EEE5" }}>Ét objekt. Dit at definere.</span>
             </div>
             <div />

@@ -281,6 +281,14 @@ export default function Nav() {
             </a>
           ))}
         </nav>
+        <a
+          className="btn btn--filled-on-dark"
+          href={isDanish ? "/da/showroom#kontakt" : "/atelier#contact"}
+          onClick={() => setDrawerOpen(false)}
+          style={{ marginTop: "auto", justifyContent: "center" }}
+        >
+          {isDanish ? "Forespørg" : "Enquire"} <span className="arrow">→</span>
+        </a>
       </div>
     </div>
     </>

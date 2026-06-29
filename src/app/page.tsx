@@ -101,9 +101,9 @@ export default function Home() {
 
       <section className="section section--dark section--no-top" style={{ background: "#0b0a08", padding: "80px 0" }}>
         <div className="fade-up" style={{ textAlign: "center", maxWidth: "72ch", margin: "0 auto" }}>
-          <h1 className="h1" style={{ color: "#f2eee5", marginBottom: "1rem" }}>
+          <h2 className="h1" style={{ color: "#f2eee5", marginBottom: "1rem" }}>
             The last screen-free sport.
-          </h1>
+          </h2>
           <p className="body" style={{ color: "#f2eee5", margin: "0 auto", maxWidth: "60ch" }}>
             You cannot be thinking about life's obstacles while genuinely engaged in play. You cannot doomscroll. You cannot answer emails. The ball moves. You move. Everyone in the room stops what they are doing and watches. For a few minutes — or a few hours — nothing else is available. That is not a side effect. That is the architecture of the object.
           </p>
