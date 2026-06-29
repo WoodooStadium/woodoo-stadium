@@ -350,14 +350,14 @@ h1, h2, h3, h4 {
 .nav__drawer-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(11, 10, 8, 0.82);
+  background: rgba(11, 10, 8, 0.95);
 }
 .nav__drawer-panel {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  width: min(320px, 100%);
+  width: 100%;
   background: #0B0A08;
   color: var(--ink-on-dark);
   padding: 32px 28px;
