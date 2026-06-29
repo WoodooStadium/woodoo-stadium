@@ -38,7 +38,7 @@ export default function AtelierPage() {
 
       {/* Chapter 1 — The object */}
       <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "center" }}>
+        <div className="two-col">
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>THE OBJECT</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>A design object.<br /><em>That you can also play.</em></h2>
@@ -49,7 +49,7 @@ export default function AtelierPage() {
               Clean. Consistent. Built to last, to entertain, and to bring people together. You cannot be thinking about life's obstacles while genuinely engaged in play. You cannot be doomscrolling. You cannot answer emails. For a few minutes — or a few hours — nothing else is available.
             </p>
           </div>
-          <div style={{ position: "relative", height: "560px" }}>
+          <div className="media-tall">
             <Image
               src="/uploads/close-up_of_freshly_ground_stainless_steel_surface_woodoo_stadium.png"
               alt="Fingerprints on brushed steel"
@@ -72,8 +72,8 @@ export default function AtelierPage() {
 
       {/* Chapter 2 — One stage */}
       <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "center" }}>
-          <div style={{ position: "relative", height: "560px" }}>
+        <div className="two-col">
+          <div className="media-tall">
             <Image
               src="/uploads/worn_working_hands_gripping_a_precision_steel_rod_woodoo_stadium.png"
               alt="Craftsman hands on steel rod"
@@ -109,7 +109,7 @@ export default function AtelierPage() {
 
       {/* Chapter 3 — Outdoors */}
       <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "center" }}>
+        <div className="two-col">
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>BUILT TO STAY</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>Play shouldn't be limited<br /><em>by where the table stands.</em></h2>
@@ -120,7 +120,7 @@ export default function AtelierPage() {
               A summer evening outside. A public space. A terrace. A lobby. A rainy day indoors. The same table. The same experience. Always present. Always ready.
             </p>
           </div>
-          <div style={{ position: "relative", height: "560px" }}>
+          <div className="media-tall">
             <Image
               src="/uploads/working_hands_pressing_an_angle_grinder_woodoo_stadium.png"
               alt="Craftsman at work — angle grinder"
@@ -179,7 +179,7 @@ export default function AtelierPage() {
 
       {/* Contact */}
       <section style={{ background: "#E6E3DA", padding: "96px 48px" }} id="contact">
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "start" }}>
+        <div className="two-col two-col--start">
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>CONTACT</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>Talk to<br /><em>the atelier.</em></h2>

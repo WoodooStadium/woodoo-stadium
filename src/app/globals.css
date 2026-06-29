@@ -441,6 +441,26 @@ h1, h2, h3, h4 {
   align-items: stretch;
 }
 
+/* ---------- RESPONSIVE TWO-COLUMN ---------- */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.two-col--start { align-items: start; }
+.media-tall {
+  position: relative;
+  height: 560px;
+}
+
+.grid-4-responsive { display: grid; grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .grid-4-responsive { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .grid-4-responsive { grid-template-columns: 1fr; } }
+
 /* ---------- PHOTOS ---------- */
 
 .photo { position: relative; overflow: hidden; background: var(--bg-dark); }
@@ -1329,6 +1349,22 @@ h1, h2, h3, h4 {
   .manifesto {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  /* Two-col grids stack on mobile */
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .media-tall {
+    height: 320px;
+  }
+
+  /* Inline-padded sections: tighten horizontal padding */
+  section[style*="padding: 96px 48px"],
+  section[style*="padding: 80px 48px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   /* eleven section needs tighter padding to prevent overflow */

@@ -42,7 +42,7 @@ export default function DaShowroomPage() {
 
       {/* Kapitel 1 — Objektet */}
       <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "center" }}>
+        <div className="two-col">
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>OBJEKTET</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>Et designobjekt.<br /><em>Man kan også spille på.</em></h2>
@@ -53,7 +53,7 @@ export default function DaShowroomPage() {
               Rent. Konsistent. Bygget til at vare, underholde og bringe folk sammen. Du kan ikke tænke på livets forhindringer mens du for alvor er fanget af spillet. Du kan ikke doomscrolle. Du kan ikke svare på mails. I et par minutter — eller et par timer — er intet andet tilgængeligt.
             </p>
           </div>
-          <div style={{ position: "relative", height: "560px" }}>
+          <div className="media-tall">
             <Image
               src="/uploads/close-up_of_freshly_ground_stainless_steel_surface_woodoo_stadium.png"
               alt="Fingeraftryk på børstet stål"
@@ -76,8 +76,8 @@ export default function DaShowroomPage() {
 
       {/* Kapitel 2 — Ét bord */}
       <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "center" }}>
-          <div style={{ position: "relative", height: "560px" }}>
+        <div className="two-col">
+          <div className="media-tall">
             <Image
               src="/uploads/worn_working_hands_gripping_a_precision_steel_rod_woodoo_stadium.png"
               alt="Håndværkerhænder på stålstang"
@@ -113,7 +113,7 @@ export default function DaShowroomPage() {
 
       {/* Kapitel 3 — Bygget til at blive */}
       <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "center" }}>
+        <div className="two-col">
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>BYGGET TIL AT BLIVE</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>Spil bør ikke begrænses<br /><em>af, hvor bordet står.</em></h2>
@@ -124,7 +124,7 @@ export default function DaShowroomPage() {
               En sommeraften udenfor. Et offentligt rum. En terrasse. En lobby. En regnvejrsdag indendørs. Det samme bord. Den samme oplevelse. Altid tilstede. Altid klar.
             </p>
           </div>
-          <div style={{ position: "relative", height: "560px" }}>
+          <div className="media-tall">
             <Image
               src="/uploads/working_hands_pressing_an_angle_grinder_woodoo_stadium.png"
               alt="Håndværker arbejder — vinkelsliber"
@@ -183,7 +183,7 @@ export default function DaShowroomPage() {
 
       {/* Kontakt */}
       <section style={{ background: "#E6E3DA", padding: "96px 48px" }} id="kontakt">
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "start" }}>
+        <div className="two-col two-col--start">
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>KONTAKT</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>Tal til<br /><em>atelieret.</em></h2>
