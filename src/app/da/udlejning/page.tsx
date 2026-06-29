@@ -37,7 +37,7 @@ function TableHeader({ cols }: { cols: string[] }) {
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: `2fr ${cols.slice(1).map(() => "1fr").join(" ")}`,
+        gridTemplateColumns: `2fr ${cols.slice(1).map(() => "auto").join(" ")}`,
         padding: "14px 24px",
         borderBottom: "1px solid rgba(242,238,229,0.12)",
         gap: "16px",
@@ -73,7 +73,7 @@ function TableRow({
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: `2fr ${cols.slice(1).map(() => "1fr").join(" ")}`,
+        gridTemplateColumns: `2fr ${cols.slice(1).map(() => "auto").join(" ")}`,
         padding: "18px 24px",
         borderBottom: last ? "none" : "1px solid rgba(242,238,229,0.08)",
         gap: "16px",
@@ -97,6 +97,7 @@ function TableRow({
             fontSize: "13px",
             color: i === 0 ? "rgba(242,238,229,0.62)" : "#F2EEE5",
             textAlign: "right",
+            whiteSpace: "nowrap",
           }}
         >
           {val}
