@@ -28,7 +28,7 @@ export default function DaHome() {
 
         <div className="hero-bleed__inner">
           <div className="hero-bleed__title fade-up" data-delay="1">
-            <h1 className="h1">Alle drømme har et <em>et mål.</em></h1>
+            <h1 className="h1">Alle drømme har <em>et mål.</em></h1>
           </div>
 
           <div className="hero-bleed__bottom fade-up" data-delay="3">

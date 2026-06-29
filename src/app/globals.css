@@ -382,18 +382,21 @@ h1, h2, h3, h4 {
   cursor: pointer;
 }
 .nav__drawer-links {
-  display: grid;
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 24px;
 }
 .nav__drawer-links a {
-  color: var(--ink-on-dark);
+  color: #F2EEE5 !important;
   font-family: var(--sans);
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.2;
   text-decoration: none;
+  display: block;
 }
 .nav__drawer-links a:hover {
-  color: var(--ink);
+  color: rgba(242,238,229,0.6);
 }
 
 @media (max-width: 899px) {
