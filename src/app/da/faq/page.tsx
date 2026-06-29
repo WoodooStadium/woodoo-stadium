@@ -33,7 +33,7 @@ const faqItems = [
   },
   {
     question: "Kan det brandes til vores virksomhed?",
-    answer: "Ja. Sideplader, spillebane og belysning kan bære din brandidentitet — ætset, oplyst og permanent. Ikke et klistermærke. Ikke en folie. Lavet af objektet selv. <a href='/da/erhverv'>Se erhvervsudgaver →</a>",
+    answer: "Ja. Sideplader, spillebane og belysning kan bære din brandidentitet — laserskåret, oplyst og permanent. Ikke et klistermærke. Ikke en folie. Lavet af objektet selv. <a href='/da/erhverv'>Se erhvervsudgaver →</a>",
     category: "Objektet",
   },
   {

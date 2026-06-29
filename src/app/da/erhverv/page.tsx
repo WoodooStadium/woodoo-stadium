@@ -24,7 +24,7 @@ const sectors = [
 const outcomes = [
   { number: "01", stat: "Opholdstid", description: "Folk bliver længere i rum med et socialt objekt. En lobby bliver en destination. En lounge bliver en grund til at ankomme tidligt." },
   { number: "02", stat: "Organisk rækkevidde", description: "Hvert fotografi taget i rummet inkluderer bordet. Det rejser med billeder inden det nogensinde beskrives med ord." },
-  { number: "03", stat: "Brandpermanens", description: "Din identitet er ætset og oplyst i stål — ikke trykt på en banner, ikke påsat som folie. Det er en del af objektet." },
+  { number: "03", stat: "Brandpermanens", description: "Din identitet er laserskåret og oplyst i stål — ikke trykt på en banner, ikke påsat som folie. Det er en del af objektet." },
   { number: "04", stat: "Social aktivering", description: "Du kan ikke doomscrolle mens du spiller. Folk får øjenkontakt. Samtaler begynder. Det er ikke en bivirkning — det er arkitekturen." },
 ];
 
@@ -163,7 +163,7 @@ export default function DaErhvervPage() {
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>BRANDING</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Dit brand.<br /><em>Indbygget.</em></h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "16px" }}>
-              Sideplader, spillebane, belysning — hver overflade er et lærred. Ikke et klistermærke. Ikke en folie. Ætset, oplyst og permanent.
+              Sideplader, spillebane, belysning — hver overflade er et lærred. Ikke et klistermærke. Ikke en folie. Laserskåret, oplyst og permanent.
             </p>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "16px" }}>
               Bordet leveres med et transportvognssystem til event- og aktiveringsbrug. Et valgfrit sporingschiplag er tilgængeligt til flåde- og udlejningsdeployeringer.

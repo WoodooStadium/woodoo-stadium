@@ -376,7 +376,7 @@ export default function UdlejningPage() {
                   marginBottom: "32px",
                 }}
               >
-                Dit brand, ætset og belyst i bordet. Til lobbyer, hovedkvarterer og showrooms.
+                Dit brand, laserskåret og belyst i bordet. Til lobbyer, hovedkvarterer og showrooms.
               </p>
               <div
                 style={{
