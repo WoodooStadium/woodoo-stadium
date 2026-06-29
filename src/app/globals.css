@@ -458,8 +458,20 @@ h1, h2, h3, h4 {
 }
 
 .grid-4-responsive { display: grid; grid-template-columns: repeat(4, 1fr); }
+.grid-3-responsive { display: grid; grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px) { .grid-4-responsive { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .grid-4-responsive { grid-template-columns: 1fr; } }
+
+.split-uneven { display: grid; grid-template-columns: 3fr 2fr; }
+@media (max-width: 768px) {
+  .split-uneven { grid-template-columns: 1fr; min-height: auto !important; }
+}
+
+.btn-group-stack { display: flex; flex-wrap: wrap; }
+@media (max-width: 768px) {
+  .btn-group-stack { flex-direction: column; align-items: stretch; }
+  .btn-group-stack > a { width: 100%; justify-content: center; }
+}
 
 /* ---------- PHOTOS ---------- */
 
@@ -1366,10 +1378,15 @@ h1, h2, h3, h4 {
   .media-tall {
     height: 320px;
   }
+  .grid-3-responsive,
+  .grid-4-responsive {
+    grid-template-columns: 1fr;
+  }
 
   /* Inline-padded sections: tighten horizontal padding */
   section[style*="padding: 96px 48px"],
-  section[style*="padding: 80px 48px"] {
+  section[style*="padding: 80px 48px"],
+  section[style*="padding: 0 48px"] {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }

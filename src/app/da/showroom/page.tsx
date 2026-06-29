@@ -148,7 +148,7 @@ export default function DaShowroomPage() {
 
       {/* Nøgletal */}
       <section style={{ background: "#0B0A08", padding: "0 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid rgba(242,238,229,0.1)", borderBottom: "1px solid rgba(242,238,229,0.1)" }}>
+        <div className="grid-4-responsive" style={{ maxWidth: "1400px", margin: "0 auto", borderTop: "1px solid rgba(242,238,229,0.1)", borderBottom: "1px solid rgba(242,238,229,0.1)" }}>
           {[
             { number: "732", label: "Enkeltkomponenter" },
             { number: "130", label: "Tekniske tegninger" },

@@ -134,9 +134,7 @@ export default function TheTablePage() {
         </div>
 
         <div style={{ maxWidth: "1400px", margin: "64px auto 0" }}>
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
+          <div className="grid-3-responsive" style={{
             borderTop: "1px solid rgba(242,238,229,0.12)",
             borderBottom: "1px solid rgba(242,238,229,0.12)",
             marginBottom: "48px",
@@ -177,9 +175,7 @@ export default function TheTablePage() {
       </section>
 
       <section style={{ background: "#0B0A08" }}>
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "3fr 2fr",
+        <div className="split-uneven" style={{
           minHeight: "500px",
         }}>
           <div style={{ position: "relative", minHeight: "400px" }}>

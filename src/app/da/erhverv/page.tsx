@@ -86,7 +86,7 @@ export default function DaErhvervPage() {
       </section>
 
       <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "center" }}>
+        <div className="two-col">
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>OBJEKTET</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Ikke et spil.<br /><em>Et socialt infrastrukturobjekt.</em></h2>
@@ -100,7 +100,7 @@ export default function DaErhvervPage() {
               Bygget i Danmark. 150 kilogram. 732 komponenter. Vedligeholdelsesfrit for livet.
             </p>
           </div>
-          <div style={{ position: "relative", height: "560px" }}>
+          <div className="media-tall">
             <Image
               src="/uploads/foosball_table_concrete.jpg"
               alt="Stadium 11-11 — tre-kvart visning"
@@ -118,7 +118,7 @@ export default function DaErhvervPage() {
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "16px" }}>ERHVERVSARGUMENTET</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1 }}>Hvad det gør<br /><em>for dit rum.</em></h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid rgba(242,238,229,0.1)" }}>
+          <div className="grid-4-responsive" style={{ borderTop: "1px solid rgba(242,238,229,0.1)" }}>
             {outcomes.map((item, index) => (
               <div key={item.stat} style={{ padding: "40px 32px", borderRight: index < 3 ? "1px solid rgba(242,238,229,0.1)" : "none" }}>
                 <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", display: "block", marginBottom: "20px" }}>{item.number}</span>
@@ -136,7 +136,7 @@ export default function DaErhvervPage() {
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>SEKTORER</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Hvor det hører til.</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid rgba(26,24,20,0.12)" }}>
+          <div className="grid-4-responsive" style={{ borderTop: "1px solid rgba(26,24,20,0.12)" }}>
             {sectors.map((sector, index) => (
               <div key={sector.title} style={{ padding: "40px 32px", borderRight: index % 4 !== 3 ? "1px solid rgba(26,24,20,0.12)" : "none", borderBottom: index < 4 ? "1px solid rgba(26,24,20,0.12)" : "none" }}>
                 <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(26,24,20,0.3)", display: "block", marginBottom: "20px" }}>{sector.number}</span>
@@ -149,8 +149,8 @@ export default function DaErhvervPage() {
       </section>
 
       <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "center" }}>
-          <div style={{ position: "relative", height: "520px" }}>
+        <div className="two-col">
+          <div className="media-tall">
             <Image
               src="/uploads/branded.png"
               alt="Stadium 11-11 — branded udgave"
@@ -181,7 +181,7 @@ export default function DaErhvervPage() {
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>PROCESSEN</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Sådan kommer en erhvervsudgave<br />til verden.</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid rgba(26,24,20,0.12)" }}>
+          <div className="grid-4-responsive" style={{ borderTop: "1px solid rgba(26,24,20,0.12)" }}>
             {processSteps.map((step, index) => (
               <div key={step.title} style={{ padding: "40px 32px", borderRight: index < 3 ? "1px solid rgba(26,24,20,0.12)" : "none" }}>
                 <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(26,24,20,0.3)", display: "block", marginBottom: "20px" }}>{step.number}</span>
@@ -194,7 +194,7 @@ export default function DaErhvervPage() {
       </section>
 
       <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
-        <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "96px", alignItems: "center" }}>
+        <div className="two-col">
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>NÆSTE SKRIDT</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Klar til at placere ét.</h2>
@@ -202,7 +202,7 @@ export default function DaErhvervPage() {
               Fortæl os om rummet. Vi sender et skræddersyet forslag — specifikation, leveringstid og konfigurationsmuligheder — inden for to arbejdsdage.
             </p>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8" }}>
-              Eller besøg showroomet i Ishøj, syd for København. Efter aftale.
+              Til seriøse forespørgsler kan vi arrangere en privat fremvisning — hvor vi bringer Stadium 11–11 til dig.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -224,26 +224,6 @@ export default function DaErhvervPage() {
               }}
             >
               ANMOD OM ET ERHVERVSFORSLAG
-            </a>
-            <a
-              href="/da/showroom#kontakt"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "0 32px",
-                height: "56px",
-                border: "1px solid rgba(242,238,229,0.3)",
-                background: "transparent",
-                color: "#F2EEE5",
-                fontFamily: "Inter Tight, sans-serif",
-                fontSize: "11px",
-                textTransform: "uppercase",
-                letterSpacing: "0.28em",
-                textDecoration: "none",
-              }}
-            >
-              BOOK ET SHOWROOMBESØG
             </a>
           </div>
         </div>

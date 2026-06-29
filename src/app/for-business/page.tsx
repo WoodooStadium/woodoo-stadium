@@ -205,7 +205,7 @@ export default function ForBusinessPage() {
               Tell us about the space. We will send a tailored proposal — specification, lead time, and configuration options — within two working days.
             </p>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8" }}>
-              Or visit the showroom in Ishøj, south of Copenhagen. By appointment.
+              For serious enquiries, we can arrange a private viewing — bringing the Stadium 11–11 to you.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
@@ -227,26 +227,6 @@ export default function ForBusinessPage() {
               }}
             >
               REQUEST A BUSINESS PROPOSAL
-            </a>
-            <a
-              href="/atelier#contact"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "0 32px",
-                height: "56px",
-                border: "1px solid rgba(242,238,229,0.3)",
-                background: "transparent",
-                color: "#F2EEE5",
-                fontFamily: "Inter Tight, sans-serif",
-                fontSize: "11px",
-                textTransform: "uppercase",
-                letterSpacing: "0.28em",
-                textDecoration: "none",
-              }}
-            >
-              BOOK A SHOWROOM VISIT
             </a>
           </div>
         </div>
