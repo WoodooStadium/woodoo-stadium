@@ -197,7 +197,7 @@ export default function DaErhvervPage() {
         <div className="two-col">
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>NÆSTE SKRIDT</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Klar til at placere ét.</h2>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Vi er klar, når du er.</h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "16px" }}>
               Fortæl os om rummet. Vi sender et skræddersyet forslag — specifikation, leveringstid og konfigurationsmuligheder — inden for to arbejdsdage.
             </p>
