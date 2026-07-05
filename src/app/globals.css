@@ -405,11 +405,17 @@ h1, h2, h3, h4 {
 
 @media (max-width: 899px) {
     .nav {
-      height: auto;
-      min-height: 88px;
+      height: 72px;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
     }
     .nav__inner {
       grid-template-columns: auto 1fr auto;
+      align-items: center;
+      height: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
   .nav__links,
@@ -422,7 +428,7 @@ h1, h2, h3, h4 {
     grid-column: 3;
   }
 
- .logo-img { height: 52px !important; width: auto !important; aspect-ratio: auto !important; }
+ .logo-img { height: 40px !important; width: auto !important; aspect-ratio: auto !important; max-width: none !important; }
 }
 
 /* ---------- LAYOUT ---------- */
