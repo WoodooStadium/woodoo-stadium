@@ -1415,3 +1415,38 @@ h1, h2, h3, h4 {
     gap: 4px;
   }
 }
+
+@media (max-width: 768px) {
+  /* Kill leftover desktop side-padding that squeezes stacked split content */
+  .tt-section .tt__content,
+  .craft .tt__content,
+  .split .tt__content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Let body text use full available width — reduce line-breaking */
+  .tt__content .body,
+  .craft .feat p,
+  .section--dark .body {
+    max-width: 100% !important;
+  }
+
+  /* The "screen-free sport" centered section → left-aligned on mobile for readability */
+  .section--dark [style*="text-align: center"] {
+    text-align: left !important;
+  }
+  .section--dark [style*="text-align: center"] .body,
+  .section--dark [style*="text-align: center"] p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  /* Consistent heading treatment — left aligned, full width */
+  .tt__content h2,
+  .craft h2 {
+    text-align: left;
+  }
+}

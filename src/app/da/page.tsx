@@ -115,7 +115,7 @@ export default function DaHome() {
           <div className="fade-up"><span className="kicker" data-index="N° 02">Håndværk</span></div>
           <h2 className="h2 fade-up" data-delay="1">732 beslutninger, <span className="serif-it">ingen af dem råber.</span></h2>
           <p className="body fade-up" data-delay="2">
-            Woodoo Stadium 11-11 bliver ikke samlet. Det bliver bygget — svejset, slebet, børstet, oplyst, stemt. Detaljer vi er stolte af.
+            Woodoo Stadium 11-11 bliver ikke samlet. Det bliver bygget — svejset, slebet, børstet, oplyst og stemt. Detaljer vi er stolte af.
           </p>
           <div className="craft__features fade-up" data-delay="3">
             <div className="feat">
