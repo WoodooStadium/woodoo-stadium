@@ -261,7 +261,7 @@ h1, h2, h3, h4 {
 
 /* ---------- LOGO ---------- */
 .logo { display: inline-flex; align-items: center; }
-.logo img { height: 36px; width: auto; display: block; object-fit: contain; }
+.logo img { height: 34px; width: auto; display: block; object-fit: contain; }
 .logo--footer, .logo--footer img { height: 28px; }
 .logo--lg, .logo--lg img { height: 44px; }
 
@@ -380,6 +380,10 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   font-size: 11px;
   cursor: pointer;
+  padding: 8px 4px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 .nav__drawer-links {
   display: flex;
@@ -414,7 +418,7 @@ h1, h2, h3, h4 {
     grid-column: 3;
   }
 
-  .logo img { height: 44px; width: auto; object-fit: contain; }
+  .logo img { height: 46px; width: auto; object-fit: contain; }
 }
 
 /* ---------- LAYOUT ---------- */

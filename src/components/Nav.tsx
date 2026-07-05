@@ -140,11 +140,11 @@ function LangSwitcher({
           style={{
             position: "absolute",
             top: "calc(100% + 6px)",
-            right: 0,
+            ...(isDark ? { left: 0, right: "auto" } : { right: 0 }),
             background: bg,
             border: `1px solid ${borderColor}`,
-            minWidth: "140px",
-            zIndex: 100,
+            minWidth: "160px",
+            zIndex: 200,
           }}
         >
           {languages.map((lang, i) => {
@@ -211,9 +211,10 @@ export default function Nav() {
           <Image
             src="/uploads/logo-light.png"
             alt="Woodoo Stadium"
-            width={200}
-            height={48}
+            width={220}
+            height={55}
             priority
+            style={{ height: "auto", width: "auto" }}
           />
         </a>
 
@@ -255,7 +256,7 @@ export default function Nav() {
     <div className={`nav__drawer ${drawerOpen ? "nav__drawer--open" : ""}`}>
       <div className="nav__drawer-backdrop" onClick={() => setDrawerOpen(false)} />
       <div className="nav__drawer-panel">
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingBottom: "12px", marginBottom: "8px" }}>
           <LangSwitcher
             pathname={pathname ?? "/"}
             onNavigate={() => setDrawerOpen(false)}
