@@ -261,7 +261,7 @@ h1, h2, h3, h4 {
 
 /* ---------- LOGO ---------- */
 .logo { display: inline-flex; align-items: center; }
-.logo img { height: 34px; width: auto; display: block; object-fit: contain; }
+.logo-img { height: 38px !important; width: auto !important; object-fit: contain; display: block; }
 .logo--footer, .logo--footer img { height: 28px; }
 .logo--lg, .logo--lg img { height: 44px; }
 
@@ -418,7 +418,7 @@ h1, h2, h3, h4 {
     grid-column: 3;
   }
 
-  .logo img { height: 44px; width: auto; object-fit: contain; }
+  .logo-img { height: 46px !important; width: auto !important; }
 }
 
 /* ---------- LAYOUT ---------- */
