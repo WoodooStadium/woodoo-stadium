@@ -16,7 +16,7 @@ export default function Home() {
       <section className="hero-bleed">
         <div className="hero-bleed__media">
           <Image
-            src="/uploads/foosball_table_concrete.jpg"
+            src="/uploads/WoodooStadium_foosball_table_stainless_steel_outdoor_2026_hero.jpeg"
             alt="Woodoo Stadium 11-11 — sculptural profile"
             fill
             sizes="100vw"
@@ -69,7 +69,7 @@ export default function Home() {
       <section className="tt-section split section--no-top section--dark" style={{ borderTop: "1px solid var(--rule)" }}>
         <div className="tt__media">
           <Image
-            src="/uploads/graded_made_in_denmark.jpg"
+            src="/uploads/WoodooStadium_foosball_table_stainless_steel_outdoor_2026_assenbled.jpeg"
             alt="Etched steel grille — Made in Denmark"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -155,7 +155,7 @@ export default function Home() {
       <section className="double" aria-hidden="true">
         <figure className="photo">
           <Image
-            src="/uploads/woodoo_stadium_side.jpg"
+            src="/uploads/woodoo-stadium-11-11-2026_red_team.jpeg"
             alt="X-frame — profile"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -165,7 +165,7 @@ export default function Home() {
         </figure>
         <figure className="photo">
           <Image
-            src="/uploads/woodoo_stadium_top.jpg"
+            src="/uploads/woodoo_stadium_side.jpg"
             alt="Playing field — top view"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
