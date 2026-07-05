@@ -1399,8 +1399,16 @@ h1, h2, h3, h4 {
 
   /* eleven section needs tighter padding to prevent overflow */
   .eleven {
+    padding-top: 64px;
+    padding-bottom: 64px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+  .eleven__content {
+    margin-top: 32px;
+  }
+  .eleven__quote {
+    margin-top: 24px;
   }
 
   /* eleven__big overflows at mobile — scale down */
