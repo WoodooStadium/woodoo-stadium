@@ -211,8 +211,8 @@ export default function Nav() {
           <Image
             src="/uploads/logo-light.png"
             alt="Woodoo Stadium"
-            width={160}
-            height={32}
+            width={200}
+            height={48}
             priority
           />
         </a>

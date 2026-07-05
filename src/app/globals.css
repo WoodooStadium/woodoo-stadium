@@ -260,8 +260,8 @@ h1, h2, h3, h4 {
 .tlink--on-dark.tlink--quiet:hover { color: var(--ink-on-dark); border-color: var(--ink-on-dark); }
 
 /* ---------- LOGO ---------- */
-.logo { display: inline-flex; align-items: center; height: 32px; }
-.logo img { height: 32px; width: auto; display: block; }
+.logo { display: inline-flex; align-items: center; }
+.logo img { height: 36px; width: auto; display: block; object-fit: contain; }
 .logo--footer, .logo--footer img { height: 28px; }
 .logo--lg, .logo--lg img { height: 44px; }
 
@@ -414,7 +414,7 @@ h1, h2, h3, h4 {
     grid-column: 3;
   }
 
-  .logo, .logo img { height: 40px; }
+  .logo img { height: 44px; width: auto; object-fit: contain; }
 }
 
 /* ---------- LAYOUT ---------- */

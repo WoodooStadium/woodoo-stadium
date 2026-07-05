@@ -38,7 +38,7 @@ export default function DaHome() {
             </div>
             <div className="col-meta">
               <span className="label">Materiale</span>
-              <span className="val">Børstet stål · støbt ramme</span>
+              <span className="val">Børstet stål · Fulsvejst ramme</span>
             </div>
             <div className="hero-bleed__cta">
               <a className="btn btn--filled-on-dark" href="/da/bordet">
@@ -54,14 +54,14 @@ export default function DaHome() {
           <span className="attrib__item"><span className="num">01</span>Bygget i København</span>
           <span className="attrib__item"><span className="num">02</span>Børstet rustfrit stål</span>
           <span className="attrib__item"><span className="num">03</span>Inde &amp; ude</span>
-          <span className="attrib__item"><span className="num">04</span>150 kg · svejset monocoque</span>
+          <span className="attrib__item"><span className="num">04</span>150 kg · Fuldsvejst ramme</span>
         </div>
       </section>
 
       <section className="manifesto">
         <div className="manifesto__inner fade-up">
           <h2>
-            130 tekniske tegninger. 732 enkeltkomponenter. Håndbygget i København. Ét bord. Vi kunne have gjort det mere simpelt. Det gjorde vi ikke.
+            130 tekniske tegninger, 732 enkeltkomponenter, håndbygget i København. Ét bord. Vi kunne have gjort det mere simpelt. Det gjorde vi ikke.
           </h2>
         </div>
       </section>
@@ -85,13 +85,13 @@ export default function DaHome() {
             Ikke samlet. Bygget.
           </h2>
           <p className="body fade-up" data-delay="2">
-            De fleste objekter bliver samlet. Dele ankommer. Dele forbindes. Resultatet er et produkt. Stadium 11–11 er noget andet. Det bliver svejset, slebet og stemt. Hundrede og halvtreds kilo børstet rustfrit stål, formet i én sammenhængende monocoque-krop. Forseglet permanent. Bygget til at stå udendørs i regn, varme og kulde uden at forandre sig. Der skulle 130 tekniske tegninger til at beskrive det. Det rummer 732 enkeltdele. Vi laver ét bord. Det er det.
+            De fleste objekter bliver samlet. Dele ankommer, dele forbindes og resultatet er et produkt. Stadium 11–11 er noget andet. Det bliver svejset, slebet og stemt. Hundrede og halvtreds kilo børstet rustfrit stål, konstrueret i én integreret struktur. Forseglet permanent. Bygget til at stå udendørs i regn, varme og kulde uden at forandre sig. Der skulle 130 tekniske tegninger til at beskrive det. Det rummer 732 enkeltdele. Vi laver ét bord. Det er det.
           </p>
           <div className="specs fade-up" data-delay="3">
             <div className="specs__row"><span className="label">Materiale</span><span className="val">Børstet rustfrit stål, 304</span></div>
             <div className="specs__row"><span className="label">Vægt</span><span className="val">150 kilogram</span></div>
             <div className="specs__row"><span className="label">Placering</span><span className="val">Inde &amp; ude · året rundt</span></div>
-            <div className="specs__row"><span className="label">Lys</span><span className="val">Integreret LED · bane &amp; plade</span></div>
+            <div className="specs__row"><span className="label">Lys</span><span className="val">Integreret LED · bane &amp; point-paneler</span></div>
           </div>
           <a className="tlink tlink--on-dark fade-up" data-delay="4" href="/da/bordet" style={{ alignSelf: "flex-start" }}>
             Fuld specifikation <span className="arrow">→</span>
@@ -105,7 +105,7 @@ export default function DaHome() {
             Den sidste skærmfri sport.
           </h2>
           <p className="body" style={{ color: "#f2eee5", margin: "0 auto", maxWidth: "60ch" }}>
-            Du kan ikke gå og tænke på livets forhindringer, mens du for alvor er fanget af spillet. Du kan ikke doomscrolle. Du kan ikke svare på mails. Bolden bevæger sig. Du bevæger dig. Alle i rummet stopper det, de har gang i, og kigger med. I et par minutter — eller et par timer — findes der ikke andet. Det er ikke en bivirkning. Det er selve objektets arkitektur.
+            Du kan ikke tænke på livets forhindringer, mens du for alvor er fanget af spillet. Du kan ikke doomscrolle på telefonen, svare på mails eller bekymre dig om tiden. Bolden bevæger sig. Du bevæger dig. Alle i rummet stopper op og kigger med. I et par minutter — eller et par timer — findes der ikke andet. Det er ikke en bivirkning. Det er selve objektets arkitektur.
           </p>
         </div>
       </section>
@@ -115,28 +115,28 @@ export default function DaHome() {
           <div className="fade-up"><span className="kicker" data-index="N° 02">Håndværk</span></div>
           <h2 className="h2 fade-up" data-delay="1">732 beslutninger, <span className="serif-it">ingen af dem råber.</span></h2>
           <p className="body fade-up" data-delay="2">
-            Stadium bliver ikke samlet. Det bliver bygget — svejset, slebet, børstet, oplyst, stemt. Tre detaljer, vi stille er stolte af.
+            Woodoo Stadium 11-11 bliver ikke samlet. Det bliver bygget — svejset, slebet, børstet, oplyst, stemt. Detaljer vi er stolte af.
           </p>
           <div className="craft__features fade-up" data-delay="3">
             <div className="feat">
               <span className="num">01.</span>
               <div>
                 <h4>Oplyste brandplader</h4>
-                <p>Indfældede stålpaneler, ætsede og oplyst indefra. Et ordmærke skabt af kroppen — ikke lagt ovenpå den. Synligt på tværs af et rum — usynligt i hvile.</p>
+                <p>Indfældede stålpaneler, præcisionsudskåret logo og integreret bagbelysning. Et mærke integreret i strukturen der er synligt på tværs af et rum — og usynligt når slukket.</p>
               </div>
             </div>
             <div className="feat">
               <span className="num">02.</span>
               <div>
                 <h4>Skjult elektronik</h4>
-                <p>Et soft-close-rum rummer kabler og batteri. Alt kan serviceres, intet er i syne.</p>
+                <p>Et vand-sikkert soft-close-rum rummer kabler og batteri. Alt kan serviceres, intet er i synsfeltet.</p>
               </div>
             </div>
             <div className="feat">
               <span className="num">03.</span>
               <div>
                 <h4>Akustisk krop</h4>
-                <p>Kammeret er stemt. Boldens anslag bæres fyrre meter med klangen af en anslået klokke.</p>
+                <p>Arenaen og målet er stemt. Spillet larmer minimalt mens boldens anslag i målet bæres fyrre meter med klangen af en anslået klokke.</p>
               </div>
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function DaHome() {
         <div className="fade-up" style={{ display: "flex", justifyContent: "space-between", alignItems: "end", gap: "64px", flexWrap: "wrap", marginBottom: "64px" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
             <span className="kicker" data-index="N° 03">Principper</span>
-            <h2 className="h2">Seks grunde til, at det bliver.</h2>
+            <h2 className="h2">Seks fordele, der gør en forskel.</h2>
           </div>
           <p className="lead">Til rum, der holder længere end tendenser. Og mennesker, der vælger med omtanke.</p>
         </div>
@@ -188,7 +188,7 @@ export default function DaHome() {
           <div className="cell">
             <span className="num">01.</span>
             <h3>Bygget til <span className="serif-it">at blive.</span></h3>
-            <p className="body">En svejset ramme i rustfrit stål. Et stykke arkitektur — ikke et møbel, ikke udstyr.</p>
+            <p className="body">En svejset ramme i rustfrit stål. Et arkitektonisk element i ét sammenhængende udtryk.</p>
           </div>
           <div className="cell">
             <span className="num">02.</span>
@@ -198,12 +198,12 @@ export default function DaHome() {
           <div className="cell">
             <span className="num">03.</span>
             <h3>Overalt. <span className="serif-it">Altid.</span></h3>
-            <p className="body">Forseglet til et liv indendøres såvel som udendørs. Regn, saltluft, sne. Det lever hvor det placeres.</p>
+            <p className="body">Forseglet til et liv indendøres såvel som udendørs. Regn, saltluft, sne. Det lever i sit miljø - uanset hvor det står.</p>
           </div>
           <div className="cell">
             <span className="num">04.</span>
-            <h3>Dit mærke, <span className="serif-it">i stål.</span></h3>
-            <p className="body">En identitet svejset ind i rammen og oplyst bagfra. Et stement. Ikke en påstand.</p>
+            <h3>Dit brand, <span className="serif-it">skåret i stål.</span></h3>
+            <p className="body">En identitet foankret i rammen og oplyst indefra. Det er ikke en påstand. Det er et statement.</p>
           </div>
           <div className="cell">
             <span className="num">05.</span>
@@ -213,7 +213,7 @@ export default function DaHome() {
           <div className="cell">
             <span className="num">06.</span>
             <h3>Væk fra <span className="serif-it">skærmen.</span></h3>
-            <p className="body">Folk lægger telefonen. De får øjenkontakt. De spiller. Det er hele pointen.</p>
+            <p className="body">Folk lægger telefonen. De får øjenkontakt. De spiller. Det er social interaktion - og det er hele pointen.</p>
           </div>
         </div>
       </section>
