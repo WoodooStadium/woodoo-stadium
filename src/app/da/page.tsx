@@ -100,7 +100,7 @@ export default function DaHome() {
       </section>
 
       <section className="section section--dark section--no-top" style={{ background: "#0b0a08", padding: "80px var(--pad-x)" }}>
-        <div className="fade-up" style={{ maxWidth: "72ch" }}>
+        <div className="fade-up" style={{ maxWidth: "72ch", textAlign: "center", margin: "0 auto" }}>
           <h2 className="h2" style={{ color: "#f2eee5", marginBottom: "1.5rem" }}>
             Den sidste skærmfri sport.
           </h2>
