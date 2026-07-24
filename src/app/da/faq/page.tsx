@@ -28,7 +28,7 @@ const faqItems = [
   },
   {
     question: "Hvad er det lavet af?",
-    answer: "Børstet rustfrit stål 304, svejset til én sammenhængende monocoque-krop. Finishen er børstet, ikke poleret. Rustfrit stål 304 er branchestandarden til permanent udendørs brug — anvendt i arkitektur, marinemiljøer og præcisionsingeniørkunst. Alle materialer er valgt for permanens. <a href='/da/bordet'>Fuld materialspecifikation →</a>",
+    answer: "Børstet rustfrit stål 304, svejset til én sammenhængende monocoque-krop. Finishen er glasblæst, ikke poleret. Rustfrit stål 304 er branchestandarden til permanent udendørs brug — anvendt i arkitektur, marinemiljøer og præcisionsingeniørkunst. Alle materialer er valgt for permanens. <a href='/da/bordet'>Fuld materialspecifikation →</a>",
     category: "Objektet",
   },
   {

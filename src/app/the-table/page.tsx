@@ -4,12 +4,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Stadium 11–11 | Woodoo Stadium — Luxury Stainless Steel Foosball Table",
-  description: "The Stadium 11–11 is a precision-engineered luxury foosball table. Handbuilt in Copenhagen from brushed stainless steel. 732 components. Indoor and outdoor. Made to order.",
+  description: "The Stadium 11–11 is a precision-engineered luxury foosball table. Handbuilt in Copenhagen from bead-blasted stainless steel. 732 components. Indoor and outdoor. Made to order.",
 };
 
 const anatomyItems = [
   { title: "Frame", description: "A welded monocoque. One body, not assembled. The structure is the object." },
-  { title: "Playing field", description: "Brushed stainless steel, or painted to a colour of your choosing. Illuminated from within either way." },
+  { title: "Playing field", description: "Bead-blasted stainless steel, or painted to a colour of your choosing. Illuminated from within either way." },
   { title: "Rods", description: "Calibrated steel. Custom-engineered bearings. The strike of the ball carries forty metres." },
   { title: "Players", description: "Standard cast, CNC-machined, or built to a custom design. Balanced for play, designed for presence." },
   { title: "Power", description: "Rechargeable battery, or hardwired to a cable socket. Your call." },
@@ -19,7 +19,7 @@ const anatomyItems = [
 ];
 
 const specRows: [string, string][] = [
-  ["MATERIAL", "Brushed stainless steel, 304"],
+  ["MATERIAL", "Bead-blasted stainless steel, 304"],
   ["WEIGHT", "150 kilograms"],
   ["HABITAT", "Indoor & outdoor, all seasons"],
   ["LIGHT", "Integrated LED — field & plate"],
@@ -32,7 +32,7 @@ const specRows: [string, string][] = [
 const keyFigures = [
   { number: "732", label: "Individual components" },
   { number: "130", label: "Technical drawings" },
-  { number: "150kg", label: "Brushed stainless steel" },
+  { number: "150kg", label: "Bead-blasted stainless steel" },
 ];
 
 export default function TheTablePage() {
@@ -190,7 +190,7 @@ export default function TheTablePage() {
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "64px 48px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "16px" }}>THE OBJECT</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(36px, 4vw, 64px)", color: "#F2EEE5", lineHeight: 1.05, margin: "0 0 24px" }}>One body.<br /><em>Made to order.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", margin: 0, maxWidth: "42ch" }}>A welded monocoque in brushed stainless steel. Every element considered, every element yours to specify.</p>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", margin: 0, maxWidth: "42ch" }}>A welded monocoque in bead-blasted stainless steel. Every element considered, every element yours to specify.</p>
           </div>
         </div>
         <div className="elements-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid rgba(242,238,229,0.1)" }}>

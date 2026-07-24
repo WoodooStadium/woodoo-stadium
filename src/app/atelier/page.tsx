@@ -52,7 +52,7 @@ export default function AtelierPage() {
           <div className="media-tall">
             <Image
               src="/uploads/close-up_of_freshly_ground_stainless_steel_surface_woodoo_stadium.png"
-              alt="Fingerprints on brushed steel"
+              alt="Fingerprints on bead-blasted steel"
               fill
               sizes="50vw"
               style={{ objectFit: "cover", objectPosition: "center" }}
@@ -92,7 +92,7 @@ export default function AtelierPage() {
               It can be personalised — the players, the colours, the lighting, the details. But the feeling is always the same. The same atmosphere. The same stadium. Many expressions of one object.
             </p>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8" }}>
-              732 individual components. 130 engineering drawings. 150 kilograms of brushed stainless steel. Built by hand in Copenhagen. Made to order. Built once, to last permanently.
+              732 individual components. 130 engineering drawings. 150 kilograms of bead-blasted stainless steel. Built by hand in Copenhagen. Made to order. Built once, to last permanently.
             </p>
           </div>
         </div>
@@ -148,7 +148,7 @@ export default function AtelierPage() {
           {[
             { number: "732", label: "Individual components" },
             { number: "130", label: "Technical drawings" },
-            { number: "150kg", label: "Brushed stainless steel" },
+            { number: "150kg", label: "Bead-blasted stainless steel" },
             { number: "1", label: "Table. Made to order." },
           ].map((item, i) => (
             <div key={item.number} style={{ padding: "40px 32px", borderRight: i < 3 ? "1px solid rgba(242,238,229,0.1)" : "none", textAlign: "center" }}>

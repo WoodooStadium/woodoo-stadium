@@ -6,7 +6,7 @@ import FaqClient from "./FaqClient";
 const fallbackFaq = [
   {
     question: "What is the Woodoo Stadium 11–11?",
-    answer: "A precision-engineered social design object. One table, handbuilt in Copenhagen from brushed stainless steel 304. It weighs 150 kilograms, contains 732 individual components, and is built for permanent indoor and outdoor use. It is not a game with a design problem solved — it is a social object that changes the atmosphere of a room. <a href='/the-table'>See the full specification →</a>",
+    answer: "A precision-engineered social design object. One table, handbuilt in Copenhagen from bead-blasted stainless steel 304. It weighs 150 kilograms, contains 732 individual components, and is built for permanent indoor and outdoor use. It is not a game with a design problem solved — it is a social object that changes the atmosphere of a room. <a href='/the-table'>See the full specification →</a>",
     category: "The Object",
   },
   {
@@ -26,7 +26,7 @@ const fallbackFaq = [
   },
   {
     question: "What materials is it made from?",
-    answer: "Brushed stainless steel 304, welded into a single monocoque body. The finish is brushed, not polished. <a href='https://en.wikipedia.org/wiki/SAE_304_stainless_steel' target='_blank' rel='noopener noreferrer'>Grade 304 stainless steel</a> is the industry standard for permanent outdoor use — used in architecture, marine environments, and precision engineering. All materials are selected for permanence — indoors and outdoors, for life. <a href='/the-table'>Full material specification →</a>",
+    answer: "Bead-blasted stainless steel 304, welded into a single monocoque body. The finish is brushed, not polished. <a href='https://en.wikipedia.org/wiki/SAE_304_stainless_steel' target='_blank' rel='noopener noreferrer'>Grade 304 stainless steel</a> is the industry standard for permanent outdoor use — used in architecture, marine environments, and precision engineering. All materials are selected for permanence — indoors and outdoors, for life. <a href='/the-table'>Full material specification →</a>",
     category: "The Object",
   },
   {
@@ -51,7 +51,7 @@ const fallbackFaq = [
   },
   {
     question: "What happens when it rains?",
-    answer: "Nothing. The table is built for it. Brushed stainless steel 304, welded into a single monocoque body, sealed for all weather. It stays where it is placed. <a href='/the-table'>Read more about the materials →</a>",
+    answer: "Nothing. The table is built for it. Bead-blasted stainless steel 304, welded into a single monocoque body, sealed for all weather. It stays where it is placed. <a href='/the-table'>Read more about the materials →</a>",
     category: "Use & Placement",
   },
   {
@@ -126,7 +126,7 @@ const fallbackFaq = [
   },
   {
     question: "How does the Stadium 11–11 compare to professional tables?",
-    answer: "The Stadium 11–11 is built to meet and exceed professional playing standards — calibrated steel rods, custom-engineered bearings, a true playing surface, and balanced figures. Where it differs from traditional tournament tables is in permanence and material: brushed stainless steel 304, welded monocoque construction, sealed for outdoor use in all conditions. Most professional tables are not built to last outdoors for decades. The Stadium 11–11 is. <a href='/the-table'>Full comparison and specification →</a>",
+    answer: "The Stadium 11–11 is built to meet and exceed professional playing standards — calibrated steel rods, custom-engineered bearings, a true playing surface, and balanced figures. Where it differs from traditional tournament tables is in permanence and material: bead-blasted stainless steel 304, welded monocoque construction, sealed for outdoor use in all conditions. Most professional tables are not built to last outdoors for decades. The Stadium 11–11 is. <a href='/the-table'>Full comparison and specification →</a>",
     category: "About the Sport",
   },
   {
@@ -136,7 +136,7 @@ const fallbackFaq = [
   },
   {
     question: "Can foosball be played outdoors?",
-    answer: "With most tables, no. Wood swells. Painted metal rusts. MDF warps. Standard tables are not built for weather. The Stadium 11–11 is the exception — brushed stainless steel 304, welded and sealed for permanent outdoor placement in rain, salt air, heat, and cold. It does not need shelter. It does not need to be brought inside. It stays where it is placed. <a href='/the-table'>See the outdoor specification →</a>",
+    answer: "With most tables, no. Wood swells. Painted metal rusts. MDF warps. Standard tables are not built for weather. The Stadium 11–11 is the exception — bead-blasted stainless steel 304, welded and sealed for permanent outdoor placement in rain, salt air, heat, and cold. It does not need shelter. It does not need to be brought inside. It stays where it is placed. <a href='/the-table'>See the outdoor specification →</a>",
     category: "About the Sport",
   },
   {
@@ -196,7 +196,7 @@ const fallbackFaq = [
   },
   {
     question: "Can a foosball table be placed on a rooftop or outdoor terrace?",
-    answer: "Most cannot. Standard foosball tables are built from wood, MDF, or painted metal — materials that warp, rust, and degrade in outdoor conditions. The Stadium 11–11 is the exception. Built from brushed stainless steel 304 and sealed for permanent outdoor use, it can be placed on a rooftop, terrace, poolside, or in a public park. It does not need shelter. It does not need to be brought inside. It is made to stay present. <a href='/the-table'>See the outdoor specification →</a>",
+    answer: "Most cannot. Standard foosball tables are built from wood, MDF, or painted metal — materials that warp, rust, and degrade in outdoor conditions. The Stadium 11–11 is the exception. Built from bead-blasted stainless steel 304 and sealed for permanent outdoor use, it can be placed on a rooftop, terrace, poolside, or in a public park. It does not need shelter. It does not need to be brought inside. It is made to stay present. <a href='/the-table'>See the outdoor specification →</a>",
     category: "For Hotels & Hospitality",
   },
   {

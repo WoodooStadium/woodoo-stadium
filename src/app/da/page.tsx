@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Woodoo Stadium 11–11 | Luksus bordfodboldbord håndbygget i København",
-  description: "Luksus bordfodboldbord håndbygget i København. Børstet rustfrit stål — indendørs & udendørs, året rundt. Stadium 11–11 fra Woodoo Stadium.",
+  description: "Luksus bordfodboldbord håndbygget i København. Glasblæst rustfrit stål — indendørs & udendørs, året rundt. Stadium 11–11 fra Woodoo Stadium.",
   alternates: {
     canonical: "https://woodoo-stadium.com/da",
     languages: { en: "https://woodoo-stadium.com/" },
@@ -38,7 +38,7 @@ export default function DaHome() {
             </div>
             <div className="col-meta">
               <span className="label">Materiale</span>
-              <span className="val">Børstet stål · Fulsvejst ramme</span>
+              <span className="val">Glasblæst stål · Fulsvejst ramme</span>
             </div>
             <div className="hero-bleed__cta">
               <a className="btn btn--filled-on-dark" href="/da/bordet">
@@ -52,7 +52,7 @@ export default function DaHome() {
       <section className="attrib" aria-label="Kort fortalt">
         <div className="attrib__inner">
           <span className="attrib__item"><span className="num">01</span>Bygget i København</span>
-          <span className="attrib__item"><span className="num">02</span>Børstet rustfrit stål</span>
+          <span className="attrib__item"><span className="num">02</span>Glasblæst rustfrit stål</span>
           <span className="attrib__item"><span className="num">03</span>Inde &amp; ude</span>
           <span className="attrib__item"><span className="num">04</span>150 kg · Fuldsvejst ramme</span>
         </div>
@@ -85,10 +85,10 @@ export default function DaHome() {
             Ikke samlet. Bygget.
           </h2>
           <p className="body fade-up" data-delay="2">
-            De fleste objekter bliver samlet. Dele ankommer, dele forbindes og resultatet er et produkt. Stadium 11–11 er noget andet. Det bliver svejset, slebet og stemt. Hundrede og halvtreds kilo børstet rustfrit stål, konstrueret i én integreret struktur. Forseglet permanent. Bygget til at stå udendørs i regn, varme og kulde uden at forandre sig. Der skulle 130 tekniske tegninger til at beskrive det. Det rummer 732 enkeltdele. Vi laver ét bord. Det er det.
+            De fleste objekter bliver samlet. Dele ankommer, dele forbindes og resultatet er et produkt. Stadium 11–11 er noget andet. Det bliver svejset, slebet og stemt. Hundrede og halvtreds kilo glasblæst rustfrit stål, konstrueret i én integreret struktur. Forseglet permanent. Bygget til at stå udendørs i regn, varme og kulde uden at forandre sig. Der skulle 130 tekniske tegninger til at beskrive det. Det rummer 732 enkeltdele. Vi laver ét bord. Det er det.
           </p>
           <div className="specs fade-up" data-delay="3">
-            <div className="specs__row"><span className="label">Materiale</span><span className="val">Børstet rustfrit stål, 304</span></div>
+            <div className="specs__row"><span className="label">Materiale</span><span className="val">Glasblæst rustfrit stål, 304</span></div>
             <div className="specs__row"><span className="label">Vægt</span><span className="val">150 kilogram</span></div>
             <div className="specs__row"><span className="label">Placering</span><span className="val">Inde &amp; ude · året rundt</span></div>
             <div className="specs__row"><span className="label">Lys</span><span className="val">Integreret LED · bane &amp; point-paneler</span></div>

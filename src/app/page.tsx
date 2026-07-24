@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Woodoo Stadium 11–11 | Luxury Foosball Table Handbuilt in Copenhagen",
-  description: "Luxury foosball table handbuilt in Copenhagen. Brushed stainless steel — indoor & outdoor, all year round. Stadium 11–11 by Woodoo Stadium.",
+  description: "Luxury foosball table handbuilt in Copenhagen. Bead-blasted stainless steel — indoor & outdoor, all year round. Stadium 11–11 by Woodoo Stadium.",
   alternates: {
     canonical: "https://woodoo-stadium.com/",
     languages: { da: "https://woodoo-stadium.com/da" },
@@ -38,7 +38,7 @@ export default function Home() {
             </div>
             <div className="col-meta">
               <span className="label">Material</span>
-              <span className="val">Brushed steel · cast frame</span>
+              <span className="val">Bead-blasted steel · cast frame</span>
             </div>
             <div className="hero-bleed__cta">
               <a className="btn btn--filled-on-dark" href="/the-table">
@@ -52,7 +52,7 @@ export default function Home() {
       <section className="attrib" aria-label="At a glance">
         <div className="attrib__inner">
           <span className="attrib__item"><span className="num">01</span>Made in Copenhagen</span>
-          <span className="attrib__item"><span className="num">02</span>Brushed Stainless Steel</span>
+          <span className="attrib__item"><span className="num">02</span>Bead-blasted Stainless Steel</span>
           <span className="attrib__item"><span className="num">03</span>Indoor &amp; Outdoor</span>
           <span className="attrib__item"><span className="num">04</span>150 kg · Welded Monocoque</span>
         </div>
@@ -85,10 +85,10 @@ export default function Home() {
             Not assembled. Built.
           </h2>
           <p className="body fade-up" data-delay="2">
-            Most objects are assembled. Parts arrive. Parts are joined. The result is a product. The Stadium 11–11 is different. It is welded, ground, and tuned. One hundred and fifty kilograms of brushed stainless steel, formed in a single monocoque body. Sealed permanently. Built to stand outdoors in rain, heat, and cold without changing. It took 130 engineering drawings to describe it. It contains 732 individual parts. We make one table. This is it.
+            Most objects are assembled. Parts arrive. Parts are joined. The result is a product. The Stadium 11–11 is different. It is welded, ground, and tuned. One hundred and fifty kilograms of bead-blasted stainless steel, formed in a single monocoque body. Sealed permanently. Built to stand outdoors in rain, heat, and cold without changing. It took 130 engineering drawings to describe it. It contains 732 individual parts. We make one table. This is it.
           </p>
           <div className="specs fade-up" data-delay="3">
-            <div className="specs__row"><span className="label">Material</span><span className="val">Brushed stainless steel, 304</span></div>
+            <div className="specs__row"><span className="label">Material</span><span className="val">Bead-blasted stainless steel, 304</span></div>
             <div className="specs__row"><span className="label">Weight</span><span className="val">150 kilograms</span></div>
             <div className="specs__row"><span className="label">Habitat</span><span className="val">Indoor &amp; outdoor · all seasons</span></div>
             <div className="specs__row"><span className="label">Light</span><span className="val">Integrated LED · field &amp; plate</span></div>

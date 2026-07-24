@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Stadium 11–11 | Woodoo Stadium — Luksus rustfrit stål bordfodboldbord",
-  description: "Stadium 11–11 er et præcisionsingeniøreret luksus bordfodboldbord. Håndbygget i København af børstet rustfrit stål. 732 komponenter. Inde og ude. Lavet til ordre.",
+  description: "Stadium 11–11 er et præcisionsingeniøreret luksus bordfodboldbord. Håndbygget i København af glasblæst rustfrit stål. 732 komponenter. Inde og ude. Lavet til ordre.",
   alternates: {
     canonical: "https://woodoo-stadium.com/da/bordet",
     languages: { en: "https://woodoo-stadium.com/the-table" },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const anatomyItems = [
   { title: "Ramme", description: "En svejset monocoque. Én konstruktion, ikke samlet. Strukturen er objektet." },
-  { title: "Spillebane", description: "Børstet rustfrit stål, eller malet i en farve efter dit valg. Oplyst indefra under alle omstændigheder." },
+  { title: "Spillebane", description: "Glasblæst rustfrit stål, eller malet i en farve efter dit valg. Oplyst indefra under alle omstændigheder." },
   { title: "Stænger", description: "Kalibreret stål. Specialudviklede lejer. Boldens anslag bæres fyrre meter." },
   { title: "Spillere", description: "Standard støbt, CNC-bearbejdet, eller bygget til et custom design. Afbalanceret til spil, designet til tilstedeværelse." },
   { title: "Strøm", description: "Genopladeligt batteri, eller hardwired til en kabelboks. Dit valg." },
@@ -23,19 +23,19 @@ const anatomyItems = [
 ];
 
 const specRows: [string, string][] = [
-  ["MATERIALE", "Børstet rustfrit stål, 304"],
+  ["MATERIALE", "Glasblæst rustfrit stål, 304"],
   ["VÆGT", "150 kilogram"],
   ["PLACERING", "Inde & ude, alle årstider"],
   ["LYS", "Integreret LED — bane & point"],
   ["KOMPONENTER", "732 enkeltdele"],
   ["TEGNINGER", "130 tekniske tegninger"],
-  ["FINISH", "Børstet stål"],
+  ["FINISH", "Glasblæst stål"],
 ];
 
 const keyFigures = [
   { number: "732", label: "Enkeltkomponenter" },
   { number: "130", label: "Tekniske tegninger" },
-  { number: "150kg", label: "Børstet rustfrit stål" },
+  { number: "150kg", label: "Glasblæst rustfrit stål" },
 ];
 
 export default function DaBordetPage() {
@@ -192,7 +192,7 @@ export default function DaBordetPage() {
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "64px 48px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "16px" }}>OBJEKTET</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(36px, 4vw, 64px)", color: "#F2EEE5", lineHeight: 1.05, margin: "0 0 24px" }}>Én konstruktion.<br /><em>Lavet individuelt.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", margin: 0, maxWidth: "42ch" }}>En svejset monocoque i børstet rustfrit stål. Hvert element er overvejet, hvisse elementer er dit at specificere.</p>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", margin: 0, maxWidth: "42ch" }}>En svejset monocoque i glasblæst rustfrit stål. Hvert element er overvejet, hvisse elementer er dit at specificere.</p>
           </div>
         </div>
         <div className="elements-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid rgba(242,238,229,0.1)" }}>

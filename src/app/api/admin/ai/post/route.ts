@@ -8,7 +8,7 @@ Brand facts:
 - 732 individual components
 - 130 engineering drawings
 - 150 kilograms
-- Brushed stainless steel 304
+- Bead-blasted stainless steel 304
 - Made in Copenhagen, Denmark
 - Indoor and outdoor, all seasons
 - One table, made to order

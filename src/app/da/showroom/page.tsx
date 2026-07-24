@@ -56,7 +56,7 @@ export default function DaShowroomPage() {
           <div className="media-tall">
             <Image
               src="/uploads/close-up_of_freshly_ground_stainless_steel_surface_woodoo_stadium.png"
-              alt="Fingeraftryk på børstet stål"
+              alt="Fingeraftryk på glasblæst stål"
               fill
               sizes="50vw"
               style={{ objectFit: "cover", objectPosition: "center" }}
@@ -96,7 +96,7 @@ export default function DaShowroomPage() {
               Det kan personliggøres — spillerne, farverne, belysningen, detaljerne. Men følelsen er altid den samme. Den samme atmosfære. Det samme stadion. Mange udtryk af ét objekt.
             </p>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8" }}>
-              732 enkeltkomponenter. 130 tekniske tegninger. 150 kilogram børstet rustfrit stål. Bygget i hånden i København. Lavet til ordre. Bygget én gang, til at holde permanent.
+              732 enkeltkomponenter. 130 tekniske tegninger. 150 kilogram glasblæst rustfrit stål. Bygget i hånden i København. Lavet til ordre. Bygget én gang, til at holde permanent.
             </p>
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function DaShowroomPage() {
           {[
             { number: "732", label: "Enkeltkomponenter" },
             { number: "130", label: "Tekniske tegninger" },
-            { number: "150kg", label: "Børstet rustfrit stål" },
+            { number: "150kg", label: "Glasblæst rustfrit stål" },
             { number: "1", label: "Bord. Lavet til ordre." },
           ].map((item, i) => (
             <div key={item.number} style={{ padding: "40px 32px", borderRight: i < 3 ? "1px solid rgba(242,238,229,0.1)" : "none", textAlign: "center" }}>
