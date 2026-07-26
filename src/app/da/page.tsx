@@ -104,7 +104,7 @@ export default function DaHome() {
           <h2 className="h2" style={{ color: "#f2eee5", marginBottom: "1.5rem" }}>
             Den sidste skærmfri sport.
           </h2>
-          <p className="body" style={{ color: "#f2eee5" }}>
+          <p className="body" style={{ color: "#f2eee5", textAlign: "center", margin: "0 auto" }}>
             Du kan ikke tænke på livets forhindringer, mens du for alvor er fanget af spillet. Du kan ikke doomscrolle på telefonen, svare på mails eller bekymre dig om tiden. Bolden bevæger sig. Du bevæger dig. Alle i rummet stopper op og kigger med. I et par minutter — eller et par timer — findes der ikke andet. Det er ikke en bivirkning. Det er selve objektets arkitektur.
           </p>
         </div>
