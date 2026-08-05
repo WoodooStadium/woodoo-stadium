@@ -25,7 +25,7 @@ const outcomes = [
 ];
 
 const processSteps = [
-  { number: "01", title: "Enquire", description: "Tell us about your project and the room you are imagining. Every enquiry is answered by hand within two working days." },
+  { number: "01", title: "Enquire", description: "Tell us about your project and the room you are imagining. Every enquiry is answered personally within two working days." },
   { number: "02", title: "Configure", description: "Choose finishes, branding, lighting and bespoke details. A tailored proposal follows." },
   { number: "03", title: "Produce", description: "The table is built, tested, and documented. You receive progress updates throughout production." },
   { number: "04", title: "Place", description: "A finished object arrives ready to be placed and played. Installation guidance included." },

@@ -215,7 +215,7 @@ export default function TheTablePage() {
       <section className="cta-row">
         <div className="cta-copy">
           <div className="fade-up"><span className="kicker">Ready</span></div>
-          <h2 className="h2 fade-up" data-delay="1">Every enquiry answered by hand.</h2>
+          <h2 className="h2 fade-up" data-delay="1">Every enquiry answered personally.</h2>
           <p className="body fade-up" data-delay="2" style={{ maxWidth: "560px" }}>
             We will send you the full specification, lead time, and a first proposal within two working days.
           </p>

@@ -109,7 +109,7 @@ export default function CustomisePage() {
           <span className="kicker">Bespoke</span>
           <h2 className="h2" style={{ marginTop: "16px" }}>Something completely yours.</h2>
           <p className="body" style={{ marginTop: "16px", maxWidth: "52ch" }}>
-            No category covers everything. Some commissions begin with a conversation, a sketch, a single constraint. Every enquiry is answered by hand.
+            No category covers everything. Some commissions begin with a conversation, a sketch, a single constraint. Every enquiry is answered personally.
           </p>
           <a
             className="btn btn--filled-on-dark"

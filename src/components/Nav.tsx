@@ -4,20 +4,31 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-const enLinks = [
+type NavChild = { href: string; label: string };
+type NavLink = { href: string; label: string; children?: NavChild[] };
+
+const enLinks: NavLink[] = [
   { href: "/the-table", label: "The Table" },
   { href: "/customise", label: "Customise" },
-  { href: "/for-business", label: "For Business" },
+  {
+    href: "/for-business",
+    label: "For Business",
+    children: [{ href: "/for-business/events", label: "Events & Agencies" }],
+  },
   { href: "/gallery", label: "Gallery" },
   { href: "/atelier", label: "Atelier" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
 ];
 
-const daLinks = [
+const daLinks: NavLink[] = [
   { href: "/da/bordet", label: "Bordet" },
   { href: "/da/tilpas", label: "Specialbygget" },
-  { href: "/da/erhverv", label: "Erhverv" },
+  {
+    href: "/da/erhverv",
+    label: "Erhverv",
+    children: [{ href: "/da/erhverv/events", label: "Events & Bureauer" }],
+  },
   { href: "/da/galleri", label: "Galleri" },
   { href: "/da/udlejning", label: "Udlejning" },
   { href: "/da/showroom", label: "Showroom" },
@@ -25,7 +36,6 @@ const daLinks = [
   { href: "/da/faq", label: "FAQ" },
 ];
 
-// To add a new language: add an entry here and extend getUrlInLang below
 const languages = [
   { code: "en", label: "EN", name: "English" },
   { code: "da", label: "DA", name: "Dansk" },
@@ -36,6 +46,7 @@ const EN_TO_DA: Record<string, string> = {
   "/the-table": "/da/bordet",
   "/customise": "/da/tilpas",
   "/for-business": "/da/erhverv",
+  "/for-business/events": "/da/erhverv/events",
   "/gallery": "/da/galleri",
   "/atelier": "/da/showroom",
   "/faq": "/da/faq",
@@ -192,8 +203,79 @@ function LangSwitcher({
   );
 }
 
+function NavDropdown({ link }: { link: NavLink & { children: NavChild[] } }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    if (open) document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [open]);
+
+  useEffect(() => {
+    function handleOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", handleOutside);
+    return () => document.removeEventListener("mousedown", handleOutside);
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="nav__dropdown"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <a
+        href={link.href}
+        data-nav={link.href}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        onFocus={() => setOpen(true)}
+        onBlur={(e) => {
+          if (!ref.current?.contains(e.relatedTarget as Node)) setOpen(false);
+        }}
+      >
+        {link.label}
+        <svg
+          width="8"
+          height="5"
+          viewBox="0 0 8 5"
+          fill="none"
+          style={{
+            marginLeft: "4px",
+            display: "inline-block",
+            verticalAlign: "middle",
+            opacity: 0.45,
+            transform: open ? "rotate(180deg)" : "none",
+            transition: "transform 0.2s",
+          }}
+        >
+          <path d="M1 1L4 4L7 1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </a>
+      {open && (
+        <div className="nav__dropdown-panel" role="menu">
+          <div className="nav__dropdown-panel__inner">
+            {link.children.map((child) => (
+              <a key={child.href} href={child.href} role="menuitem">
+                {child.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Nav() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const pathname = usePathname();
   const isDanish = pathname?.startsWith("/da") ?? false;
   const links = isDanish ? daLinks : enLinks;
@@ -219,11 +301,15 @@ export default function Nav() {
         </a>
 
         <nav className="nav__links" aria-label="Primary">
-          {links.map((link) => (
-            <a key={link.href} href={link.href} data-nav={link.href}>
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.children ? (
+              <NavDropdown key={link.href} link={link as NavLink & { children: NavChild[] }} />
+            ) : (
+              <a key={link.href} href={link.href} data-nav={link.href}>
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
 
         <div className="nav__cta">
@@ -251,8 +337,8 @@ export default function Nav() {
           <span />
         </button>
       </div>
-
     </header>
+
     <div className={`nav__drawer ${drawerOpen ? "nav__drawer--open" : ""}`}>
       <div className="nav__drawer-backdrop" onClick={() => setDrawerOpen(false)} />
       <div className="nav__drawer-panel">
@@ -271,16 +357,73 @@ export default function Nav() {
           </button>
         </div>
         <nav className="nav__drawer-links" aria-label="Mobile primary">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              data-nav={link.href}
-              onClick={() => setDrawerOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.children ? (
+              <div key={link.href}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
+                  <a
+                    href={link.href}
+                    data-nav={link.href}
+                    onClick={() => setDrawerOpen(false)}
+                    style={{ flex: 1 }}
+                  >
+                    {link.label}
+                  </a>
+                  <button
+                    type="button"
+                    aria-expanded={openAccordion === link.href}
+                    aria-label={`${openAccordion === link.href ? (isDanish ? "Luk" : "Close") : (isDanish ? "Vis" : "Show")} under-sider for ${link.label}`}
+                    onClick={() => setOpenAccordion(openAccordion === link.href ? null : link.href)}
+                    style={{
+                      background: "transparent",
+                      border: 0,
+                      padding: "8px",
+                      cursor: "pointer",
+                      color: "#F2EEE5",
+                      display: "flex",
+                      alignItems: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <svg
+                      width="12"
+                      height="8"
+                      viewBox="0 0 8 5"
+                      fill="none"
+                      style={{
+                        transform: openAccordion === link.href ? "rotate(180deg)" : "none",
+                        transition: "transform 0.2s",
+                      }}
+                    >
+                      <path d="M1 1L4 4L7 1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                {openAccordion === link.href && (
+                  <div className="nav__drawer-sub-links">
+                    {link.children.map((child) => (
+                      <a
+                        key={child.href}
+                        href={child.href}
+                        onClick={() => setDrawerOpen(false)}
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                data-nav={link.href}
+                onClick={() => setDrawerOpen(false)}
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
         <a
           className="btn btn--filled-on-dark"

@@ -43,7 +43,7 @@ const faqItems = [
   },
   {
     question: "Hvordan forespørger jeg?",
-    answer: "Brug forespørgselsformularen på hjemmesiden. Alle forespørgsler besvares i hånden inden for to arbejdsdage. Vi sender dig den fulde specifikation, leveringstid og et første forslag. <a href='/da/showroom#kontakt'>Send en forespørgsel →</a>",
+    answer: "Brug forespørgselsformularen på hjemmesiden. Alle forespørgsler besvares personligt inden for to arbejdsdage. Vi sender dig den fulde specifikation, leveringstid og et første forslag. <a href='/da/showroom#kontakt'>Send en forespørgsel →</a>",
     category: "Objektet",
   },
   {
@@ -174,7 +174,7 @@ export default function DaFaqPage() {
           <div className="fade-up"><span className="kicker">Stadig nysgerrig?</span></div>
           <h2 className="h2 fade-up" data-delay="1">Spørg os direkte.</h2>
           <p className="body fade-up" data-delay="2" style={{ maxWidth: "480px" }}>
-            Alle forespørgsler besvares i hånden inden for to arbejdsdage.
+            Alle forespørgsler besvares personligt inden for to arbejdsdage.
           </p>
         </div>
         <div className="cta-actions fade-up" data-delay="2">

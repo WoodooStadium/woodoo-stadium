@@ -184,7 +184,7 @@ export default function AtelierPage() {
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>CONTACT</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>Talk to<br /><em>the atelier.</em></h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8", marginBottom: "16px" }}>
-              Every enquiry is answered by hand within two working days. Tell us about your project, your space, or your question.
+              Every enquiry is answered personally within two working days. Tell us about your project, your space, or your question.
             </p>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8" }}>
               We will send you the full specification, lead time, and a first proposal.

@@ -41,7 +41,7 @@ const fallbackFaq = [
   },
   {
     question: "How do I enquire?",
-    answer: "Use the enquiry form on this site. Every enquiry is answered by hand within two working days. We will send you the full specification, lead time, and a first proposal. <a href='/atelier#contact'>Send an enquiry →</a>",
+    answer: "Use the enquiry form on this site. Every enquiry is answered personally within two working days. We will send you the full specification, lead time, and a first proposal. <a href='/atelier#contact'>Send an enquiry →</a>",
     category: "The Object",
   },
   {
@@ -285,7 +285,7 @@ export default async function FAQPage() {
           <div className="fade-up"><span className="kicker">Still curious?</span></div>
           <h2 className="h2 fade-up" data-delay="1">Ask us directly.</h2>
           <p className="body fade-up" data-delay="2" style={{ maxWidth: "480px" }}>
-            Every enquiry is answered by hand within two working days.
+            Every enquiry is answered personally within two working days.
           </p>
         </div>
         <div className="cta-actions fade-up" data-delay="2">

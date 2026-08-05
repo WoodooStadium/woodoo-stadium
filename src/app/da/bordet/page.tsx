@@ -19,17 +19,17 @@ const anatomyItems = [
   { title: "Strøm", description: "Genopladeligt batteri, eller hardwired til en kabelboks. Dit valg." },
   { title: "Belysning", description: "Integreret i bordet. Oplyst point og bane. Hvidt eller varmt lys på banen, pointlys efter dit valg" },
   { title: "Brandplader", description: "Indfældet og oplyst. Kan udskiftes efter behov" },
-  { title: "Folieprint", description: "Et valgfrit lag. Trykt, påsat, aftagelig." },
+  { title: "Folieprint & Lakering", description: "Et valgfrit lag. Trykt, påsat & aftagelig - eller påført, hærdet & permanent." },
 ];
 
 const specRows: [string, string][] = [
   ["MATERIALE", "Glasblæst rustfrit stål, 304"],
-  ["VÆGT", "150 kilogram"],
+  ["VÆGT", "ca. 150 kg."],
   ["PLACERING", "Inde & ude, alle årstider"],
-  ["LYS", "Integreret LED — bane & point"],
-  ["KOMPONENTER", "732 enkeltdele"],
-  ["TEGNINGER", "130 tekniske tegninger"],
-  ["FINISH", "Glasblæst stål"],
+  ["LYS", "Mulighed for integreret LED — bane, point og brandplader"],
+  ["KOMPONENTER", "732 enkeltdele. Leveret i sin endelige helhed."],
+  ["TEGNINGER", "130 tekniske tegninger. Én sides brugsvejledning."],
+  ["FINISH", "Glasblæst stål - lakering mulig efter ønske."],
 ];
 
 const keyFigures = [
@@ -78,7 +78,7 @@ export default function DaBordetPage() {
           <div className="hero-bleed__bottom fade-up" data-delay="2" style={{ marginTop: "48px" }}>
             <div className="col-meta">
               <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>Objektet</span>
-              <span className="val" style={{ color: "#F2EEE5" }}>Ét objekt. Besluttet.</span>
+              <span className="val" style={{ color: "#F2EEE5" }}>Ét objekt. Perfektioneret.</span>
             </div>
             <div className="hero-bleed__cta">
               <a
@@ -192,7 +192,7 @@ export default function DaBordetPage() {
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "64px 48px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "16px" }}>OBJEKTET</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(36px, 4vw, 64px)", color: "#F2EEE5", lineHeight: 1.05, margin: "0 0 24px" }}>Én konstruktion.<br /><em>Lavet individuelt.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", margin: 0, maxWidth: "42ch" }}>En svejset monocoque i glasblæst rustfrit stål. Hvert element er overvejet, hvisse elementer er dit at specificere.</p>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", margin: 0, maxWidth: "42ch" }}>En svejset monocoque i glasblæst rustfrit stål. Hvert element er overvejet, visse elementer er dit at specificere.</p>
           </div>
         </div>
         <div className="elements-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid rgba(242,238,229,0.1)" }}>
@@ -217,7 +217,7 @@ export default function DaBordetPage() {
       <section className="cta-row">
         <div className="cta-copy">
           <div className="fade-up"><span className="kicker">Klar</span></div>
-          <h2 className="h2 fade-up" data-delay="1">Alle forespørgsler besvares i hånden.</h2>
+          <h2 className="h2 fade-up" data-delay="1">Alle forespørgsler besvares personligt.</h2>
           <p className="body fade-up" data-delay="2" style={{ maxWidth: "560px" }}>
             Vi sender dig den fulde specifikation, leveringstid og et første forslag inden for to arbejdsdage.
           </p>

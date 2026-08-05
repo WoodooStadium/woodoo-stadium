@@ -29,7 +29,7 @@ const outcomes = [
 ];
 
 const processSteps = [
-  { number: "01", title: "Forespørg", description: "Fortæl os om dit projekt og det rum du forestiller dig. Alle forespørgsler besvares i hånden inden for to arbejdsdage." },
+  { number: "01", title: "Forespørg", description: "Fortæl os om dit projekt og det rum du forestiller dig. Alle forespørgsler besvares personligt inden for to arbejdsdage." },
   { number: "02", title: "Konfigurér", description: "Vælg finish, branding, belysning og bespoke detaljer. Et skræddersyet forslag følger." },
   { number: "03", title: "Produktion", description: "Bordet bygges, testes og dokumenteres. Du modtager statusopdateringer løbende under produktionen." },
   { number: "04", title: "Placering", description: "Et færdigt objekt ankommer klar til placering og spil. Installationsvejledning inkluderet." },

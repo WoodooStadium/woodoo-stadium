@@ -113,7 +113,7 @@ export default function DaTilpasPage() {
           <span className="kicker">Bespoke</span>
           <h2 className="h2" style={{ marginTop: "16px" }}>Noget helt dit.</h2>
           <p className="body" style={{ marginTop: "16px", maxWidth: "52ch" }}>
-            Ingen kategori dækker alt. Nogle kommissioner begynder med en samtale, en skitse, én enkelt begrænsning. Alle forespørgsler besvares i hånden.
+            Ingen kategori dækker alt. Nogle kommissioner begynder med en samtale, en skitse, én enkelt begrænsning. Alle forespørgsler besvares personligt.
           </p>
           <a
             className="btn btn--filled-on-dark"
