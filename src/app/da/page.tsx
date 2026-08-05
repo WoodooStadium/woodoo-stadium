@@ -113,16 +113,16 @@ export default function DaHome() {
       <section className="section section--alt craft split">
         <div className="tt__content" style={{ padding: "24px var(--pad-x)", display: "flex", flexDirection: "column", gap: "32px", justifyContent: "center" }}>
           <div className="fade-up"><span className="kicker" data-index="N° 02">Håndværk</span></div>
-          <h2 className="h2 fade-up" data-delay="1">732 beslutninger, <span className="serif-it">ingen af dem råber.</span></h2>
+          <h2 className="h2 fade-up" data-delay="1">732 detaljer.<span className="serif-it">Ingen ubemærkede.</span></h2>
           <p className="body fade-up" data-delay="2">
-            Woodoo Stadium 11-11 bliver ikke samlet. Det bliver bygget — svejset, slebet, børstet, oplyst og stemt. Detaljer vi er stolte af.
+            Woodoo Stadium 11-11 bliver ikke samlet. Det bliver bygget — svejset, slebet, glasblæst, oplyst og stemt. Detaljer vi er stolte af.
           </p>
           <div className="craft__features fade-up" data-delay="3">
             <div className="feat">
               <span className="num">01.</span>
               <div>
-                <h4>Oplyste brandplader</h4>
-                <p>Indfældede stålpaneler, præcisionsudskåret logo og integreret bagbelysning. Et mærke integreret i strukturen der er synligt på tværs af et rum — og usynligt når slukket.</p>
+                <h4>Oplyste branding-plader</h4>
+                <p>Indfældede stålpaneler, præcisionsudskåret logo og integreret bag-belysning. Et mærke integreret i strukturen der er synligt på tværs af et rum — og usynligt når slukket.</p>
               </div>
             </div>
             <div className="feat">
@@ -136,7 +136,7 @@ export default function DaHome() {
               <span className="num">03.</span>
               <div>
                 <h4>Akustisk krop</h4>
-                <p>Arenaen og målet er stemt. Spillet larmer minimalt mens boldens anslag i målet bæres fyrre meter med klangen af en anslået klokke.</p>
+                <p>Arenaen og målet er stemt. Spillet larmer minimalt mens boldens anslag i målet bæres med klangen af en anslået klokke.</p>
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function DaHome() {
         <figure className="photo">
           <Image
             src="/uploads/woodoo_stadium_side.jpg"
-            alt="Scoreviser — detalje i rav"
+            alt="Pointpanel — detalje"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             loading="lazy"
@@ -193,12 +193,12 @@ export default function DaHome() {
           <div className="cell">
             <span className="num">02.</span>
             <h3>Spiller som <span className="serif-it">intet andet.</span></h3>
-            <p className="body">Specialudviklede lejer, kalibrerede stænger, et anslag der mærkes i rummet, før det høres.</p>
+            <p className="body">Specialudviklede lejer, centreret stænger, et anslag der fornemmes i rummet, før det høres.</p>
           </div>
           <div className="cell">
             <span className="num">03.</span>
             <h3>Overalt. <span className="serif-it">Altid.</span></h3>
-            <p className="body">Forseglet til et liv indendøres såvel som udendørs. Regn, saltluft, sne. Det lever i sit miljø - uanset hvor det står.</p>
+            <p className="body">Forseglet til et liv indendøres såvel som udendørs. Regn, sol, saltluft, sne. Det lever i sit miljø - uanset hvor det står.</p>
           </div>
           <div className="cell">
             <span className="num">04.</span>
