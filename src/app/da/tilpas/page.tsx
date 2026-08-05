@@ -2,8 +2,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tilpas | Woodoo Stadium",
-  description: "Opdag de konfigurerbare elementer på Stadium 11–11 og begynd dit eget udtryk.",
+  title: "Specialbygget bordfodboldbord | Woodoo Stadium",
+  description: "Specialbyg dit Stadium 11–11 bordfodboldbord — vælg spillere, finish, belysning og bane. Håndbygget i København til ordre.",
   alternates: {
     canonical: "https://woodoo-stadium.com/da/tilpas",
     languages: { en: "https://woodoo-stadium.com/customise" },
@@ -56,7 +56,7 @@ export default function DaTilpasPage() {
                 marginBottom: "20px",
               }}
             >
-              Tilpas
+              Specialbygget
             </span>
             <h1 className="h1" style={{ fontSize: "clamp(48px, 6vw, 96px)", lineHeight: 1.02 }}>
               Dit mærke. Dit bord.

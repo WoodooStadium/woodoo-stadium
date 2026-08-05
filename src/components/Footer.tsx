@@ -1,11 +1,14 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const pathname = usePathname();
+  const isDanish = pathname?.startsWith("/da") ?? false;
 
   useEffect(() => {
     if (!submitted) return;
@@ -23,6 +26,112 @@ export default function Footer() {
     setEmail("");
     setSubmitted(true);
   };
+
+  if (isDanish) {
+    return (
+      <footer className="footer">
+        <div className="footer__wordmark">
+          <Image
+            src="/uploads/logo-dark.png"
+            alt="Woodoo Stadium"
+            width={200}
+            height={64}
+            priority
+          />
+          <p className="tag">
+            Alle drømme har<em>et mål.</em>
+          </p>
+        </div>
+
+        <div className="footer__grid">
+          <div className="footer__brand">
+            <p className="footer__legal">
+              Woodoo · København, Danmark<br />
+              CVR 41 21 36 63<br />
+              Registreret Design · Danmark &amp; Den Europæiske Union
+            </p>
+            <div className="footer__newsletter">
+              <h5>Atelier Journal</h5>
+              <p>
+                Et kort brev, fire gange om året, fra værkstedet.
+              </p>
+              <form className="news-row" onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  placeholder="Din e-mailadresse"
+                  required
+                />
+                <button type="submit">Tilmeld →</button>
+              </form>
+              {submitted && (
+                <p className="caption" style={{ marginTop: "18px" }}>
+                  Tilmeldt ✓
+                </p>
+              )}
+            </div>
+          </div>
+
+          <div className="footer__col">
+            <h4>Objektet</h4>
+            <ul>
+              <li><a href="/da/bordet">Bordet</a></li>
+              <li><a href="/da/tilpas">Specialbygget</a></li>
+              <li><a href="/da/tilpas">Brandudgave</a></li>
+              <li><a href="/da/tilpas">Bespoke kommission</a></li>
+            </ul>
+          </div>
+
+          <div className="footer__col">
+            <h4>Erhverv</h4>
+            <ul>
+              <li><a href="/da/erhverv">Virksomhedsmiljø</a></li>
+              <li><a href="/da/erhverv">Hoteller &amp; Resorter</a></li>
+              <li><a href="/da/erhverv">Lufthavne &amp; Lounges</a></li>
+              <li><a href="/da/erhverv">Brand &amp; Aktivering</a></li>
+              <li><a href="/da/udlejning">Udlejning</a></li>
+            </ul>
+          </div>
+
+          <div className="footer__col">
+            <h4>Atelieret</h4>
+            <ul>
+              <li><a href="/da/showroom">Om os</a></li>
+              <li><a href="/da/galleri">Galleri</a></li>
+              <li><a href="/da/blog">Blog</a></li>
+              <li><a href="/da/faq">FAQ</a></li>
+              <li><a href="/da/showroom#kontakt">Kontakt</a></li>
+              <li><a href="#">Presse</a></li>
+            </ul>
+            <a href="mailto:contact@woodoo-stadium.com" className="footer__email">contact@woodoo-stadium.com</a>
+          </div>
+        </div>
+
+        <div className="footer__bottom">
+          <span>© MMXXVI · Woodoo · København</span>
+          <a
+            href="/da/privatliv"
+            style={{
+              fontFamily: "var(--sans)",
+              fontSize: "11px",
+              letterSpacing: "0.14em",
+              color: "var(--faint-on-dark)",
+              textDecoration: "none",
+              transition: "color 0.2s",
+            }}
+          >
+            Privatliv &amp; Cookies
+          </a>
+          <div className="social">
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Pinterest</a>
+          </div>
+        </div>
+      </footer>
+    );
+  }
 
   return (
     <footer className="footer">

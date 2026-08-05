@@ -16,7 +16,7 @@ const enLinks = [
 
 const daLinks = [
   { href: "/da/bordet", label: "Bordet" },
-  { href: "/da/tilpas", label: "Tilpas" },
+  { href: "/da/tilpas", label: "Specialbygget" },
   { href: "/da/erhverv", label: "Erhverv" },
   { href: "/da/galleri", label: "Galleri" },
   { href: "/da/udlejning", label: "Udlejning" },
