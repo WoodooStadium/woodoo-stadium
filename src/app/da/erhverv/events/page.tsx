@@ -121,7 +121,7 @@ export default function DaErhvervEventsPage() {
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>EVENTARGUMENTET</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
-              Ikke bare et arrangement.<br /><em>Et samlingspunkt.</em>
+              Ikke bare et arrangement.<br /><em style={{ color: "var(--pine-on-dark)" }}>Et samlingspunkt.</em>
             </h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
               Skærme kræver opmærksomhed. Ethvert arrangement kan leje en skærm, en fotobooth eller en DJ. Det, der adskiller et event folk husker fra et event folk overværer, er et øjeblik af ægte fællesskab — og det opstår ikke af sig selv.
@@ -157,7 +157,7 @@ export default function DaErhvervEventsPage() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "64px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "16px" }}>HVAD DET GØR</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1 }}>Hvad det gør<br /><em>for dit event.</em></h2>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1 }}>Hvad det gør<br /><em style={{ color: "var(--pine-on-dark)" }}>for dit event.</em></h2>
           </div>
           <div className="grid-4-responsive" style={{ borderTop: "1px solid rgba(242,238,229,0.1)" }}>
             {eventArguments.map((item, index) => (
@@ -176,7 +176,7 @@ export default function DaErhvervEventsPage() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "80px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>BEVISET</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Fællesskab<br /><em>skaber erindring.</em></h2>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Fællesskab<br /><em style={{ color: "var(--pine)" }}>skaber erindring.</em></h2>
           </div>
           <div className="grid-3-responsive" style={{ borderTop: "1px solid rgba(26,24,20,0.12)" }}>
             {stats.map((stat, index) => (
@@ -188,7 +188,7 @@ export default function DaErhvervEventsPage() {
                   borderBottom: index < 3 ? "1px solid rgba(26,24,20,0.12)" : "none",
                 }}
               >
-                <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "#1A1814", lineHeight: 1, marginBottom: "24px" }}>{stat.figure}</div>
+                <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "var(--pine)", lineHeight: 1, marginBottom: "24px" }}>{stat.figure}</div>
                 <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(26,24,20,0.65)", lineHeight: "1.7", margin: "0 0 12px" }}>{stat.text}</p>
                 <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(26,24,20,0.35)", margin: 0 }}>Kilde: {stat.source}</p>
               </div>
@@ -202,19 +202,19 @@ export default function DaErhvervEventsPage() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "48px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>N°04 — Passivt vs. Aktivt</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>De fleste brandede objekter bliver set.<br /><em>Dette bliver spillet.</em></h2>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>De fleste brandede objekter bliver set.<br /><em style={{ color: "var(--pine)" }}>Dette bliver spillet.</em></h2>
           </div>
           <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "clamp(20px, 2.5vw, 28px)", color: "rgba(26,24,20,0.7)", lineHeight: 1.5, maxWidth: "72ch", marginBottom: "72px" }}>
             Selv den bedste reklameartikel virker på samme måde — nogen lægger mærke til et logo, og går videre. Intet beder dem stoppe op, samles eller blive.
           </p>
           <div className="grid-3-responsive" style={{ borderTop: "1px solid rgba(26,24,20,0.12)" }}>
             <div style={{ padding: "64px 40px", borderRight: "1px solid rgba(26,24,20,0.12)" }}>
-              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "#1A1814", lineHeight: 1, marginBottom: "24px" }}>3.300</div>
+              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "var(--pine)", lineHeight: 1, marginBottom: "24px" }}>3.300</div>
               <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(26,24,20,0.65)", lineHeight: "1.7", margin: "0 0 12px" }}>Gennemsnitligt antal brand-eksponeringer en reklameartikel genererer i sin levetid — hver især et flygtigt blik.</p>
               <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(26,24,20,0.35)", margin: 0 }}>Kilde: ASI Global Advertising Impressions Study, 2026</p>
             </div>
             <div style={{ padding: "64px 40px", borderRight: "1px solid rgba(26,24,20,0.12)" }}>
-              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "#1A1814", lineHeight: 1, marginBottom: "24px" }}>85%</div>
+              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "var(--pine)", lineHeight: 1, marginBottom: "24px" }}>85%</div>
               <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(26,24,20,0.65)", lineHeight: "1.7", margin: "0 0 12px" }}>af forbrugere husker brandet bag en reklameartikel — uden nogensinde aktivt at have interageret med den.</p>
               <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(26,24,20,0.35)", margin: 0 }}>Kilde: ASI Global Advertising Impressions Study, 2026</p>
             </div>
@@ -232,7 +232,7 @@ export default function DaErhvervEventsPage() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "64px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>EVENTTYPER</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Til alle de events<br /><em>I allerede arrangerer.</em></h2>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Til alle de events<br /><em style={{ color: "var(--pine)" }}>I allerede arrangerer.</em></h2>
           </div>
           <div className="grid-3-responsive" style={{ borderTop: "1px solid rgba(26,24,20,0.12)" }}>
             {eventTypes.map((type, index) => (
@@ -258,7 +258,7 @@ export default function DaErhvervEventsPage() {
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>BRANDING</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
-              Jeres kundes brand.<br /><em>Skåret ind.</em>
+              Jeres kundes brand.<br /><em style={{ color: "var(--pine-on-dark)" }}>Skåret ind.</em>
             </h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "28px" }}>
               Fem måder at gøre bordet unikt til jeres kunde — alle permanente i stålet, ikke påsatte som folie eller klistermærker.
@@ -330,7 +330,7 @@ export default function DaErhvervEventsPage() {
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>PRIS &amp; PRAKTISK</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
-              Adgang — <em>uden binding.</em>
+              Adgang — <em style={{ color: "var(--pine-on-dark)" }}>uden binding.</em>
             </h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "32px" }}>
               Leje giver fuld adgang til Stadium 11–11, uden at binde kapital. Vi sender fuld specifikation og et første tilbud inden for to arbejdsdage.

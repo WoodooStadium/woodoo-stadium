@@ -13,7 +13,10 @@ const enLinks: NavLink[] = [
   {
     href: "/for-business",
     label: "For Business",
-    children: [{ href: "/for-business/events", label: "Events & Agencies" }],
+    children: [
+      { href: "/for-business/events", label: "Events & Agencies" },
+      { href: "/for-business/hotels", label: "Hotels & Hospitality" },
+    ],
   },
   { href: "/gallery", label: "Gallery" },
   { href: "/atelier", label: "Atelier" },
@@ -27,7 +30,10 @@ const daLinks: NavLink[] = [
   {
     href: "/da/erhverv",
     label: "Erhverv",
-    children: [{ href: "/da/erhverv/events", label: "Events & Bureauer" }],
+    children: [
+      { href: "/da/erhverv/events", label: "Events & Bureauer" },
+      { href: "/da/erhverv/hoteller", label: "Hoteller & Hospitality" },
+    ],
   },
   { href: "/da/galleri", label: "Galleri" },
   { href: "/da/udlejning", label: "Udlejning" },
@@ -47,6 +53,7 @@ const EN_TO_DA: Record<string, string> = {
   "/customise": "/da/tilpas",
   "/for-business": "/da/erhverv",
   "/for-business/events": "/da/erhverv/events",
+  "/for-business/hotels": "/da/erhverv/hoteller",
   "/gallery": "/da/galleri",
   "/atelier": "/da/showroom",
   "/faq": "/da/faq",

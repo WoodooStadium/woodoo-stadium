@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Branded Foosball Table Hire for Corporate Events | Woodoo Stadium",
-  description: "Rent the Stadium 11–11 for your next corporate event, trade show, or client activation. Custom-branded foosball table rental for events from 3,500 DKK/day. Built in Copenhagen.",
+  description: "Bring the Stadium 11–11 to your next corporate event, trade show, or client activation. Custom-branded foosball table for international placements — pricing on request. Built in Copenhagen.",
   alternates: {
     canonical: "https://woodoo-stadium.com/for-business/events",
     languages: { da: "https://woodoo-stadium.com/da/erhverv/events" },
@@ -26,10 +26,6 @@ const structuredData = {
       description: "Custom-branded foosball table rental for corporate events, trade shows, team building, and client activations. Logo etched into bead-blasted steel.",
       provider: { "@type": "Organization", name: "Woodoo Stadium", url: "https://woodoo-stadium.com" },
       areaServed: [{ "@type": "Country", name: "DK" }, { "@type": "Country", name: "DE" }, { "@type": "Country", name: "SE" }],
-      offers: [
-        { "@type": "Offer", name: "1 day (up to 23 hours)", price: "3500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 3500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
-        { "@type": "Offer", name: "2 days / weekend", price: "5000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 5000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
-      ],
     },
   ],
 };
@@ -68,15 +64,12 @@ const brandingMethods = [
 ];
 
 const pricingRows = [
-  { label: "1 DAY (up to 23 hours)", price: "DKK 3,500", note: "excl. VAT" },
-  { label: "2 DAYS / WEEKEND", price: "DKK 5,000", note: "excl. VAT" },
   { label: "FIXED PLACEMENT (3+ months)", price: "Contact for pricing", note: "" },
   { label: "BRANDING (plates + playing field)", price: "By arrangement", note: "" },
 ];
 
 const included = [
-  "Self-collection from Ballerup (free)",
-  "Insurance for the full rental period",
+  "Insurance for the full placement period",
   "Deposit (refunded on return)",
 ];
 
@@ -121,7 +114,7 @@ export default function ForBusinessEventsPage() {
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>THE EVENT CASE</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
-              Not just an event.<br /><em>A gathering point.</em>
+              Not just an event.<br /><em style={{ color: "var(--pine-on-dark)" }}>A gathering point.</em>
             </h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
               Screens demand attention. Any event can hire a screen, a photo booth, or a DJ. What separates an event people remember from an event people attend is a moment of genuine human connection — and that does not happen by itself.
@@ -157,7 +150,7 @@ export default function ForBusinessEventsPage() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "64px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "16px" }}>WHAT IT DOES</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1 }}>What it does<br /><em>for your event.</em></h2>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1 }}>What it does<br /><em style={{ color: "var(--pine-on-dark)" }}>for your event.</em></h2>
           </div>
           <div className="grid-4-responsive" style={{ borderTop: "1px solid rgba(242,238,229,0.1)" }}>
             {eventArguments.map((item, index) => (
@@ -176,7 +169,7 @@ export default function ForBusinessEventsPage() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "80px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>THE EVIDENCE</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Experience<br /><em>builds memory.</em></h2>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Experience<br /><em style={{ color: "var(--pine)" }}>builds memory.</em></h2>
           </div>
           <div className="grid-3-responsive" style={{ borderTop: "1px solid rgba(26,24,20,0.12)" }}>
             {stats.map((stat, index) => (
@@ -188,7 +181,7 @@ export default function ForBusinessEventsPage() {
                   borderBottom: index < 3 ? "1px solid rgba(26,24,20,0.12)" : "none",
                 }}
               >
-                <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "#1A1814", lineHeight: 1, marginBottom: "24px" }}>{stat.figure}</div>
+                <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "var(--pine)", lineHeight: 1, marginBottom: "24px" }}>{stat.figure}</div>
                 <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(26,24,20,0.65)", lineHeight: "1.7", margin: "0 0 12px" }}>{stat.text}</p>
                 <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(26,24,20,0.35)", margin: 0 }}>Source: {stat.source}</p>
               </div>
@@ -202,19 +195,19 @@ export default function ForBusinessEventsPage() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "48px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>N°04 — Passive vs. Active</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Most branded objects are seen.<br /><em>This one is played.</em></h2>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Most branded objects are seen.<br /><em style={{ color: "var(--pine)" }}>This one is played.</em></h2>
           </div>
           <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "clamp(20px, 2.5vw, 28px)", color: "rgba(26,24,20,0.7)", lineHeight: 1.5, maxWidth: "72ch", marginBottom: "72px" }}>
             The best promotional merchandise in the world still works the same way — someone notices a logo, and moves on. Nothing asks them to stop, gather, or stay.
           </p>
           <div className="grid-3-responsive" style={{ borderTop: "1px solid rgba(26,24,20,0.12)" }}>
             <div style={{ padding: "64px 40px", borderRight: "1px solid rgba(26,24,20,0.12)" }}>
-              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "#1A1814", lineHeight: 1, marginBottom: "24px" }}>3,300</div>
+              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "var(--pine)", lineHeight: 1, marginBottom: "24px" }}>3,300</div>
               <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(26,24,20,0.65)", lineHeight: "1.7", margin: "0 0 12px" }}>Average brand impressions a promotional product generates over its lifetime — each one a passing glance.</p>
               <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(26,24,20,0.35)", margin: 0 }}>Source: ASI Global Advertising Impressions Study, 2026</p>
             </div>
             <div style={{ padding: "64px 40px", borderRight: "1px solid rgba(26,24,20,0.12)" }}>
-              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "#1A1814", lineHeight: 1, marginBottom: "24px" }}>85%</div>
+              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(64px,7vw,96px)", color: "var(--pine)", lineHeight: 1, marginBottom: "24px" }}>85%</div>
               <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(26,24,20,0.65)", lineHeight: "1.7", margin: "0 0 12px" }}>of consumers remember the brand behind a promotional item — without ever actively engaging with it.</p>
               <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(26,24,20,0.35)", margin: 0 }}>Source: ASI Global Advertising Impressions Study, 2026</p>
             </div>
@@ -232,7 +225,7 @@ export default function ForBusinessEventsPage() {
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "64px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>EVENT TYPES</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Built for the events<br /><em>you are already running.</em></h2>
+            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Built for the events<br /><em style={{ color: "var(--pine)" }}>you are already running.</em></h2>
           </div>
           <div className="grid-3-responsive" style={{ borderTop: "1px solid rgba(26,24,20,0.12)" }}>
             {eventTypes.map((type, index) => (
@@ -258,7 +251,7 @@ export default function ForBusinessEventsPage() {
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>BRANDING</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
-              Your client&apos;s brand.<br /><em>Cut in.</em>
+              Your client&apos;s brand.<br /><em style={{ color: "var(--pine-on-dark)" }}>Cut in.</em>
             </h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "28px" }}>
               Five ways to make the table unique to your client — all permanent in the steel, not applied as wraps or stickers.
@@ -330,10 +323,10 @@ export default function ForBusinessEventsPage() {
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>PRICING &amp; PRACTICAL</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
-              Access — <em>without commitment.</em>
+              Access — <em style={{ color: "var(--pine-on-dark)" }}>without commitment.</em>
             </h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "32px" }}>
-              Rental gives full access to the Stadium 11–11 without tying up capital. We send a full specification and a first proposal within two working days.
+              Fixed placement gives you a permanent social anchor in your space without the capital outlay of outright ownership. We send a full specification and a first proposal within two working days.
             </p>
             <div style={{ border: "1px solid rgba(242,238,229,0.15)", overflow: "hidden" }}>
               {pricingRows.map(({ label, price, note }, i) => (
@@ -361,7 +354,7 @@ export default function ForBusinessEventsPage() {
               ))}
             </ul>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.4)", lineHeight: "1.7" }}>
-              Delivery and setup are available as an add-on — pricing depends on location, day, and time, and will be quoted in the full proposal.
+              International delivery is quoted individually, based on location and logistics — it is not included in the placement price and there is no fixed rate. A tailored delivery quote is included as part of your proposal.
             </p>
             <div style={{ marginTop: "32px" }}>
               <a
