@@ -39,7 +39,7 @@ export default function Footer() {
             priority
           />
           <p className="tag">
-            Alle drømme har<em>et mål.</em>
+            Alle drømme har <em>et mål.</em>
           </p>
         </div>
 

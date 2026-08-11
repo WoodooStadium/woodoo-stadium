@@ -1,6 +1,8 @@
 import DrawingViewer from "@/components/DrawingViewer";
 import Image from "next/image";
 import type { Metadata } from "next";
+import SectionHeading from "@/components/SectionHeading";
+import { CardGrid, Card } from "@/components/CardGrid";
 
 export const metadata: Metadata = {
   title: "Stadium 11–11 | Woodoo Stadium — Luksus rustfrit stål bordfodboldbord",
@@ -81,27 +83,7 @@ export default function DaBordetPage() {
               <span className="val" style={{ color: "#F2EEE5" }}>Ét objekt. Perfektioneret.</span>
             </div>
             <div className="hero-bleed__cta">
-              <a
-                href="/da/showroom#kontakt"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "10px",
-                  padding: "0 36px",
-                  height: "56px",
-                  border: "1px solid #F2EEE5",
-                  background: "#F2EEE5",
-                  color: "#0B0A08",
-                  fontFamily: "Inter Tight, sans-serif",
-                  fontWeight: 500,
-                  fontSize: "11px",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.28em",
-                  textDecoration: "none",
-                  transition: "opacity 0.2s ease",
-                }}
-              >
+              <a href="/da/showroom#kontakt" className="btn btn--hero-filled">
                 Forespørg om dit bord
               </a>
             </div>
@@ -109,12 +91,15 @@ export default function DaBordetPage() {
         </div>
       </section>
 
-      <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
+      <section style={{ background: "#0B0A08", padding: "96px var(--pad-x-editorial)" }}>
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          <div>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>SPECIFIKATION</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(28px, 3vw, 42px)", color: "#F2EEE5", marginTop: "16px" }}>Specifikationen</h2>
-          </div>
+          <SectionHeading
+            kicker="SPECIFIKATION"
+            kickerIndex="N° 01"
+            variant="dark"
+            size="section"
+            heading="Specifikationen"
+          />
           <div style={{ border: "1px solid rgba(242,238,229,0.15)", overflow: "hidden", marginTop: "24px" }}>
             {specRows.map(([label, value], i) => (
               <div key={label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "18px 24px", borderBottom: i < specRows.length - 1 ? "1px solid rgba(242,238,229,0.1)" : "none", gap: "16px" }}>
@@ -127,9 +112,14 @@ export default function DaBordetPage() {
 
         <div style={{ maxWidth: "1400px", margin: "96px auto 0" }}>
           <div style={{ marginBottom: "32px" }}>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>TEKNISK TEGNING</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(28px, 3vw, 42px)", color: "#F2EEE5", marginTop: "16px" }}>Tegningen.</h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.62)", marginTop: "16px", lineHeight: "1.7", maxWidth: "480px" }}>
+            <SectionHeading
+              kicker="TEKNISK TEGNING"
+              kickerIndex="N° 02"
+              variant="dark"
+              size="section"
+              heading="Tegningen."
+            />
+            <p className="body" style={{ marginTop: "16px", color: "var(--mid-on-dark)", maxWidth: "480px" }}>
               130 tekniske tegninger. Nøjagtige mål og dokumentation deles ved forespørgsel.
             </p>
           </div>
@@ -150,26 +140,7 @@ export default function DaBordetPage() {
             ))}
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <a
-              href="/da/showroom#kontakt"
-              style={{
-                width: "100%",
-                maxWidth: "520px",
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "0 32px",
-                height: "56px",
-                border: "1px solid rgba(242,238,229,0.3)",
-                background: "transparent",
-                color: "#F2EEE5",
-                fontFamily: "Inter Tight, sans-serif",
-                fontSize: "11px",
-                textTransform: "uppercase",
-                letterSpacing: "0.28em",
-                textDecoration: "none",
-              }}
-            >
+            <a href="/da/showroom#kontakt" className="btn btn--filled-on-dark">
               FORESPØRG OM DIT BORD
             </a>
           </div>
@@ -190,28 +161,25 @@ export default function DaBordetPage() {
             />
           </div>
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "64px 48px" }}>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "16px" }}>OBJEKTET</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(36px, 4vw, 64px)", color: "#F2EEE5", lineHeight: 1.05, margin: "0 0 24px" }}>Én konstruktion.<br /><em>Lavet individuelt.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", margin: 0, maxWidth: "42ch" }}>En fuldsvejst ramme i glasblæst rustfrit stål. Hvert element er overvejet, visse elementer er dit at specificere.</p>
+            <SectionHeading
+              kicker="OBJEKTET"
+              kickerIndex="N° 03"
+              variant="dark"
+              heading={<>Én konstruktion.<br /><em>Lavet individuelt.</em></>}
+            />
+            <p className="body" style={{ marginTop: "24px", color: "var(--mid-on-dark)", maxWidth: "42ch" }}>En fuldsvejst ramme i glasblæst rustfrit stål. Hvert element er overvejet, visse elementer er dit at specificere.</p>
           </div>
         </div>
-        <div className="elements-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid rgba(242,238,229,0.1)" }}>
+        <CardGrid cols={4} variant="dark">
           {anatomyItems.map((item, index) => (
-            <div
+            <Card
               key={item.title}
-              className="fade-up"
-              style={{
-                padding: "48px 36px",
-                borderRight: index % 4 !== 3 ? "1px solid rgba(242,238,229,0.1)" : "none",
-                borderBottom: index < 4 ? "1px solid rgba(242,238,229,0.1)" : "none",
-              }}
-            >
-              <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", display: "block", marginBottom: "24px", letterSpacing: "0.1em" }}>0{index + 1}</span>
-              <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "26px", color: "#F2EEE5", margin: "0 0 16px" }}>{item.title}</h3>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.55)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
-            </div>
+              num={`0${index + 1}`}
+              title={item.title}
+              body={item.description}
+            />
           ))}
-        </div>
+        </CardGrid>
       </section>
 
       <section className="cta-row">

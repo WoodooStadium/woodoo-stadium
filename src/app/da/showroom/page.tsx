@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -41,15 +42,19 @@ export default function DaShowroomPage() {
       </section>
 
       {/* Kapitel 1 — Objektet */}
-      <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
+      <section style={{ background: "#E6E3DA", padding: "96px var(--pad-x-editorial)" }}>
         <div className="two-col">
           <div>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>OBJEKTET</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>Et designobjekt.<br /><em>Man kan også spille på.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <SectionHeading
+              kicker="OBJEKTET"
+              kickerIndex="N° 01"
+              variant="light"
+              heading={<>Et designobjekt.<br /><em>Man kan også spille på.</em></>}
+            />
+            <p className="body" style={{ marginTop: "32px", color: "var(--mid)" }}>
               Stadium 11–11 er ikke et spil med et designproblem løst. Det er et socialt objekt — et der ændrer atmosfæren i et rum, giver folk en grund til at samles, og leverer en spileoplevelse der matcher dets visuelle identitet.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8" }}>
+            <p className="body" style={{ marginTop: "20px", color: "var(--mid)" }}>
               Rent. Konsistent. Bygget til at vare, underholde og bringe folk sammen. Du kan ikke tænke på livets forhindringer mens du for alvor er fanget af spillet. Du kan ikke doomscrolle. Du kan ikke svare på mails. I et par minutter — eller et par timer — er intet andet tilgængeligt.
             </p>
           </div>
@@ -66,7 +71,7 @@ export default function DaShowroomPage() {
       </section>
 
       {/* Citat 1 */}
-      <section style={{ background: "#0B0A08", padding: "80px 48px" }}>
+      <section style={{ background: "#0B0A08", padding: "80px var(--pad-x-editorial)" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "clamp(28px, 3.5vw, 48px)", color: "#F2EEE5", lineHeight: 1.2 }}>
             "Få mennesker til at samles i et øjeblik, hvor intet andet har betydning."
@@ -75,7 +80,7 @@ export default function DaShowroomPage() {
       </section>
 
       {/* Kapitel 2 — Ét bord */}
-      <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
+      <section style={{ background: "#E6E3DA", padding: "96px var(--pad-x-editorial)" }}>
         <div className="two-col">
           <div className="media-tall">
             <Image
@@ -87,15 +92,19 @@ export default function DaShowroomPage() {
             />
           </div>
           <div>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>ÉT BORD</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>Alle får<br /><em>den samme scene.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <SectionHeading
+              kicker="ÉT BORD"
+              kickerIndex="N° 02"
+              variant="light"
+              heading={<>Alle får<br /><em>den samme scene.</em></>}
+            />
+            <p className="body" style={{ marginTop: "32px", color: "var(--mid)" }}>
               Der er ét bord. Ikke en standardversion og en premium version. Ikke et hverdagsbord og et turneringsbord. Ét objekt — Stadium 11–11 — og én oplevelse der aldrig ændrer sig.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <p className="body" style={{ marginTop: "20px", color: "var(--mid)" }}>
               Det kan personliggøres — spillerne, farverne, belysningen, detaljerne. Men følelsen er altid den samme. Den samme atmosfære. Det samme stadion. Mange udtryk af ét objekt.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8" }}>
+            <p className="body" style={{ marginTop: "20px", color: "var(--mid)" }}>
               732 enkeltkomponenter. 130 tekniske tegninger. 150 kilogram glasblæst rustfrit stål. Bygget i hånden i København. Lavet til ordre. Bygget én gang, til at holde permanent.
             </p>
           </div>
@@ -103,7 +112,7 @@ export default function DaShowroomPage() {
       </section>
 
       {/* Citat 2 */}
-      <section style={{ background: "#1A1814", padding: "80px 48px" }}>
+      <section style={{ background: "#1A1814", padding: "80px var(--pad-x-editorial)" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "clamp(28px, 3.5vw, 48px)", color: "#F2EEE5", lineHeight: 1.2 }}>
             "Det er ikke noget der skal opbevares eller beskyttes. Det er lavet til at forblive tilstede."
@@ -112,15 +121,19 @@ export default function DaShowroomPage() {
       </section>
 
       {/* Kapitel 3 — Bygget til at blive */}
-      <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
+      <section style={{ background: "#E6E3DA", padding: "96px var(--pad-x-editorial)" }}>
         <div className="two-col">
           <div>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>BYGGET TIL AT BLIVE</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>Spil bør ikke begrænses<br /><em>af, hvor bordet står.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <SectionHeading
+              kicker="BYGGET TIL AT BLIVE"
+              kickerIndex="N° 03"
+              variant="light"
+              heading={<>Spil bør ikke begrænses<br /><em>af, hvor bordet står.</em></>}
+            />
+            <p className="body" style={{ marginTop: "32px", color: "var(--mid)" }}>
               Traditionelle borde ender med at tilhøre ét rum. En kælder. En bar. Et spillerum. Stadium 11–11 er forseglet til permanent udendørs brug — i regn, saltluft, varme og kulde. Det bevæger sig med livet i stedet for at bede livet om at bevæge sig rundt om det.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8" }}>
+            <p className="body" style={{ marginTop: "20px", color: "var(--mid)" }}>
               En sommeraften udenfor. Et offentligt rum. En terrasse. En lobby. En regnvejrsdag indendørs. Det samme bord. Den samme oplevelse. Altid tilstede. Altid klar.
             </p>
           </div>
@@ -137,7 +150,7 @@ export default function DaShowroomPage() {
       </section>
 
       {/* Citat 3 */}
-      <section style={{ background: "#0B0A08", padding: "80px 48px" }}>
+      <section style={{ background: "#0B0A08", padding: "80px var(--pad-x-editorial)" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "clamp(28px, 3.5vw, 48px)", color: "#F2EEE5", lineHeight: 1.2, marginBottom: "32px" }}>
             "Trærødder. Stål fremtid."
@@ -147,7 +160,7 @@ export default function DaShowroomPage() {
       </section>
 
       {/* Nøgletal */}
-      <section style={{ background: "#0B0A08", padding: "0 48px" }}>
+      <section style={{ background: "#0B0A08", padding: "0 var(--pad-x-editorial)" }}>
         <div className="grid-4-responsive" style={{ maxWidth: "1400px", margin: "0 auto", borderTop: "1px solid rgba(242,238,229,0.1)", borderBottom: "1px solid rgba(242,238,229,0.1)" }}>
           {[
             { number: "732", label: "Enkeltkomponenter" },
@@ -156,7 +169,7 @@ export default function DaShowroomPage() {
             { number: "1", label: "Bord. Lavet til ordre." },
           ].map((item, i) => (
             <div key={item.number} style={{ padding: "40px 32px", borderRight: i < 3 ? "1px solid rgba(242,238,229,0.1)" : "none", textAlign: "center" }}>
-              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "56px", color: "#F2EEE5", lineHeight: 1, marginBottom: "12px" }}>{item.number}</div>
+              <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "72px", color: "#F2EEE5", lineHeight: 1, marginBottom: "12px" }}>{item.number}</div>
               <div style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>{item.label}</div>
             </div>
           ))}
@@ -164,17 +177,22 @@ export default function DaShowroomPage() {
       </section>
 
       {/* Privat fremvisning */}
-      <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
+      <section style={{ background: "#0B0A08", padding: "96px var(--pad-x-editorial)" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
-          <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.55)", display: "block", marginBottom: "24px" }}>PRIVAT FREMVISNING</span>
-          <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Se bordet <em>i virkeligheden.</em></h2>
-          <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.72)", lineHeight: "1.8", maxWidth: "52ch", margin: "0 auto 32px" }}>
+          <SectionHeading
+            kicker="PRIVAT FREMVISNING"
+            kickerIndex="N° 04"
+            variant="dark"
+            align="center"
+            heading={<>Se bordet <em>i virkeligheden.</em></>}
+          />
+          <p className="body" style={{ marginTop: "32px", color: "var(--mid-on-dark)", maxWidth: "52ch", margin: "32px auto 0" }}>
             Ved seriøse forespørgsler kan vi arrangere en privat fremvisning — vi bringer Stadium 11–11 ud til jeres lokale, så I kan se det, røre ved det og spille på det, før I beslutter jer.
           </p>
           <a
             className="btn btn--filled-on-dark"
             href="#kontakt"
-            style={{ justifyContent: "center" }}
+            style={{ justifyContent: "center", marginTop: "32px" }}
           >
             Book en fremvisning <span className="arrow">→</span>
           </a>
@@ -182,15 +200,19 @@ export default function DaShowroomPage() {
       </section>
 
       {/* Kontakt */}
-      <section style={{ background: "#E6E3DA", padding: "96px 48px" }} id="kontakt">
+      <section style={{ background: "#E6E3DA", padding: "96px var(--pad-x-editorial)" }} id="kontakt">
         <div className="two-col two-col--start">
           <div>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "24px" }}>KONTAKT</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#1A1814", lineHeight: 1.1, marginBottom: "32px" }}>Tal til<br /><em>atelieret.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8", marginBottom: "16px" }}>
+            <SectionHeading
+              kicker="KONTAKT"
+              kickerIndex="N° 05"
+              variant="light"
+              heading={<>Tal til<br /><em>atelieret.</em></>}
+            />
+            <p className="body" style={{ marginTop: "32px", color: "var(--mid)" }}>
               Alle forespørgsler besvares personligt inden for to arbejdsdage. Fortæl os om dit projekt, dit rum, eller dit spørgsmål.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(26,24,20,0.65)", lineHeight: "1.8" }}>
+            <p className="body" style={{ marginTop: "16px", color: "var(--mid)" }}>
               Vi sender dig den fulde specifikation, leveringstid og et første forslag.
             </p>
           </div>

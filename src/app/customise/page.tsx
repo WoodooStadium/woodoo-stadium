@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Customise | Woodoo Stadium",
@@ -55,7 +56,7 @@ export default function CustomisePage() {
               Customise
             </span>
             <h1 className="h1" style={{ fontSize: "clamp(48px, 6vw, 96px)", lineHeight: 1.02 }}>
-              Your mark. Your table.
+              Your mark. <em>Your table.</em>
             </h1>
           </div>
           <div className="hero-bleed__bottom fade-up" data-delay="2" style={{ marginTop: "48px" }}>
@@ -64,27 +65,7 @@ export default function CustomisePage() {
             </div>
             <div />
             <div className="hero-bleed__cta">
-              <a
-                href="/atelier#contact"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "10px",
-                  padding: "0 36px",
-                  height: "56px",
-                  border: "1px solid #F2EEE5",
-                  background: "#F2EEE5",
-                  color: "#0B0A08",
-                  fontFamily: "Inter Tight, sans-serif",
-                  fontWeight: 500,
-                  fontSize: "11px",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.28em",
-                  textDecoration: "none",
-                  transition: "opacity 0.2s ease",
-                }}
-              >
+              <a href="/atelier#contact" className="btn btn--hero-filled">
                 Start a bespoke enquiry
               </a>
             </div>
@@ -92,13 +73,20 @@ export default function CustomisePage() {
         </div>
       </section>
 
-      <section className="section section--alt">
-        <div className="ruled-grid ruled-grid--2 fade-up">
+      <section className="section section--alt" style={{ padding: "96px var(--pad-x-editorial)" }}>
+        <SectionHeading
+          kicker="CONFIGURATION"
+          kickerIndex="N° 01"
+          heading={<>Five ways <em>to make it yours.</em></>}
+          variant="light"
+          size="editorial"
+        />
+        <div className="grid-3-responsive fade-up" style={{ gap: "40px", marginTop: "48px" }}>
           {categories.map((item) => (
-            <div className="cell" key={item.title}>
-              <span className="num">{item.number}</span>
-              <h3>{item.title}</h3>
-              <p className="body">{item.description}</p>
+            <div key={item.title} style={{ borderTop: "1px solid rgba(26,24,20,0.1)", paddingTop: "24px" }}>
+              <span style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.2em", color: "var(--mid)" }}>{item.number}</span>
+              <h3 style={{ marginTop: "8px", fontFamily: "var(--sans)", fontSize: "16px", fontWeight: 500, color: "var(--ink)", letterSpacing: "0.02em" }}>{item.title}</h3>
+              <p className="body" style={{ marginTop: "8px", color: "var(--mid)" }}>{item.description}</p>
             </div>
           ))}
         </div>
@@ -106,9 +94,13 @@ export default function CustomisePage() {
 
       <section className="section section--dark section--no-top" style={{ padding: "96px var(--pad-x)" }}>
         <div style={{ maxWidth: "72ch", margin: "0 auto" }}>
-          <span className="kicker">Bespoke</span>
-          <h2 className="h2" style={{ marginTop: "16px" }}>Something completely yours.</h2>
-          <p className="body" style={{ marginTop: "16px", maxWidth: "52ch" }}>
+          <SectionHeading
+            kicker="Bespoke"
+            kickerIndex="N° 02"
+            variant="dark"
+            heading="Something completely yours."
+          />
+          <p className="body" style={{ marginTop: "16px", maxWidth: "52ch", color: "var(--mid-on-dark)" }}>
             No category covers everything. Some commissions begin with a conversation, a sketch, a single constraint. Every enquiry is answered personally.
           </p>
           <a
