@@ -16,7 +16,7 @@ export default function Home() {
       <section className="hero-bleed">
         <div className="hero-bleed__media">
           <Image
-            src="/uploads/WoodooStadium_foosball_table_stainless_steel_outdoor_2026_hero.jpeg"
+            src="/uploads/Hero_1.png"
             alt="Woodoo Stadium 11-11 — sculptural profile"
             fill
             sizes="100vw"

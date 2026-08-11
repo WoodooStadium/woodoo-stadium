@@ -28,7 +28,7 @@ const faqItems = [
   },
   {
     question: "Hvad er det lavet af?",
-    answer: "Børstet rustfrit stål 304, svejset til én sammenhængende monocoque-krop. Finishen er glasblæst, ikke poleret. Rustfrit stål 304 er branchestandarden til permanent udendørs brug — anvendt i arkitektur, marinemiljøer og præcisionsingeniørkunst. Alle materialer er valgt for permanens. <a href='/da/bordet'>Fuld materialspecifikation →</a>",
+    answer: "En fuldsvejst ramme i rustfri stål, svejset til ét sammenhængende objekt. Finishen er glasblæst, ikke poleret. Rustfrit stål A304 er branchestandarden til permanent udendørs brug — anvendt i arkitektur, marinemiljøer og præcisionsingeniørkunst. Alle materialer er valgt for permanens. <a href='/da/bordet'>Fuld materialspecifikation →</a>",
     category: "Objektet",
   },
   {
@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: "Hvad sker der når det regner?",
-    answer: "Ingenting. Bordet er bygget til det. Børstet rustfrit stål 304, svejset til én sammenhængende monocoque-krop, forseglet til alt vejr. Det bliver, hvor det placeres. <a href='/da/bordet'>Læs mere om materialerne →</a>",
+    answer: "Ingenting. Bordet er bygget til det. Glasblæst rustfrit stål A304, svejset til ét sammenhængende objekt, forseglet til alt vejr. Det bliver, hvor det placeres. <a href='/da/bordet'>Læs mere om materialerne →</a>",
     category: "Brug & Placering",
   },
   {

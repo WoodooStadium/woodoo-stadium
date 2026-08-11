@@ -12,24 +12,24 @@ export const metadata: Metadata = {
 };
 
 const anatomyItems = [
-  { title: "Ramme", description: "En svejset monocoque. Én konstruktion, ikke samlet. Strukturen er objektet." },
-  { title: "Spillebane", description: "Glasblæst rustfrit stål, eller malet i en farve efter dit valg. Oplyst indefra under alle omstændigheder." },
-  { title: "Stænger", description: "Kalibreret stål. Specialudviklede lejer. Boldens anslag bæres fyrre meter." },
-  { title: "Spillere", description: "Standard støbt, CNC-bearbejdet, eller bygget til et custom design. Afbalanceret til spil, designet til tilstedeværelse." },
-  { title: "Strøm", description: "Genopladeligt batteri, eller hardwired til en kabelboks. Dit valg." },
-  { title: "Belysning", description: "Integreret i bordet. Oplyst point og bane. Hvidt eller varmt lys på banen, pointlys efter dit valg" },
-  { title: "Brandplader", description: "Indfældet og oplyst. Kan udskiftes efter behov" },
+  { title: "Ramme", description: "Fuldsvejst ramme. Én konstruktion, ikke samlet. Strukturen er objektet." },
+  { title: "Spillebane", description: "Glasblæst rustfrit stål, lakeret i valgfri farve efter eller folieret. Oplyst med LED." },
+  { title: "Stænger", description: "Præcisionsrør i blankglødet stål med titanium legering. Specialudviklede lejer. Boldens anslag bæres fyrre meter." },
+  { title: "Spillere", description: "Rå eller poleret, CNC-bearbejdet, eller bygget til et custom design. Afbalanceret til spil, designet til tilstedeværelse." },
+  { title: "Strøm", description: "Genopladelig batteripakke, eller strømudtag med stik. Dit valg." },
+  { title: "Belysning", description: "Integreret i bordet. Oplyst point i valgfri farve. Hvidt eller varmt lys på banen." },
+  { title: "Brandplader", description: "Indfældet og oplyst. Valgfri farver og kombinationer. Kan udskiftes efter behov" },
   { title: "Folieprint & Lakering", description: "Et valgfrit lag. Trykt, påsat & aftagelig - eller påført, hærdet & permanent." },
 ];
 
 const specRows: [string, string][] = [
-  ["MATERIALE", "Glasblæst rustfrit stål, 304"],
+  ["MATERIALE", "Glasblæst rustfrit stål, A304 + A316"],
   ["VÆGT", "ca. 150 kg."],
   ["PLACERING", "Inde & ude, alle årstider"],
-  ["LYS", "Mulighed for integreret LED — bane, point og brandplader"],
+  ["LYS", "Mulighed for integreret LED på bane, point og brandplader"],
   ["KOMPONENTER", "732 enkeltdele. Leveret i sin endelige helhed."],
   ["TEGNINGER", "130 tekniske tegninger. Én sides brugsvejledning."],
-  ["FINISH", "Glasblæst stål - lakering mulig efter ønske."],
+  ["FINISH", "Glasblæst stål - lakering eller foliering er mulig efter ønske."],
 ];
 
 const keyFigures = [
@@ -130,7 +130,7 @@ export default function DaBordetPage() {
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)" }}>TEKNISK TEGNING</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(28px, 3vw, 42px)", color: "#F2EEE5", marginTop: "16px" }}>Tegningen.</h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.62)", marginTop: "16px", lineHeight: "1.7", maxWidth: "480px" }}>
-              130 tekniske tegninger. Nøjagtige mål og fuld dokumentation deles ved forespørgsel.
+              130 tekniske tegninger. Nøjagtige mål og dokumentation deles ved forespørgsel.
             </p>
           </div>
           <DrawingViewer />
@@ -192,7 +192,7 @@ export default function DaBordetPage() {
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "64px 48px" }}>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "16px" }}>OBJEKTET</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(36px, 4vw, 64px)", color: "#F2EEE5", lineHeight: 1.05, margin: "0 0 24px" }}>Én konstruktion.<br /><em>Lavet individuelt.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", margin: 0, maxWidth: "42ch" }}>En svejset monocoque i glasblæst rustfrit stål. Hvert element er overvejet, visse elementer er dit at specificere.</p>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", margin: 0, maxWidth: "42ch" }}>En fuldsvejst ramme i glasblæst rustfrit stål. Hvert element er overvejet, visse elementer er dit at specificere.</p>
           </div>
         </div>
         <div className="elements-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid rgba(242,238,229,0.1)" }}>

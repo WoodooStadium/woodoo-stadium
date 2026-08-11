@@ -16,7 +16,7 @@ export default function DaHome() {
       <section className="hero-bleed">
         <div className="hero-bleed__media">
           <Image
-            src="/uploads/WoodooStadium_foosball_table_stainless_steel_outdoor_2026_hero.jpeg"
+            src="/uploads/Hero_1.png"
             alt="Woodoo Stadium 11-11 — skulpturelt profil"
             fill
             sizes="100vw"
@@ -38,7 +38,7 @@ export default function DaHome() {
             </div>
             <div className="col-meta">
               <span className="label">Materiale</span>
-              <span className="val">Glasblæst stål · Fulsvejst ramme</span>
+              <span className="val">Glasblæst stål · Fuldsvejst ramme</span>
             </div>
             <div className="hero-bleed__cta">
               <a className="btn btn--filled-on-dark" href="/da/bordet">
@@ -122,7 +122,7 @@ export default function DaHome() {
               <span className="num">01.</span>
               <div>
                 <h4>Oplyste branding-plader</h4>
-                <p>Indfældede stålpaneler, præcisionsudskåret logo og integreret bag-belysning. Et mærke integreret i strukturen der er synligt på tværs af et rum — og usynligt når slukket.</p>
+                <p>Indfældede stålplader, præcisionsudskåret logo og integreret bag-belysning. Et mærke integreret i strukturen der er synligt på tværs af et rum — og usynligt når slukket.</p>
               </div>
             </div>
             <div className="feat">
@@ -136,7 +136,7 @@ export default function DaHome() {
               <span className="num">03.</span>
               <div>
                 <h4>Akustisk krop</h4>
-                <p>Arenaen og målet er stemt. Spillet larmer minimalt mens boldens anslag i målet bæres med klangen af en anslået klokke.</p>
+                <p>Arenaen og målene er stemt. Spillet larmer minimalt, mens boldens anslag i målet bæres af en ren resonans.</p>
               </div>
             </div>
           </div>
@@ -193,7 +193,7 @@ export default function DaHome() {
           <div className="cell">
             <span className="num">02.</span>
             <h3>Spiller som <span className="serif-it">intet andet.</span></h3>
-            <p className="body">Specialudviklede lejer, centreret stænger, et anslag der fornemmes i rummet, før det høres.</p>
+            <p className="body">Specialudviklede lejer, præcisionsstænger, et anslag der fornemmes i rummet, før det høres.</p>
           </div>
           <div className="cell">
             <span className="num">03.</span>
@@ -203,17 +203,17 @@ export default function DaHome() {
           <div className="cell">
             <span className="num">04.</span>
             <h3>Dit brand, <span className="serif-it">skåret i stål.</span></h3>
-            <p className="body">En identitet foankret i rammen og oplyst indefra. Det er ikke en påstand. Det er et statement.</p>
+            <p className="body">En identitet forankret i rammen og oplyst indefra. Det er ikke en påstand. Det er et statement.</p>
           </div>
           <div className="cell">
             <span className="num">05.</span>
             <h3>Et rum <span className="serif-it">falder til ro.</span></h3>
-            <p className="body">En lobby sænker farten. En bar starter samtaler. Et Woodoo Stadium gør begge dele ved et rum.</p>
+            <p className="body">En lobby sænker farten. En bar starter samtaler. Det er dét Woodoo Stadium gør ved et rum.</p>
           </div>
           <div className="cell">
             <span className="num">06.</span>
             <h3>Væk fra <span className="serif-it">skærmen.</span></h3>
-            <p className="body">Folk lægger telefonen. De får øjenkontakt. De spiller. Det er social interaktion - og det er hele pointen.</p>
+            <p className="body">Folk lægger telefonen. De får øjenkontakt. De spiller. Social interaktion er hele pointen.</p>
           </div>
         </div>
       </section>
@@ -229,7 +229,7 @@ export default function DaHome() {
             </span>
             <h2 className="h2 fade-up" data-delay="2">Elleve mod elleve. <span className="serif-it">Ét stadion.</span></h2>
             <p className="fade-up" data-delay="3">
-              Fire ettaller på stribe. Minuttet på uret, hvor folk — for et enkelt sekund — stopper op og kigger opad. En lille synkronicitet. Et signal om, at en vision er klar til at forlade papiret.
+              Fire ettaller på stribe. Minuttet på uret, hvor folk — for et enkelt sekund — stopper og kigger op. En lille synkronicitet. Et signal om, at en vision er klar til at blive virkelighed.
             </p>
             <blockquote className="eleven__quote fade-up" data-delay="4">
               Nogle ser 11:11 og sender et ønske ud. Vi gjorde det til virkelighed.
@@ -364,7 +364,7 @@ export default function DaHome() {
         <div className="fade-up" style={{ display: "flex", justifyContent: "space-between", alignItems: "end", gap: "64px", flexWrap: "wrap", marginBottom: "64px" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
             <span className="kicker" data-index="N° 06">Erhverv</span>
-            <h2 className="h2">Spil bør ikke begrænses <span className="serif-it">af, hvor bordet står.</span></h2>
+            <h2 className="h2">Spillet bør ikke begrænses <span className="serif-it">af, hvor bordet står.</span></h2>
           </div>
           <p className="lead">Et signaturstykke til de rum, der beder om ét.</p>
         </div>
@@ -373,12 +373,12 @@ export default function DaHome() {
           <div className="cell">
             <span className="num">01.</span>
             <h3 className="serif">Virksomhedens <span className="serif-it">HQ</span></h3>
-            <p className="body">Et stykke i lobbyen, der gør det arbejde, intet møbel kan. Det første, kandidaten husker.</p>
+            <p className="body">Et element i lobbyen, der løser det behov, intet møbel kan. Et blikfang der huskes.</p>
           </div>
           <div className="cell">
             <span className="num">02.</span>
             <h3 className="serif">Hoteller &amp; <span className="serif-it">resorts</span></h3>
-            <p className="body">Objektet i rummet, der rejser med på fotografiet. Inde eller på terrassen; forseglet mod havluft.</p>
+            <p className="body">Objektet i rummet, der rejser med på fotografiet. Indenfor eller på udeområder; forseglet mod havluft.</p>
           </div>
           <div className="cell">
             <span className="num">03.</span>
@@ -404,7 +404,7 @@ export default function DaHome() {
             Dit bord. Ét udtryk for ét objekt.
           </h2>
           <p className="body fade-up" data-delay="2">
-            Arenaen er altid den samme. Det, der ændrer sig, er hvordan du gør den til din. Konfigurér dit eget, eller besøg showroomet i København.
+            Arenaen er altid den samme. Det, der ændrer sig, er hvordan du gør den til din. Konfigurér dit eget, eller få et foreslag fra os.
           </p>
         </div>
         <div className="cta-actions fade-up" data-delay="2">
