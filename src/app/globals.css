@@ -33,7 +33,7 @@
   /* Accent — pine green. Literalizes "every dream needs a field":
      the pitch, the recyclable stainless steel, a Nordic forest tone.
      Values are WCAG-contrast-checked against their intended background. */
-  --pine:          #2E4A38;   /* accent on light/paper sections — 7.6:1 on --bg */
+  --pine:          #3D6B4A;   /* accent on light/paper sections */
   --pine-deep:     #264030;   /* hover / pressed state */
   --pine-on-dark:  #52915F;   /* accent on dark sections — 5.25:1 on --bg-dark */
 
@@ -48,6 +48,7 @@
   --mono:  'JetBrains Mono', ui-monospace, monospace;
 
   --pad-x: 72px;
+  --pad-x-editorial: 48px;
   --pad-y: clamp(64px, 7vw, 112px);
 }
 
@@ -113,12 +114,16 @@ button { font: inherit; cursor: pointer; background: none; border: none; color: 
 .section--dark .kicker::before { background: var(--pine-on-dark); }
 .kicker[data-index]::after {
   content: attr(data-index);
-  font-family: var(--sans);
+  font-family: var(--mono);
   font-weight: 400;
   font-size: 11px;
   letter-spacing: 0.06em;
   color: var(--faint);
   margin-left: 4px;
+}
+.kicker--block {
+  display: flex;
+  margin-bottom: 24px;
 }
 
 .caption {
@@ -236,6 +241,28 @@ h1, h2, h3, h4 {
 .btn--filled-on-dark:hover {
   background: var(--bg-dark);
   color: var(--ink-on-dark);
+  border-color: var(--ink-on-dark);
+}
+
+.btn--hero-filled {
+  background: var(--ink-on-dark);
+  color: var(--bg-dark);
+  border-color: var(--ink-on-dark);
+  font-weight: 500;
+}
+.btn--hero-filled:hover {
+  background: transparent;
+  color: var(--ink-on-dark);
+  border-color: var(--ink-on-dark);
+}
+.btn--hero-outline {
+  color: var(--ink-on-dark);
+  border-color: rgba(242,238,229,0.5);
+  font-weight: 500;
+}
+.btn--hero-outline:hover {
+  background: var(--ink-on-dark);
+  color: var(--bg-dark);
   border-color: var(--ink-on-dark);
 }
 
@@ -1465,7 +1492,8 @@ h1, h2, h3, h4 {
   /* Inline-padded sections: tighten horizontal padding */
   section[style*="padding: 96px 48px"],
   section[style*="padding: 80px 48px"],
-  section[style*="padding: 0 48px"] {
+  section[style*="padding: 0 48px"],
+  section[style*="var(--pad-x-editorial)"] {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
@@ -1537,3 +1565,11 @@ h1, h2, h3, h4 {
     text-align: left;
   }
 }
+
+/* ---------- SECTION HEADING ---------- */
+.sh-dark .kicker { color: var(--ink-on-dark); }
+.sh-dark .kicker::before { background: var(--pine-on-dark); }
+.sh-dark .kicker[data-index]::after { color: var(--faint-on-dark); }
+.sh-dark .sh-heading em  { color: var(--pine-on-dark); font-style: italic; }
+.sh-light .kicker::before { background: var(--pine); }
+.sh-light .sh-heading em { color: var(--pine); font-style: italic; }

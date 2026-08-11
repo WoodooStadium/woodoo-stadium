@@ -194,7 +194,7 @@ export default function ForBusinessEventsPage() {
       <section style={{ background: "#E6E3DA", padding: "120px 48px" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "48px" }}>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>N°04 — Passive vs. Active</span>
+            <span style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>N°04 — Passive vs. Active</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Most branded objects are seen.<br /><em style={{ color: "var(--pine)" }}>This one is played.</em></h2>
           </div>
           <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "clamp(20px, 2.5vw, 28px)", color: "rgba(26,24,20,0.7)", lineHeight: 1.5, maxWidth: "72ch", marginBottom: "72px" }}>

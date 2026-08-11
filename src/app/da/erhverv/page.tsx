@@ -1,5 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import SectionHeading from "@/components/SectionHeading";
+import { CardGrid, Card } from "@/components/CardGrid";
 
 export const metadata: Metadata = {
   title: "Erhverv | Woodoo Stadium",
@@ -38,6 +40,7 @@ const processSteps = [
 export default function DaErhvervPage() {
   return (
     <>
+      {/* Hero */}
       <section className="hero-bleed">
         <div className="hero-bleed__media">
           <Image
@@ -60,24 +63,7 @@ export default function DaErhvervPage() {
               <span className="val" style={{ color: "#F2EEE5" }}>Ikke et spil. Et socialt infrastrukturobjekt.</span>
             </div>
             <div className="hero-bleed__cta">
-              <a
-                href="/da/showroom#kontakt"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: "0 32px",
-                  height: "56px",
-                  border: "1px solid #F2EEE5",
-                  background: "transparent",
-                  color: "#F2EEE5",
-                  fontFamily: "Inter Tight, sans-serif",
-                  fontSize: "11px",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.28em",
-                  textDecoration: "none",
-                }}
-              >
+              <a href="/da/showroom#kontakt" className="btn btn--hero-outline">
                 ANMOD OM ET FORSLAG
               </a>
             </div>
@@ -85,18 +71,23 @@ export default function DaErhvervPage() {
         </div>
       </section>
 
-      <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
+      {/* Intro */}
+      <section style={{ background: "#0B0A08", padding: "96px var(--pad-x-editorial)" }}>
         <div className="two-col">
           <div>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>OBJEKTET</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Ikke et spil.<br /><em>Et socialt infrastrukturobjekt.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <SectionHeading
+              kicker="OBJEKTET"
+              kickerIndex="N° 01"
+              variant="dark"
+              heading={<>Ikke et spil.<br /><em>Et socialt infrastrukturobjekt.</em></>}
+            />
+            <p className="body" style={{ marginTop: "32px", color: "var(--mid-on-dark)" }}>
               Stadium 11–11 kombinerer præcisionsingeniørkunst, integreret belysning og fuld brandtilpasning i ét objekt der aktiverer menneskelig interaktion i fysiske rum.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <p className="body" style={{ marginTop: "20px", color: "var(--mid-on-dark)" }}>
               Det er ikke møbel. Det er ikke udstyr. Det er et permanent socialt anker — et der ændrer atmosfæren i et rum, giver folk en grund til at samles, og bærer dit brand i stål.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8" }}>
+            <p className="body" style={{ marginTop: "20px", color: "var(--mid-on-dark)" }}>
               Bygget i Danmark. 150 kilogram. 732 komponenter. Vedligeholdelsesfrit for livet.
             </p>
           </div>
@@ -112,43 +103,56 @@ export default function DaErhvervPage() {
         </div>
       </section>
 
-      <section style={{ background: "#1A1814", padding: "96px 48px" }}>
+      {/* What it does */}
+      <section style={{ background: "#1A1814", padding: "96px var(--pad-x-editorial)" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "64px" }}>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "16px" }}>ERHVERVSARGUMENTET</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1 }}>Hvad det gør<br /><em>for dit rum.</em></h2>
+            <SectionHeading
+              kicker="ERHVERVSARGUMENTET"
+              kickerIndex="N° 02"
+              variant="dark"
+              heading={<>Hvad det gør<br /><em>for dit rum.</em></>}
+            />
           </div>
-          <div className="grid-4-responsive" style={{ borderTop: "1px solid rgba(242,238,229,0.1)" }}>
-            {outcomes.map((item, index) => (
-              <div key={item.stat} style={{ padding: "40px 32px", borderRight: index < 3 ? "1px solid rgba(242,238,229,0.1)" : "none" }}>
-                <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", display: "block", marginBottom: "20px" }}>{item.number}</span>
-                <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 400, fontStyle: "italic", fontSize: "24px", color: "#F2EEE5", margin: "0 0 16px" }}>{item.stat}</h3>
-                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.6)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
-              </div>
+          <CardGrid cols={4} variant="dark">
+            {outcomes.map((item) => (
+              <Card
+                key={item.stat}
+                num={item.number}
+                title={item.stat}
+                body={item.description}
+              />
             ))}
-          </div>
+          </CardGrid>
         </div>
       </section>
 
-      <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
+      {/* Sectors */}
+      <section style={{ background: "#E6E3DA", padding: "96px var(--pad-x-editorial)" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "64px" }}>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>SEKTORER</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Hvor det hører til.</h2>
+            <SectionHeading
+              kicker="SEKTORER"
+              kickerIndex="N° 03"
+              variant="light"
+              heading="Hvor det hører til."
+            />
           </div>
-          <div className="grid-4-responsive" style={{ borderTop: "1px solid rgba(26,24,20,0.12)" }}>
-            {sectors.map((sector, index) => (
-              <div key={sector.title} style={{ padding: "40px 32px", borderRight: index % 4 !== 3 ? "1px solid rgba(26,24,20,0.12)" : "none", borderBottom: index < 4 ? "1px solid rgba(26,24,20,0.12)" : "none" }}>
-                <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(26,24,20,0.3)", display: "block", marginBottom: "20px" }}>{sector.number}</span>
-                <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 400, fontStyle: "italic", fontSize: "22px", color: "#1A1814", margin: "0 0 12px" }}>{sector.title}</h3>
-                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(26,24,20,0.6)", lineHeight: "1.7", margin: 0 }}>{sector.description}</p>
-              </div>
+          <CardGrid cols={4} variant="light">
+            {sectors.map((sector) => (
+              <Card
+                key={sector.title}
+                num={sector.number}
+                title={sector.title}
+                body={sector.description}
+              />
             ))}
-          </div>
+          </CardGrid>
         </div>
       </section>
 
-      <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
+      {/* Branding */}
+      <section style={{ background: "#0B0A08", padding: "96px var(--pad-x-editorial)" }}>
         <div className="two-col">
           <div className="media-tall">
             <Image
@@ -160,69 +164,68 @@ export default function DaErhvervPage() {
             />
           </div>
           <div>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>BRANDING</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Dit brand.<br /><em>Indbygget.</em></h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "16px" }}>
+            <SectionHeading
+              kicker="BRANDING"
+              kickerIndex="N° 04"
+              variant="dark"
+              heading={<>Dit brand.<br /><em>Indbygget.</em></>}
+            />
+            <p className="body" style={{ marginTop: "32px", color: "var(--mid-on-dark)" }}>
               Sideplader, spillebane, belysning — hver overflade er et lærred. Ikke et klistermærke. Ikke en folie. Laserskåret, oplyst og permanent.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "16px" }}>
+            <p className="body" style={{ marginTop: "16px", color: "var(--mid-on-dark)" }}>
               Bordet leveres med et transportvognssystem til event- og aktiveringsbrug. Et valgfrit sporingschiplag er tilgængeligt til flåde- og udlejningsdeployeringer.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8" }}>
+            <p className="body" style={{ marginTop: "16px", color: "var(--mid-on-dark)" }}>
               Alle erhvervsudgaver konfigureres til rummet, brandet og den tilsigtede brug. Ingen to er ens.
             </p>
           </div>
         </div>
       </section>
 
-      <section style={{ background: "#E6E3DA", padding: "96px 48px" }}>
+      {/* Process */}
+      <section style={{ background: "#E6E3DA", padding: "96px var(--pad-x-editorial)" }}>
         <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div style={{ marginBottom: "64px" }}>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(26,24,20,0.4)", display: "block", marginBottom: "16px" }}>PROCESSEN</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#1A1814", lineHeight: 1.1 }}>Sådan kommer en erhvervsudgave<br />til verden.</h2>
+            <SectionHeading
+              kicker="PROCESSEN"
+              kickerIndex="N° 05"
+              variant="light"
+              heading={<>Sådan kommer en erhvervsudgave<br />til verden.</>}
+            />
           </div>
-          <div className="grid-4-responsive" style={{ borderTop: "1px solid rgba(26,24,20,0.12)" }}>
-            {processSteps.map((step, index) => (
-              <div key={step.title} style={{ padding: "40px 32px", borderRight: index < 3 ? "1px solid rgba(26,24,20,0.12)" : "none" }}>
-                <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(26,24,20,0.3)", display: "block", marginBottom: "20px" }}>{step.number}</span>
-                <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 400, fontStyle: "italic", fontSize: "22px", color: "#1A1814", margin: "0 0 12px" }}>{step.title}</h3>
-                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(26,24,20,0.6)", lineHeight: "1.7", margin: 0 }}>{step.description}</p>
-              </div>
+          <CardGrid cols={4} variant="light">
+            {processSteps.map((step) => (
+              <Card
+                key={step.title}
+                num={step.number}
+                title={step.title}
+                body={step.description}
+              />
             ))}
-          </div>
+          </CardGrid>
         </div>
       </section>
 
-      <section style={{ background: "#0B0A08", padding: "96px 48px" }}>
+      {/* CTA */}
+      <section style={{ background: "#0B0A08", padding: "96px var(--pad-x-editorial)" }}>
         <div className="two-col">
           <div>
-            <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>NÆSTE SKRIDT</span>
-            <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>Vi er klar, når du er.</h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "16px" }}>
+            <SectionHeading
+              kicker="NÆSTE SKRIDT"
+              kickerIndex="N° 06"
+              variant="dark"
+              heading="Vi er klar, når du er."
+            />
+            <p className="body" style={{ marginTop: "32px", color: "var(--mid-on-dark)" }}>
               Fortæl os om rummet. Vi sender et skræddersyet forslag — specifikation, leveringstid og konfigurationsmuligheder — inden for to arbejdsdage.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8" }}>
+            <p className="body" style={{ marginTop: "16px", color: "var(--mid-on-dark)" }}>
               Til seriøse forespørgsler kan vi arrangere en privat fremvisning — hvor vi bringer Stadium 11–11 til dig.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-            <a
-              href="/da/showroom#kontakt"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "0 32px",
-                height: "56px",
-                background: "#F2EEE5",
-                color: "#0B0A08",
-                fontFamily: "Inter Tight, sans-serif",
-                fontSize: "11px",
-                textTransform: "uppercase",
-                letterSpacing: "0.28em",
-                textDecoration: "none",
-              }}
-            >
+            <a href="/da/showroom#kontakt" className="btn btn--hero-filled">
               ANMOD OM ET ERHVERVSFORSLAG
             </a>
           </div>
