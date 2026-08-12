@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
+import { CardGrid, Card } from "@/components/CardGrid";
 
 export const metadata: Metadata = {
   title: "Specialbygget bordfodboldbord | Woodoo Stadium",
@@ -17,6 +18,7 @@ const categories = [
   { number: "03", title: "Spillebane", description: "Farve, logoplacering eller en fuldt tilpasset grafisk bane." },
   { number: "04", title: "Sideplader", description: "Planlagte, brandede eller tilpassede tekst- og logooptioner." },
   { number: "05", title: "Belysning", description: "Banefarve og intensitet designet til rummets stemning." },
+  { number: "06", title: "Folie", description: "Et lag der er helt dit — trykt og aftageligt, eller hærdet permanent ind i finishen." },
 ];
 
 export default function DaTilpasPage() {
@@ -85,33 +87,30 @@ export default function DaTilpasPage() {
           variant="light"
           size="editorial"
         />
-        <div className="grid-3-responsive fade-up" style={{ gap: "40px", marginTop: "48px" }}>
-          {categories.map((item) => (
-            <div key={item.title} style={{ borderTop: "1px solid rgba(26,24,20,0.1)", paddingTop: "24px" }}>
-              <span style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.2em", color: "var(--mid)" }}>{item.number}</span>
-              <h3 style={{ marginTop: "8px", fontFamily: "var(--sans)", fontSize: "16px", fontWeight: 500, color: "var(--ink)", letterSpacing: "0.02em" }}>{item.title}</h3>
-              <p className="body" style={{ marginTop: "8px", color: "var(--mid)" }}>{item.description}</p>
-            </div>
-          ))}
+        <div className="fade-up" style={{ marginTop: "48px" }}>
+          <CardGrid cols={3} variant="light">
+            {categories.map((item) => (
+              <Card
+                key={item.title}
+                num={item.number}
+                title={item.title}
+                body={item.description}
+              />
+            ))}
+          </CardGrid>
         </div>
       </section>
 
-      <section className="section section--dark section--no-top" style={{ padding: "96px var(--pad-x)" }}>
-        <div style={{ maxWidth: "72ch", margin: "0 auto" }}>
-          <SectionHeading
-            kicker="Bespoke"
-            kickerIndex="N° 02"
-            variant="dark"
-            heading="Noget helt dit."
-          />
-          <p className="body" style={{ marginTop: "16px", maxWidth: "52ch", color: "var(--mid-on-dark)" }}>
+      <section className="section--dark cta-row" style={{ borderTop: "none" }}>
+        <div className="cta-copy">
+          <div className="fade-up"><span className="kicker" data-index="N° 02">Bespoke</span></div>
+          <h2 className="h2 fade-up" data-delay="1">Noget helt dit.</h2>
+          <p className="body fade-up" data-delay="2" style={{ maxWidth: "52ch" }}>
             Ingen kategori dækker alt. Nogle kommissioner begynder med en samtale, en skitse, én enkelt begrænsning. Alle forespørgsler besvares personligt.
           </p>
-          <a
-            className="btn btn--filled-on-dark"
-            href="/da/showroom#kontakt"
-            style={{ marginTop: "32px", display: "inline-flex" }}
-          >
+        </div>
+        <div className="cta-actions fade-up" data-delay="3">
+          <a className="btn btn--filled-on-dark" href="/da/showroom#kontakt">
             Start en bespoke forespørgsel →
           </a>
         </div>
