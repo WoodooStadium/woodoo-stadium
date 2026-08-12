@@ -28,6 +28,7 @@ const specRows: [string, string][] = [
   ["MATERIALE", "Glasblæst rustfrit stål, A304 + A316"],
   ["VÆGT", "ca. 150 kg."],
   ["PLACERING", "Inde & ude, alle årstider"],
+  ["GARANTI", "5 års garanti på Stadium 11–11"],
   ["LYS", "Mulighed for integreret LED på bane, point og brandplader"],
   ["KOMPONENTER", "732 enkeltdele. Leveret i sin endelige helhed."],
   ["TEGNINGER", "130 tekniske tegninger. Én sides brugsvejledning."],
@@ -39,6 +40,8 @@ const keyFigures = [
   { number: "130", label: "Tekniske tegninger" },
   { number: "150kg", label: "Glasblæst rustfrit stål" },
 ];
+
+const SHOW_DELIVERIES = false; // TODO: flip to true once real delivery photos exist
 
 export default function DaBordetPage() {
   return (
@@ -80,7 +83,7 @@ export default function DaBordetPage() {
           <div className="hero-bleed__bottom fade-up" data-delay="2" style={{ marginTop: "48px" }}>
             <div className="col-meta">
               <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>Objektet</span>
-              <span className="val" style={{ color: "#F2EEE5" }}>Ét objekt. Perfektioneret.</span>
+              <span className="val" style={{ color: "#F2EEE5" }}>Ét objekt. <em style={{ color: "var(--pine-on-dark)" }}>Perfektioneret.</em></span>
             </div>
             <div className="hero-bleed__cta">
               <a href="/da/showroom#kontakt" className="btn btn--hero-filled">
@@ -181,6 +184,24 @@ export default function DaBordetPage() {
           ))}
         </CardGrid>
       </section>
+
+      {SHOW_DELIVERIES && (
+        <section style={{ background: "#0B0A08", padding: "96px var(--pad-x-editorial)" }}>
+          <SectionHeading
+            kicker="LEVERINGER"
+            kickerIndex="N° 04"
+            variant="dark"
+            heading={<>Hvor det <em>er landet.</em></>}
+          />
+          <div style={{ marginTop: "48px" }}>
+            <CardGrid cols={3} variant="dark">
+              <Card num="01" title="—" body="[PLACEHOLDER: Klient — By — Måned/år]" />
+              <Card num="02" title="—" body="[PLACEHOLDER: Klient — By — Måned/år]" />
+              <Card num="03" title="—" body="[PLACEHOLDER: Klient — By — Måned/år]" />
+            </CardGrid>
+          </div>
+        </section>
+      )}
 
       <section className="cta-row">
         <div className="cta-copy">

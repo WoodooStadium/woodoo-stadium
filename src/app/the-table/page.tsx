@@ -24,6 +24,7 @@ const specRows: [string, string][] = [
   ["MATERIAL", "Bead-blasted stainless steel, 304"],
   ["WEIGHT", "150 kilograms"],
   ["HABITAT", "Indoor & outdoor, all seasons"],
+  ["WARRANTY", "5-year warranty on the Stadium 11–11"],
   ["LIGHT", "Integrated LED — field & plate"],
   ["COMPONENTS", "732 individual parts"],
   ["ENGINEERING", "130 technical drawings"],
@@ -36,6 +37,8 @@ const keyFigures = [
   { number: "130", label: "Technical drawings" },
   { number: "150kg", label: "Bead-blasted stainless steel" },
 ];
+
+const SHOW_DELIVERIES = false; // TODO: flip to true once real delivery photos exist
 
 export default function TheTablePage() {
   return (
@@ -77,7 +80,7 @@ export default function TheTablePage() {
           <div className="hero-bleed__bottom fade-up" data-delay="2" style={{ marginTop: "48px" }}>
             <div className="col-meta">
               <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>The Object</span>
-              <span className="val" style={{ color: "#F2EEE5" }}>One object. Decided upon.</span>
+              <span className="val" style={{ color: "#F2EEE5" }}>One object. <em style={{ color: "var(--pine-on-dark)" }}>Decided upon.</em></span>
             </div>
             <div className="hero-bleed__cta">
               <a href="/atelier#contact" className="btn btn--hero-filled">
@@ -178,6 +181,24 @@ export default function TheTablePage() {
           ))}
         </CardGrid>
       </section>
+
+      {SHOW_DELIVERIES && (
+        <section style={{ background: "#0B0A08", padding: "96px var(--pad-x-editorial)" }}>
+          <SectionHeading
+            kicker="DELIVERIES"
+            kickerIndex="N° 04"
+            variant="dark"
+            heading={<>Where it's <em>arrived.</em></>}
+          />
+          <div style={{ marginTop: "48px" }}>
+            <CardGrid cols={3} variant="dark">
+              <Card num="01" title="—" body="[PLACEHOLDER: Client — City — Month/year]" />
+              <Card num="02" title="—" body="[PLACEHOLDER: Client — City — Month/year]" />
+              <Card num="03" title="—" body="[PLACEHOLDER: Client — City — Month/year]" />
+            </CardGrid>
+          </div>
+        </section>
+      )}
 
       <section className="cta-row">
         <div className="cta-copy">
