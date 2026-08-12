@@ -121,7 +121,7 @@ export default function RentalForm() {
             <option value="Syd-Jylland">Syd-Jylland</option>
             <option value="Midt-Jylland">Midt-Jylland</option>
             <option value="Nord-Jylland">Nord-Jylland</option>
-            <option value="Selvafhentning (Ballerup)">Selvafhentning (Ballerup)</option>
+            <option value="Selvafhentning (Storkøbenhavn)">Selvafhentning (Storkøbenhavn)</option>
           </select>
         </div>
       </div>

@@ -75,7 +75,7 @@ const pricingRows = [
 ];
 
 const included = [
-  "Selvafhentning i Ballerup (gratis)",
+  "Selvafhentning i Storkøbenhavn (gratis)",
   "Forsikring i hele lejeperioden",
   "Depositum (refunderes ved aflevering)",
 ];

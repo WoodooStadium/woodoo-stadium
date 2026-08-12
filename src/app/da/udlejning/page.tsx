@@ -130,7 +130,7 @@ const faqItems = [
   },
   {
     q: "Hvor leverer I?",
-    a: "I hele Danmark. Se priser pr. landsdel ovenfor. Du kan også selv afhente i Ballerup uden beregning.",
+    a: "I hele Danmark. Se priser pr. landsdel ovenfor. Du kan også selv afhente i Storkøbenhavn uden beregning.",
   },
   {
     q: "Hvordan booker jeg?",
@@ -553,7 +553,7 @@ export default function UdlejningPage() {
             <TableRow cols={["Syd-Jylland", "3.400 kr.", "4.250 kr."]} />
             <TableRow cols={["Midt-Jylland", "3.900 kr.", "4.875 kr."]} />
             <TableRow cols={["Nord-Jylland", "4.500 kr.", "5.625 kr."]} />
-            <TableRow cols={["Selvafhentning (Ballerup)", "Gratis", "Gratis"]} last />
+            <TableRow cols={["Selvafhentning (Storkøbenhavn)", "Gratis", "Gratis"]} last />
           </div>
           <p
             style={{
