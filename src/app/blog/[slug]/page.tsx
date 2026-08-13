@@ -2,39 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import type { BlogPost } from "@/lib/supabase-types";
-import { supabaseServerClient } from "@/lib/supabase";
-import MarkdownRenderer from "@/components/MarkdownRenderer";
+import { getAllPostSlugs, getAllPostSummaries, getPostBySlug } from "@/lib/blog-mdx";
 
-export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
-export const revalidate = 0;
+const BASE = "https://woodoo-stadium.com";
 
 interface BlogPageProps {
   params: Promise<{ slug: string }>;
 }
 
-async function getPost(slug: string) {
-  const { data, error } = (await supabaseServerClient
-    .from("blog_posts")
-    .select("*")
-    .eq("slug", slug)
-    .eq("status", "published")
-    .single()) as { data: BlogPost | null; error: any };
-
-  return { data, error };
-}
-
-async function getRelated(slug: string) {
-  const { data } = (await supabaseServerClient
-    .from("blog_posts")
-    .select("*")
-    .neq("slug", slug)
-    .eq("status", "published")
-    .order("published_at", { ascending: false })
-    .limit(3)) as { data: BlogPost[] | null; error: any };
-
-  return data ?? [];
+export async function generateStaticParams() {
+  return getAllPostSlugs("en").map((slug) => ({ slug }));
 }
 
 function formatDate(date: string | null) {
@@ -44,31 +21,62 @@ function formatDate(date: string | null) {
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const { data } = await getPost(slug);
-  if (!data) {
-    return {
-      title: "Post not found | Woodoo Stadium",
-      description: "The requested blog post does not exist.",
-    };
-  }
+  const post = await getPostBySlug(slug, "en");
+  if (!post) return { title: "Post not found | Woodoo Stadium" };
 
   return {
-    title: data.meta_title ?? data.title,
-    description: data.meta_description ?? data.excerpt ?? "Notes from Woodoo Stadium workshop.",
+    title: post.metaTitle ?? post.title,
+    description: post.metaDescription ?? post.excerpt ?? "Notes from Woodoo Stadium workshop.",
+    alternates: {
+      canonical: `${BASE}/blog/${slug}`,
+      ...(post.alternateSlug
+        ? { languages: { da: `${BASE}/da/blog/${post.alternateSlug}` } }
+        : {}),
+    },
     openGraph: {
-      title: data.meta_title ?? data.title,
-      description: data.meta_description ?? data.excerpt ?? "Notes from Woodoo Stadium workshop.",
-      images: data.featured_image ? [{ url: data.featured_image }] : [],
+      title: post.metaTitle ?? post.title,
+      description: post.metaDescription ?? post.excerpt ?? "",
+      images: post.featuredImage ? [{ url: post.featuredImage }] : [],
     },
   };
 }
 
 export default async function BlogPostPage({ params }: BlogPageProps) {
   const { slug } = await params;
-  const { data: post } = await getPost(slug);
+  const post = await getPostBySlug(slug, "en");
   if (!post) notFound();
 
-  const relatedPosts = await getRelated(slug);
+  const relatedPosts = getAllPostSummaries("en")
+    .filter((p) => p.slug !== slug)
+    .slice(0, 3);
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.excerpt ?? post.metaDescription ?? "",
+        author: { "@type": "Person", name: post.author ?? "Woodoo Stadium" },
+        publisher: {
+          "@type": "Organization",
+          name: "Woodoo Stadium",
+          url: BASE,
+        },
+        ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
+        ...(post.featuredImage ? { image: post.featuredImage } : {}),
+        url: `${BASE}/blog/${slug}`,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Woodoo Stadium", item: BASE },
+          { "@type": "ListItem", position: 2, name: "Journal", item: `${BASE}/blog` },
+          { "@type": "ListItem", position: 3, name: post.title, item: `${BASE}/blog/${slug}` },
+        ],
+      },
+    ],
+  };
 
   return (
     <>
@@ -76,15 +84,25 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
         <div className="fade-up" style={{ maxWidth: "72ch", margin: "0 auto" }}>
           <span className="kicker">Atelier Journal</span>
           <h1 className="h1 post-title">{post.title}</h1>
-          <p className="caption">{formatDate(post.published_at)} · {post.author ?? "Woodoo"} · {(post.tags || []).join(", ")}</p>
+          {(post.publishedAt || post.author || post.tags.length > 0) && (
+            <p className="caption">
+              {[
+                post.publishedAt ? formatDate(post.publishedAt) : null,
+                post.author ?? "Woodoo",
+                post.tags.length > 0 ? post.tags.join(", ") : null,
+              ]
+                .filter(Boolean)
+                .join(" · ")}
+            </p>
+          )}
         </div>
       </section>
 
-      {post.featured_image ? (
+      {post.featuredImage ? (
         <section className="section section--no-top">
           <div className="photo fade-up" style={{ minHeight: "520px" }}>
             <Image
-              src={post.featured_image}
+              src={post.featuredImage}
               alt={post.title}
               fill
               sizes="100vw"
@@ -95,9 +113,11 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
       ) : null}
 
       <section className="section section--no-top">
-        <div className="fade-up" style={{ maxWidth: "72ch", margin: "0 auto" }}>
-          <MarkdownRenderer content={post.body} />
-        </div>
+        <div
+          className="fade-up markdown"
+          style={{ maxWidth: "72ch", margin: "0 auto" }}
+          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        />
       </section>
 
       {relatedPosts.length > 0 ? (
@@ -109,10 +129,10 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
           <div className="posts-grid fade-up" data-delay="1">
             {relatedPosts.map((related) => (
               <article className="post-card" key={related.slug}>
-                {related.featured_image ? (
+                {related.featuredImage ? (
                   <div className="post-image">
                     <Image
-                      src={related.featured_image}
+                      src={related.featuredImage}
                       alt={related.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -121,9 +141,9 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                   </div>
                 ) : null}
                 <div style={{ padding: "32px" }}>
-                  <span className="caption">{formatDate(related.published_at)}</span>
+                  {related.publishedAt ? <span className="caption">{formatDate(related.publishedAt)}</span> : null}
                   <h3>{related.title}</h3>
-                  <p className="body">{related.excerpt ?? related.body.slice(0, 140) + "..."}</p>
+                  <p className="body">{related.excerpt ?? ""}</p>
                   <Link className="tlink" href={`/blog/${related.slug}`}>
                     Read the article <span className="arrow">→</span>
                   </Link>
@@ -133,6 +153,11 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
           </div>
         </section>
       ) : null}
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
     </>
   );
 }

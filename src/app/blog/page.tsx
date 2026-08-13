@@ -1,15 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import type { BlogPost } from "@/lib/supabase-types";
-import { getBlogPostsByLanguage } from "@/lib/db";
+import { getAllPostSummaries } from "@/lib/blog-mdx";
 
 export const metadata: Metadata = {
   title: "Atelier Journal | Woodoo Stadium",
   description: "Notes from the Woodoo Stadium workshop and stories from the production of the Stadium 11–11.",
   alternates: {
     canonical: "https://woodoo-stadium.com/blog",
-    languages: { "da": "https://woodoo-stadium.com/da/blog" },
+    languages: { da: "https://woodoo-stadium.com/da/blog" },
   },
 };
 
@@ -18,9 +17,8 @@ function formatDate(date: string | null) {
   return new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric" }).format(new Date(date));
 }
 
-export default async function BlogPage() {
-  const response = (await getBlogPostsByLanguage("en")) as { data: BlogPost[] | null; error: unknown };
-const posts = response.data ?? [];
+export default function BlogPage() {
+  const posts = getAllPostSummaries("en");
 
   return (
     <>
@@ -43,10 +41,10 @@ const posts = response.data ?? [];
           <div className="posts-grid fade-up" data-delay="1">
             {posts.map((post) => (
               <article className="post-card" key={post.slug}>
-                {post.featured_image ? (
+                {post.featuredImage ? (
                   <div className="post-image">
                     <Image
-                      src={post.featured_image}
+                      src={post.featuredImage}
                       alt={post.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -55,9 +53,9 @@ const posts = response.data ?? [];
                   </div>
                 ) : null}
                 <div style={{ padding: "32px" }}>
-                  <span className="caption">{formatDate(post.published_at)} · {post.language?.toUpperCase()}</span>
+                  {post.publishedAt ? <span className="caption">{formatDate(post.publishedAt)}</span> : null}
                   <h3>{post.title}</h3>
-                  <p className="body">{post.excerpt ?? post.body.slice(0, 140) + "..."}</p>
+                  <p className="body">{post.excerpt ?? ""}</p>
                   <Link className="tlink" href={`/blog/${post.slug}`}>
                     Read the article <span className="arrow">→</span>
                   </Link>
