@@ -6,6 +6,10 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Atelier | Woodoo Stadium",
   description: "The Woodoo Stadium atelier in Copenhagen — design and production of the Stadium 11–11.",
+  alternates: {
+    canonical: "https://woodoo-stadium.com/atelier",
+    languages: { da: "https://woodoo-stadium.com/da/showroom" },
+  },
 };
 
 export default function AtelierPage() {

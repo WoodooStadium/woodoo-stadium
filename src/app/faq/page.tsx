@@ -234,6 +234,10 @@ const fallbackFaq = [
 export const metadata: Metadata = {
   title: "FAQ | Woodoo Stadium — Luxury Foosball Table, Table Football & Social Design Object",
   description: "Everything about the Woodoo Stadium 11–11 — the world's finest foosball table. Questions about the sport, professional play, hotel amenities, office social spaces, and how to enquire.",
+  alternates: {
+    canonical: "https://woodoo-stadium.com/faq",
+    languages: { da: "https://woodoo-stadium.com/da/faq" },
+  },
 };
 
 function groupFaq(items: Array<{ question: string; answer: string; category: string | null }>) {
@@ -269,7 +273,7 @@ export default async function FAQPage() {
       <section className="section section--dark section--no-top" style={{ paddingTop: "140px", paddingBottom: "80px" }}>
         <div className="fade-up" style={{ maxWidth: "72ch", margin: "0 auto", textAlign: "center" }}>
           <span className="kicker" style={{ color: "rgba(242,238,229,0.4)" }}>FAQ</span>
-          <h1 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 4vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginTop: "16px" }}>
+          <h1 className="h1" style={{ fontSize: "clamp(32px, 4vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginTop: "16px" }}>
             Foosball Table, Table Football<br />& <em>the Stadium 11–11</em>
           </h1>
           <p className="body fade-up" data-delay="1" style={{ color: "rgba(242,238,229,0.62)", marginTop: "24px" }}>

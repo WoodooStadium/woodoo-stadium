@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // Core pages
-      { source: "/", destination: "/da", permanent: true },
       { source: "/omwoodoo", destination: "/da/showroom", permanent: true },
       { source: "/omproduktionen", destination: "/da/showroom", permanent: true },
       { source: "/udlejning", destination: "/da/udlejning", permanent: true },

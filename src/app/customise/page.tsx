@@ -6,6 +6,10 @@ import { CardGrid, Card } from "@/components/CardGrid";
 export const metadata: Metadata = {
   title: "Customise | Woodoo Stadium",
   description: "Discover the configurable elements of the Stadium 11–11 and begin your own expression.",
+  alternates: {
+    canonical: "https://woodoo-stadium.com/customise",
+    languages: { da: "https://woodoo-stadium.com/da/tilpas" },
+  },
 };
 
 const categories = [

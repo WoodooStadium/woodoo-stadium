@@ -158,7 +158,7 @@ export default function DaFaqPage() {
       <section className="section section--dark section--no-top" style={{ paddingTop: "140px", paddingBottom: "80px" }}>
         <div className="fade-up" style={{ maxWidth: "72ch", margin: "0 auto", textAlign: "center" }}>
           <span className="kicker" style={{ color: "rgba(242,238,229,0.4)" }}>FAQ</span>
-          <h1 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 4vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginTop: "16px" }}>
+          <h1 className="h1" style={{ fontSize: "clamp(32px, 4vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginTop: "16px" }}>
             Bordfodbold, bordfodboldbord<br />&amp; <em>Stadium 11–11</em>
           </h1>
           <p className="body fade-up" data-delay="1" style={{ color: "rgba(242,238,229,0.62)", marginTop: "24px" }}>

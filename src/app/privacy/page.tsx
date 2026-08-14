@@ -44,9 +44,8 @@ export default function PrivacyPage() {
       <div style={{ maxWidth: "72ch", margin: "0 auto" }}>
         <span style={kicker}>Privacy &amp; Cookies</span>
         <h1
+          className="h1"
           style={{
-            fontFamily: "Cormorant Garamond, serif",
-            fontWeight: 300,
             fontSize: "clamp(36px, 4vw, 60px)",
             color: "#1A1814",
             lineHeight: 1.05,

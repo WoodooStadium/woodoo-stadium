@@ -7,6 +7,10 @@ import { CardGrid, Card } from "@/components/CardGrid";
 export const metadata: Metadata = {
   title: "The Stadium 11–11 | Woodoo Stadium — Luxury Stainless Steel Foosball Table",
   description: "The Stadium 11–11 is a precision-engineered luxury foosball table. Handbuilt in Copenhagen from bead-blasted stainless steel. 732 components. Indoor and outdoor. Made to order.",
+  alternates: {
+    canonical: "https://woodoo-stadium.com/the-table",
+    languages: { da: "https://woodoo-stadium.com/da/bordet" },
+  },
 };
 
 const anatomyItems = [

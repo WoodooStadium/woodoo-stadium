@@ -4,6 +4,10 @@ import GalleryClient from "./GalleryClient";
 export const metadata: Metadata = {
   title: "Gallery | Woodoo Stadium",
   description: "A photographic gallery of the Stadium 11–11 in atelier, detail and outdoor settings.",
+  alternates: {
+    canonical: "https://woodoo-stadium.com/gallery",
+    languages: { da: "https://woodoo-stadium.com/da/galleri" },
+  },
 };
 
 const images = [
