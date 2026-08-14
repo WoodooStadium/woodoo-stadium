@@ -29,7 +29,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Woodoo Stadium",
   description: "Dark Nordic luxury handbuilt foosball table.",
-  metadataBase: new URL("https://www.woodoostadium.com"),
+  metadataBase: new URL("https://woodoo-stadium.com"),
   openGraph: {
     title: "Woodoo Stadium",
     description: "Dark Nordic luxury handbuilt foosball table.",
