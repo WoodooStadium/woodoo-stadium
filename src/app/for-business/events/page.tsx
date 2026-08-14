@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Branded Foosball Table Hire for Corporate Events | Woodoo Stadium",
-  description: "Bring the Stadium 11–11 to your next corporate event, trade show, or client activation. Custom-branded foosball table for international placements — pricing on request. Built in Copenhagen.",
+  description: "Bring the Stadium 11–11 to your next corporate event, trade show, or client activation. Custom-branded, built in Copenhagen for international placements.",
   alternates: {
     canonical: "https://woodoo-stadium.com/for-business/events",
     languages: { da: "https://woodoo-stadium.com/da/erhverv/events" },

@@ -4,7 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Atelier | Woodoo Stadium",
+  title: "Handmade Foosball Table Workshop | Woodoo Stadium",
   description: "The Woodoo Stadium atelier in Copenhagen — design and production of the Stadium 11–11.",
   alternates: {
     canonical: "https://woodoo-stadium.com/atelier",

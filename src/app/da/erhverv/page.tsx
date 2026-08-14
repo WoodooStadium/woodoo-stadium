@@ -4,7 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
 
 export const metadata: Metadata = {
-  title: "Erhverv | Woodoo Stadium",
+  title: "Erhvervsbordfodbold til virksomheder | Woodoo Stadium",
   description: "Stadium 11–11 er et socialt infrastrukturobjekt. En præcisionsbygget brandingplatform til virksomheder, hoteller og offentlige rum.",
   alternates: {
     canonical: "https://woodoo-stadium.com/da/erhverv",

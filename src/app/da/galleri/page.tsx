@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GalleryClient from "@/app/gallery/GalleryClient";
 
 export const metadata: Metadata = {
-  title: "Galleri | Woodoo Stadium",
+  title: "Bordfodbold galleri | Billeder af Stadium 11–11",
   description: "Et fotografisk galleri af Stadium 11–11 i atelier, detalje og udendørs omgivelser.",
   alternates: {
     canonical: "https://woodoo-stadium.com/da/galleri",

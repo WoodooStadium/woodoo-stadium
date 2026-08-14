@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { getAllPostSummaries } from "@/lib/blog-mdx";
 
 export const metadata: Metadata = {
-  title: "Atelier Journal | Woodoo Stadium",
+  title: "Atelier Journalen | Woodoo Stadium",
   description: "Nyheder fra Woodoo Stadium værkstedet og historier fra produktionen af Stadium 11–11.",
   alternates: {
     canonical: "https://woodoo-stadium.com/da/blog",

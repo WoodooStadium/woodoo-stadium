@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Designer Furniture for Hotel Lobby | Woodoo Stadium",
-  description: "The Stadium 11–11 transforms a hotel lobby into a destination. A designer foosball table for hotels — with integrated lighting and logo etched into bead-blasted steel. Handcrafted in Denmark.",
+  description: "A designer foosball table that transforms a hotel lobby into a destination — integrated lighting, logo etched into steel, handcrafted in Denmark.",
   alternates: {
     canonical: "https://woodoo-stadium.com/for-business/hotels",
     languages: { da: "https://woodoo-stadium.com/da/erhverv/hoteller" },
