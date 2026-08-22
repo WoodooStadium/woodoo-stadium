@@ -63,12 +63,12 @@ const faqItems = [
   },
   {
     question: "Hvor er Woodoo Stadium fremstillet?",
-    answer: "Designet og bygget i København, Danmark. <a href='/da/showroom'>Besøg showroomet →</a>",
+    answer: "Designet og bygget i København, Danmark. <a href='/da/showroom'>Book en fremvisning →</a>",
     category: "Brug & Placering",
   },
   {
     question: "Er der et showroom?",
-    answer: "Ja. Showroomet er i Ishøj, syd for København. Bordet er der. Du kan se det, røre ved det, og spille på det. Besøg sker efter aftale — besvaret af de mennesker der bygger det. <a href='/da/showroom#kontakt'>Book et showroombesøg →</a>",
+    answer: "Nej, der er ikke et fast showroom med åbningstider. Ved seriøse forespørgsler arrangerer vi i stedet en privat fremvisning — vi bringer Stadium 11–11 ud til jeres lokale, så I kan se det, røre ved det og spille på det, før I beslutter jer. <a href='/da/showroom#kontakt'>Book en fremvisning →</a>",
     category: "Brug & Placering",
   },
   {

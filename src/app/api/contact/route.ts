@@ -6,7 +6,7 @@ import { Resend } from "resend";
 const TYPE_LABELS: Record<string, string> = {
   general: "General enquiry",
   quote: "Request a quote",
-  showroom: "Book showroom visit",
+  showroom: "Private viewing",
 };
 
 export async function POST(request: NextRequest) {

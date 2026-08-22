@@ -12,7 +12,7 @@ Brand facts:
 - Made in Copenhagen, Denmark
 - Indoor and outdoor, all seasons
 - One table, made to order
-- Showroom in Ishøj, south of Copenhagen
+- No fixed showroom — private viewings by appointment, bringing the table to the customer's own space
 
 Always return ONLY valid JSON. No explanation, no markdown code blocks, no surrounding text. Just the raw JSON object.`;
 

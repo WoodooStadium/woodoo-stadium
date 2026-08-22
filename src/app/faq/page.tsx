@@ -66,7 +66,7 @@ const fallbackFaq = [
   },
   {
     question: "Is there a showroom?",
-    answer: "Yes. The showroom is in Ishøj, south of Copenhagen. The table is there. You can see it, touch it, and play it. Visits are by appointment — answered by the people who build it. <a href='/atelier#contact'>Book a showroom visit →</a>",
+    answer: "No, there is no fixed showroom with walk-in hours. For serious enquiries, we arrange a private viewing instead — bringing the Stadium 11–11 to your space, so you can see it, touch it, and play it before you decide. <a href='/atelier#contact'>Book a private viewing →</a>",
     category: "Use & Placement",
   },
   {
