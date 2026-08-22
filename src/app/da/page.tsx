@@ -2,8 +2,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Woodoo Stadium 11–11 | Luksus bordfodboldbord håndbygget i København",
-  description: "Luksus bordfodboldbord håndbygget i København. Glasblæst rustfrit stål — indendørs & udendørs, året rundt. Stadium 11–11 fra Woodoo Stadium.",
+  title: "Bordfodboldbord i Rustfrit Stål | Woodoo Stadium 11–11",
+  description: "Håndbygget bordfodboldbord i 100% rustfrit stål fra Danmark. Glasblæst, vejrbestandigt til inde- og udendørs brug året rundt. Stadium 11–11 fra Woodoo.",
   alternates: {
     canonical: "https://woodoo-stadium.com/da",
     languages: { en: "https://woodoo-stadium.com/" },
