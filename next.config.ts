@@ -98,6 +98,22 @@ const nextConfig: NextConfig = {
       { source: "/post/bordfodbold-til-hotel", destination: "/da/blog/bordfodbold-til-hotel", permanent: true },
       { source: "/post/tjekliste-krav-til-udend%C3%B8rs-udstyr-i-h%C3%B8jtrafikerede-rum", destination: "/da/blog/tjekliste-krav-udendoers-udstyr-hoejtrafikerede-rum", permanent: true },
       { source: "/post/aktiviteter-skolegaard", destination: "/da/blog/aktiviteter-skolegaard", permanent: true },
+
+      // Blog post migration from Wix (batch 2)
+      { source: "/post/leje-af-bordfodbold-til-events-i-herning-messe-firmafest-og-weekendleje", destination: "/da/blog/leje-af-bordfodbold-til-events-i-herning", permanent: true },
+      { source: "/post/leje-af-bordfodbold-til-firmafest", destination: "/da/blog/leje-af-bordfodbold-til-firmafest", permanent: true },
+      { source: "/post/nyt-eller-brugt-bordfodbold-hvad-boer-du-v%C3%A6lge", destination: "/da/blog/nyt-eller-brugt-bordfodbold", permanent: true },
+      { source: "/post/faellesarealer-i-sportshaller-aktiviteter-der-skaber-liv-mellem-traening-og-kamp", destination: "/da/blog/faellesarealer-i-sportshaller", permanent: true },
+      { source: "/post/saadan-vaelger-ungdomsklubber-aktiviteter-der-holder-til-hoej-daglig-belastning", destination: "/da/blog/saadan-vaelger-ungdomsklubber-aktiviteter", permanent: true },
+      { source: "/post/bordfodbold-som-trivselstiltag-derfor-virker-det-i-skolegaarde-kantiner-og-faellesarealer", destination: "/da/blog/bordfodbold-som-trivselstiltag", permanent: true },
+      { source: "/post/fritstaaende-eller-fastgjort-bordfodbold", destination: "/da/blog/fritstaaende-eller-fastgjort-bordfodbold", permanent: true },
+      { source: "/post/bordfodbold-til-ungdomsklubber-og-fritidscentre-robust-loesning-til-daglig-brug", destination: "/da/blog/bordfodbold-til-ungdomsklubber-og-fritidscentre", permanent: true },
+      { source: "/post/5-tegn-p%C3%A5-et-professionelt-bordfodboldbord", destination: "/da/blog/5-tegn-paa-et-professionelt-bordfodboldbord", permanent: true },
+      { source: "/post/indendoers-eller-udendoers-bordfodbold", destination: "/da/blog/indendoers-eller-udendoers-bordfodbold", permanent: true },
+      { source: "/post/7-steder-til-udendoers-bordfodbold", destination: "/da/blog/7-steder-til-udendoers-bordfodbold", permanent: true },
+      { source: "/post/bordfodbold-til-sportshaller-og-idraetsanlaeg-til-foyer-lounge-og-faellesarealer", destination: "/da/blog/bordfodbold-til-sportshaller-og-idraetsanlaeg", permanent: true },
+      { source: "/post/planlaegning-af-faellesomraader", destination: "/da/blog/planlaegning-af-faellesomraader", permanent: true },
+      { source: "/post/leje-af-bordfodbold-til-messer", destination: "/da/blog/leje-af-bordfodbold-til-messer", permanent: true },
     ];
   },
 };
