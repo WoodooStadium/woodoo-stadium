@@ -37,6 +37,11 @@ export default function DaShowroomPage() {
               <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>Atelieret</span>
               <span className="val" style={{ color: "#F2EEE5" }}>Design · Produktion</span>
             </div>
+            <div className="hero-bleed__cta">
+              <a href="#kontakt" className="btn btn--hero-filled">
+                Send en forespørgsel
+              </a>
+            </div>
           </div>
         </div>
       </section>

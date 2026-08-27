@@ -193,7 +193,7 @@ export default function UdlejningPage() {
           >
             <div className="col-meta">
               <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>
-                Udlejning
+                Erhverv
               </span>
               <span
                 className="val"

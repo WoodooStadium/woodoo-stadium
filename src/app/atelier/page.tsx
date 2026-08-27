@@ -37,6 +37,11 @@ export default function AtelierPage() {
               <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>The Atelier</span>
               <span className="val" style={{ color: "#F2EEE5" }}>Design · Production</span>
             </div>
+            <div className="hero-bleed__cta">
+              <a href="#contact" className="btn btn--hero-filled">
+                Send an enquiry
+              </a>
+            </div>
           </div>
         </div>
       </section>
