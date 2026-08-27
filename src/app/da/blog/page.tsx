@@ -24,9 +24,9 @@ export default function DaBlogPage() {
     <>
       <section className="section section--alt">
         <div className="fade-up" style={{ maxWidth: "72ch", margin: "0 auto" }}>
-          <span className="kicker">Atelier Journal</span>
+          <span className="kicker kicker--block">Atelier Journal</span>
           <h1 className="h1">Atelier Journal</h1>
-          <p className="lead">Noter fra værkstedet. Fire gange om året, sommetider mere.</p>
+          <p className="lead" style={{ marginTop: "24px" }}>Noter fra værkstedet. Fire gange om året, sommetider mere.</p>
         </div>
       </section>
 

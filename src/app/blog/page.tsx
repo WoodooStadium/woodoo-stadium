@@ -24,9 +24,9 @@ export default function BlogPage() {
     <>
       <section className="section section--alt">
         <div className="fade-up" style={{ maxWidth: "72ch", margin: "0 auto" }}>
-          <span className="kicker">Atelier Journal</span>
+          <span className="kicker kicker--block">Atelier Journal</span>
           <h1 className="h1">Atelier Journal</h1>
-          <p className="lead">Notes from the workshop. Four times a year, sometimes more.</p>
+          <p className="lead" style={{ marginTop: "24px" }}>Notes from the workshop. Four times a year, sometimes more.</p>
         </div>
       </section>
 
