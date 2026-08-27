@@ -12,7 +12,6 @@ const nextConfig: NextConfig = {
       { source: "/udlejning", destination: "/da/udlejning", permanent: true },
       { source: "/galleri", destination: "/da/galleri", permanent: true },
       { source: "/kopi-af-udlejning", destination: "/da/showroom", permanent: true },
-      { source: "/blog", destination: "/da/blog", permanent: true },
       { source: "/bordene", destination: "/da/bordet", permanent: true },
       { source: "/da/blog/bordfodboldbord-koebenhavn", destination: "/da/showroom", permanent: true },
 

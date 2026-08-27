@@ -38,7 +38,7 @@ export default function DaBlogPage() {
         </section>
       ) : (
         <section className="section section--no-top">
-          <div className="posts-grid fade-up" data-delay="1">
+          <div className="posts-grid">
             {posts.map((post) => (
               <article className="post-card" key={post.slug}>
                 {post.featuredImage ? (
