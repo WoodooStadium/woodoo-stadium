@@ -280,9 +280,14 @@ function NavDropdown({ link }: { link: NavLink & { children: NavChild[] } }) {
   );
 }
 
+const DESKTOP_BREAKPOINT = "(min-width: 900px)";
+const HIDE_THRESHOLD = 80;
+
 export default function Nav() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+  const [navHidden, setNavHidden] = useState(false);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
   const isDanish = pathname?.startsWith("/da") ?? false;
   const links = isDanish ? daLinks : enLinks;
@@ -292,9 +297,42 @@ export default function Nav() {
     return () => { document.body.style.overflow = ""; };
   }, [drawerOpen]);
 
+  useEffect(() => {
+    const mql = window.matchMedia(DESKTOP_BREAKPOINT);
+    lastScrollY.current = window.scrollY;
+
+    function handleScroll() {
+      if (!mql.matches || drawerOpen) return;
+
+      const currentY = window.scrollY;
+      const delta = currentY - lastScrollY.current;
+
+      if (currentY <= HIDE_THRESHOLD) {
+        setNavHidden(false);
+      } else if (delta > 0) {
+        setNavHidden(true);
+      } else if (delta < 0) {
+        setNavHidden(false);
+      }
+
+      lastScrollY.current = currentY;
+    }
+
+    function handleBreakpointChange() {
+      if (!mql.matches) setNavHidden(false);
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    mql.addEventListener("change", handleBreakpointChange);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      mql.removeEventListener("change", handleBreakpointChange);
+    };
+  }, [drawerOpen]);
+
   return (
     <>
-    <header className="nav">
+    <header className={`nav${navHidden ? " nav--hidden" : ""}`}>
       <div className="nav__inner">
         <a href={isDanish ? "/da" : "/"} className="logo" aria-label="Woodoo Stadium">
           <Image
