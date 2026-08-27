@@ -99,12 +99,13 @@ export default function DaHome() {
         </div>
       </section>
 
-      <section className="section section--dark section--no-top" style={{ background: "#0b0a08", padding: "80px var(--pad-x)" }}>
+      <section className="section section--dark section--pine section--no-top" style={{ padding: "120px var(--pad-x)" }}>
         <div className="fade-up" style={{ maxWidth: "72ch", textAlign: "center", margin: "0 auto" }}>
-          <h2 className="h2" style={{ color: "#f2eee5", marginBottom: "1.5rem" }}>
+          <span className="kicker kicker--block" style={{ justifyContent: "center" }}>Filosofi</span>
+          <h2 className="h2" style={{ marginBottom: "1.5rem" }}>
             Den sidste skærmfri sport.
           </h2>
-          <p className="body" style={{ color: "#f2eee5", textAlign: "center", margin: "0 auto" }}>
+          <p className="body" style={{ textAlign: "center", margin: "0 auto" }}>
             Du kan ikke tænke på livets forhindringer, mens du for alvor er fanget af spillet. Du kan ikke doomscrolle på telefonen, svare på mails eller bekymre dig om tiden. Bolden bevæger sig. Du bevæger dig. Alle i rummet stopper op og kigger med. I et par minutter — eller et par timer — findes der ikke andet. Det er ikke en bivirkning. Det er selve objektets arkitektur.
           </p>
         </div>

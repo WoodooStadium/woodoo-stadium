@@ -540,6 +540,7 @@ h1, h2, h3, h4 {
 .section--dark .body { color: var(--mid-on-dark); }
 .section--dark .label { color: var(--mid-on-dark); }
 .section--dark .caption { color: var(--faint-on-dark); }
+.section--dark.section--pine { background: var(--pine-deep); }
 .section--dark .kicker { color: var(--ink-on-dark); }
 .section--dark .kicker[data-index]::after { color: var(--faint-on-dark); }
 .section--dark .lead { color: var(--mid-on-dark); }
