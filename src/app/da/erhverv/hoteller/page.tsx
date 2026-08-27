@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -75,7 +76,16 @@ export default function DaErhvervHotellerPage() {
     <>
       {/* Hero */}
       <section className="hero-bleed">
-        <div className="hero-bleed__media" style={{ background: "#0B0A08" }} />
+        <div className="hero-bleed__media">
+          <Image
+            src="/uploads/woodoo_stadium_outdoor.png"
+            alt="Stadium 11-11 — udendørs terrasse om aftenen"
+            fill
+            sizes="100vw"
+            priority
+            style={{ objectFit: "cover", objectPosition: "center 65%" }}
+          />
+        </div>
         <div className="hero-bleed__veil" style={{ background: "linear-gradient(180deg, rgba(11,10,8,0.6) 0%, rgba(11,10,8,0.2) 40%, rgba(11,10,8,0.7) 100%)" }} />
         <div className="hero-bleed__inner" style={{ paddingTop: "140px" }}>
           <div className="hero-bleed__title fade-up" data-delay="1">
