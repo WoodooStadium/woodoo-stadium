@@ -196,7 +196,7 @@ export default function DaErhvervHotellerPage() {
               Bordets integrerede LED-belysning er fuldt tilpasselig — farve, styrke og udtryk designes til at spille sammen med jeres eksisterende interiør, dag og aften. Det er ikke et lyselement tilføjet til bordet. Det er en del af det samme designobjekt.
             </p>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "28px" }}>
-              Fem måder at indlejre jeres hotels visuelle identitet permanent i stålet — ikke påsat, ikke pakket ind, ikke fjernbart.
+              Fem måder at indlejre jeres hotels visuelle identitet - permanent.
             </p>
             <div style={{ padding: "24px", background: "rgba(242,238,229,0.04)", border: "1px solid rgba(242,238,229,0.1)" }}>
               <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "18px", color: "#F2EEE5", lineHeight: 1.4, margin: "0 0 12px" }}>

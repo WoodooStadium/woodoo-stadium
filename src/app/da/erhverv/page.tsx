@@ -85,7 +85,7 @@ export default function DaErhvervPage() {
               Stadium 11–11 kombinerer præcisionsingeniørkunst, integreret belysning og fuld brandtilpasning i ét objekt der aktiverer menneskelig interaktion i fysiske rum.
             </p>
             <p className="body" style={{ marginTop: "20px", color: "var(--mid-on-dark)" }}>
-              Det er ikke møbel. Det er ikke udstyr. Det er et permanent socialt anker — et der ændrer atmosfæren i et rum, giver folk en grund til at samles, og bærer dit brand i stål.
+              Det er ikke et møbel. Det er ikke udstyr. Det er et permanent socialt anker som ændrer atmosfæren i et rum, giver folk en grund til at samles, og bærer dit brand i stål.
             </p>
             <p className="body" style={{ marginTop: "20px", color: "var(--mid-on-dark)" }}>
               Bygget i Danmark. 150 kilogram. 732 komponenter. Vedligeholdelsesfrit for livet.
@@ -218,7 +218,7 @@ export default function DaErhvervPage() {
               heading="Vi er klar, når du er."
             />
             <p className="body" style={{ marginTop: "32px", color: "var(--mid-on-dark)" }}>
-              Fortæl os om rummet. Vi sender et skræddersyet forslag — specifikation, leveringstid og konfigurationsmuligheder — inden for to arbejdsdage.
+              Fortæl os om rummet. Vi sender et skræddersyet forslag — specifikationer, leveringstid og konfigurationsmuligheder — inden for to arbejdsdage.
             </p>
             <p className="body" style={{ marginTop: "16px", color: "var(--mid-on-dark)" }}>
               Til seriøse forespørgsler kan vi arrangere en privat fremvisning — hvor vi bringer Stadium 11–11 til dig.

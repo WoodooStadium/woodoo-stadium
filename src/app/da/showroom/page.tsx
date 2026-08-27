@@ -30,7 +30,7 @@ export default function DaShowroomPage() {
         <div className="hero-bleed__veil" />
         <div className="hero-bleed__inner">
           <div className="hero-bleed__title fade-up" data-delay="1">
-            <h1 className="h1">Lavet i<br /><em>København.</em></h1>
+            <h1 className="h1">Bygget i<br /><em>København.</em></h1>
           </div>
           <div className="hero-bleed__bottom fade-up" data-delay="2">
             <div className="col-meta">
@@ -49,13 +49,13 @@ export default function DaShowroomPage() {
               kicker="OBJEKTET"
               kickerIndex="N° 01"
               variant="light"
-              heading={<>Et designobjekt.<br /><em>Man kan også spille på.</em></>}
+              heading={<>Et designobjekt.<br /><em>Man også kan spille på.</em></>}
             />
             <p className="body" style={{ marginTop: "32px", color: "var(--mid)" }}>
               Stadium 11–11 er ikke et spil med et designproblem løst. Det er et socialt objekt — et der ændrer atmosfæren i et rum, giver folk en grund til at samles, og leverer en spileoplevelse der matcher dets visuelle identitet.
             </p>
             <p className="body" style={{ marginTop: "20px", color: "var(--mid)" }}>
-              Rent. Konsistent. Bygget til at vare, underholde og bringe folk sammen. Du kan ikke tænke på livets forhindringer mens du for alvor er fanget af spillet. Du kan ikke doomscrolle. Du kan ikke svare på mails. I et par minutter — eller et par timer — er intet andet tilgængeligt.
+              Rent. Konsistent. Bygget til at holde, underholde og bringe folk sammen. Du kan ikke tænke på livets forhindringer mens du for alvor er fanget af spillet. Du kan ikke doomscrolle. Du kan ikke svare på mails, tale i telefon eller skrive to-do lister. I et øjeblik — eller et par timer — kan fokus ændres, perspektiver forandres og humøret opløftes.
             </p>
           </div>
           <div className="media-tall">
@@ -74,7 +74,7 @@ export default function DaShowroomPage() {
       <section style={{ background: "#0B0A08", padding: "80px var(--pad-x-editorial)" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "clamp(28px, 3.5vw, 48px)", color: "#F2EEE5", lineHeight: 1.2 }}>
-            "Få mennesker til at samles i et øjeblik, hvor intet andet har betydning."
+            "Mennesker samles i et øjeblik, hvor intet andet har betydning."
           </p>
         </div>
       </section>
@@ -131,7 +131,7 @@ export default function DaShowroomPage() {
               heading={<>Spil bør ikke begrænses<br /><em>af, hvor bordet står.</em></>}
             />
             <p className="body" style={{ marginTop: "32px", color: "var(--mid)" }}>
-              Traditionelle borde ender med at tilhøre ét rum. En kælder. En bar. Et spillerum. Stadium 11–11 er forseglet til permanent udendørs brug — i regn, saltluft, varme og kulde. Det bevæger sig med livet i stedet for at bede livet om at bevæge sig rundt om det.
+              Traditionelle borde ender med at tilhøre ét rum. En kælder. En bar. Et spillerum. Stadium 11–11 er forseglet til permanent udendørs brug — i regn, saltluft, varme og kulde. Uanset om bordet placeres indendøres eller udendørs, kan bordet flyttes rundt med nemt tilgængelige redskaber. Det bevæger sig med livet i stedet for at bede livet om at bevæge sig rundt om det.
             </p>
             <p className="body" style={{ marginTop: "20px", color: "var(--mid)" }}>
               En sommeraften udenfor. Et offentligt rum. En terrasse. En lobby. En regnvejrsdag indendørs. Det samme bord. Den samme oplevelse. Altid tilstede. Altid klar.
@@ -166,7 +166,7 @@ export default function DaShowroomPage() {
             { number: "732", label: "Enkeltkomponenter" },
             { number: "130", label: "Tekniske tegninger" },
             { number: "150kg", label: "Glasblæst rustfrit stål" },
-            { number: "1", label: "Bord. Lavet til ordre." },
+            { number: "Ét", label: "Bord. Lavet til ordre." },
           ].map((item, i) => (
             <div key={item.number} style={{ padding: "40px 32px", borderRight: i < 3 ? "1px solid rgba(242,238,229,0.1)" : "none", textAlign: "center" }}>
               <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "72px", color: "#F2EEE5", lineHeight: 1, marginBottom: "12px" }}>{item.number}</div>
@@ -187,7 +187,7 @@ export default function DaShowroomPage() {
             heading={<>Se bordet <em>i virkeligheden.</em></>}
           />
           <p className="body" style={{ marginTop: "32px", color: "var(--mid-on-dark)", maxWidth: "52ch", margin: "32px auto 0" }}>
-            Ved seriøse forespørgsler kan vi arrangere en privat fremvisning — vi bringer Stadium 11–11 ud til jeres lokale, så I kan se det, røre ved det og spille på det, før I beslutter jer.
+            Ved seriøse forespørgsler kan vi arrangere en privat fremvisning — vi bringer Stadium 11–11 til jeres lokation, så I kan se det, røre ved det og spille på det, før I beslutter jer.
           </p>
           <a
             className="btn btn--filled-on-dark"
@@ -210,7 +210,7 @@ export default function DaShowroomPage() {
               heading={<>Tal til<br /><em>atelieret.</em></>}
             />
             <p className="body" style={{ marginTop: "32px", color: "var(--mid)" }}>
-              Alle forespørgsler besvares personligt inden for to arbejdsdage. Fortæl os om dit projekt, dit rum, eller dit spørgsmål.
+              Alle forespørgsler besvares personligt inden for to arbejdsdage. Fortæl os om dit projekt, dit rum, din drøm - eller få svar på dit spørgsmål.
             </p>
             <p className="body" style={{ marginTop: "16px", color: "var(--mid)" }}>
               Vi sender dig den fulde specifikation, leveringstid og et første forslag.
