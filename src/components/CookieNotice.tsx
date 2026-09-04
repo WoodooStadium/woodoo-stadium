@@ -64,7 +64,7 @@ export default function CookieNotice() {
         style={{
           fontFamily: "Inter Tight, sans-serif",
           fontSize: "13px",
-          color: "rgba(242,238,229,0.65)",
+          color: "rgba(242,238,229,0.75)",
           lineHeight: "1.6",
           margin: 0,
           maxWidth: "72ch",

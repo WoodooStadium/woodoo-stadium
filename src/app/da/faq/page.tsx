@@ -161,7 +161,7 @@ export default function DaFaqPage() {
           <h1 className="h1" style={{ fontSize: "clamp(32px, 4vw, 56px)", color: "#F2EEE5", lineHeight: 1.1, marginTop: "16px" }}>
             Bordfodbold, bordfodboldbord<br />&amp; <em>Stadium 11–11</em>
           </h1>
-          <p className="body fade-up" data-delay="1" style={{ color: "rgba(242,238,229,0.62)", marginTop: "24px" }}>
+          <p className="body fade-up" data-delay="1" style={{ color: "rgba(242,238,229,0.75)", marginTop: "24px" }}>
             Svar på de vigtigste spørgsmål. Har du et spørgsmål der ikke er her, besvarer vi det inden for to arbejdsdage.
           </p>
         </div>

@@ -253,7 +253,7 @@ export default function UdlejningPage() {
               style={{
                 fontFamily: "Inter Tight, sans-serif",
                 fontSize: "15px",
-                color: "rgba(242,238,229,0.65)",
+                color: "rgba(242,238,229,0.75)",
                 lineHeight: "1.85",
                 margin: 0,
               }}
@@ -264,7 +264,7 @@ export default function UdlejningPage() {
               style={{
                 fontFamily: "Inter Tight, sans-serif",
                 fontSize: "15px",
-                color: "rgba(242,238,229,0.65)",
+                color: "rgba(242,238,229,0.75)",
                 lineHeight: "1.85",
                 margin: 0,
               }}
@@ -315,7 +315,7 @@ export default function UdlejningPage() {
                 style={{
                   fontFamily: "Inter Tight, sans-serif",
                   fontSize: "13px",
-                  color: "rgba(242,238,229,0.55)",
+                  color: "rgba(242,238,229,0.75)",
                   lineHeight: "1.7",
                   marginBottom: "32px",
                 }}
@@ -372,7 +372,7 @@ export default function UdlejningPage() {
                 style={{
                   fontFamily: "Inter Tight, sans-serif",
                   fontSize: "13px",
-                  color: "rgba(242,238,229,0.55)",
+                  color: "rgba(242,238,229,0.75)",
                   lineHeight: "1.7",
                   marginBottom: "32px",
                 }}
@@ -394,7 +394,7 @@ export default function UdlejningPage() {
                 style={{
                   fontFamily: "Inter Tight, sans-serif",
                   fontSize: "11px",
-                  color: "rgba(242,238,229,0.35)",
+                  color: "rgba(242,238,229,0.6)",
                   letterSpacing: "0.04em",
                   lineHeight: "1.6",
                 }}
@@ -428,7 +428,7 @@ export default function UdlejningPage() {
                 style={{
                   fontFamily: "Inter Tight, sans-serif",
                   fontSize: "13px",
-                  color: "rgba(242,238,229,0.45)",
+                  color: "rgba(242,238,229,0.75)",
                   lineHeight: "1.7",
                   marginTop: "24px",
                 }}
@@ -532,7 +532,7 @@ export default function UdlejningPage() {
             style={{
               fontFamily: "Inter Tight, sans-serif",
               fontSize: "14px",
-              color: "rgba(242,238,229,0.55)",
+              color: "rgba(242,238,229,0.75)",
               lineHeight: "1.7",
               marginBottom: "36px",
               maxWidth: "56ch",
@@ -559,7 +559,7 @@ export default function UdlejningPage() {
             style={{
               fontFamily: "Inter Tight, sans-serif",
               fontSize: "11px",
-              color: "rgba(242,238,229,0.3)",
+              color: "rgba(242,238,229,0.6)",
               letterSpacing: "0.04em",
               lineHeight: "1.6",
               marginTop: "16px",
@@ -629,7 +629,7 @@ export default function UdlejningPage() {
                   style={{
                     fontFamily: "Inter Tight, sans-serif",
                     fontSize: "14px",
-                    color: "rgba(242,238,229,0.62)",
+                    color: "rgba(242,238,229,0.75)",
                     lineHeight: "1.85",
                     paddingBottom: "28px",
                     maxWidth: "72ch",

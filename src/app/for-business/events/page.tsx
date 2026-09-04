@@ -116,27 +116,27 @@ export default function ForBusinessEventsPage() {
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
               Not just an event.<br /><em style={{ color: "var(--pine-on-dark)" }}>A gathering point.</em>
             </h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "20px" }}>
               Screens demand attention. Any event can hire a screen, a photo booth, or a DJ. What separates an event people remember from an event people attend is a moment of genuine human connection — and that does not happen by itself.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
-              When a guest sits down to play, the phone disappears. Eye contact happens. The body moves. People who did not know each other three minutes earlier are now teammates. Everyone in the room stops what they are doing and watches — not because they were asked to, but because they cannot help it.
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "20px" }}>
+              When someone gets ready to play, the phone disappears. Eye contact happens. The body moves. People who did not know each other three minutes earlier are now teammates. Everyone in the room stops what they are doing and watches — not because they were asked to, but because they cannot help it.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8" }}>
               That is not a coincidence. It is the architecture of the object. A social infrastructure piece built to activate human interaction in physical spaces — whether that is a corporate summer party, a branded client activation, or an international trade show stand.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: "32px" }}>
             <div style={{ borderLeft: "1px solid rgba(242,238,229,0.12)", paddingLeft: "32px" }}>
               <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "56px", color: "#F2EEE5", lineHeight: 1, marginBottom: "8px" }}>85%</div>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.5)", lineHeight: "1.6", margin: 0 }}>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>
                 can recall a specific sender behind a branded physical object they have held in their hands.<br />
                 <em style={{ opacity: 0.6 }}>ASI Research · Journal of Vision</em>
               </p>
             </div>
             <div style={{ borderLeft: "1px solid rgba(242,238,229,0.12)", paddingLeft: "32px" }}>
               <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "56px", color: "#F2EEE5", lineHeight: 1, marginBottom: "8px" }}>5–12 min</div>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.5)", lineHeight: "1.6", margin: 0 }}>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>
                 average dwell time at an interactive stand, versus seconds at a static one.<br />
                 <em style={{ opacity: 0.6 }}>Exhibitor Magazine</em>
               </p>
@@ -157,7 +157,7 @@ export default function ForBusinessEventsPage() {
               <div key={item.stat} style={{ padding: "40px 32px", borderRight: index < 3 ? "1px solid rgba(242,238,229,0.1)" : "none" }}>
                 <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", display: "block", marginBottom: "20px" }}>{item.number}</span>
                 <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 400, fontStyle: "italic", fontSize: "24px", color: "#F2EEE5", margin: "0 0 16px" }}>{item.stat}</h3>
-                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.6)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
+                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
               </div>
             ))}
           </div>
@@ -260,7 +260,7 @@ export default function ForBusinessEventsPage() {
               <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "18px", color: "#F2EEE5", lineHeight: 1.4, margin: "0 0 12px" }}>
                 &ldquo;85% can recall the specific sender behind a branded physical object they have held in their hands.&rdquo;
               </p>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(242,238,229,0.35)", margin: 0 }}>ASI Research · Journal of Vision</p>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(242,238,229,0.6)", margin: 0 }}>ASI Research · Journal of Vision</p>
             </div>
           </div>
           <div>
@@ -273,7 +273,7 @@ export default function ForBusinessEventsPage() {
                   <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", flexShrink: 0, paddingTop: "3px" }}>{method.number}</span>
                   <div>
                     <h3 style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F2EEE5", margin: "0 0 6px" }}>{method.title}</h3>
-                    <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.55)", lineHeight: "1.6", margin: 0 }}>{method.description}</p>
+                    <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>{method.description}</p>
                   </div>
                 </div>
               ))}
@@ -325,7 +325,7 @@ export default function ForBusinessEventsPage() {
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
               Access — <em style={{ color: "var(--pine-on-dark)" }}>without commitment.</em>
             </h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "32px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "32px" }}>
               Fixed placement gives you a permanent social anchor in your space without the capital outlay of outright ownership. We send a full specification and a first proposal within two working days.
             </p>
             <div style={{ border: "1px solid rgba(242,238,229,0.15)", overflow: "hidden" }}>
@@ -349,11 +349,11 @@ export default function ForBusinessEventsPage() {
               {included.map((item) => (
                 <li key={item} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
                   <span style={{ color: "rgba(242,238,229,0.4)", flexShrink: 0, lineHeight: 1.6 }}>—</span>
-                  <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.65)", lineHeight: "1.6" }}>{item}</span>
+                  <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6" }}>{item}</span>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.4)", lineHeight: "1.7" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.7" }}>
               International delivery is quoted individually, based on location and logistics — it is not included in the placement price and there is no fixed rate. A tailored delivery quote is included as part of your proposal.
             </p>
             <div style={{ marginTop: "32px" }}>

@@ -109,27 +109,27 @@ export default function ForBusinessHotelsPage() {
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
               Not just furniture.<br /><em style={{ color: "var(--pine-on-dark)" }}>A destination.</em>
             </h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "20px" }}>
               Most hotel lobbies have the same problem. The furniture is designed to be sat in, not to make something happen. A guest checks in, finds a seat, reaches for their phone. The space carries on as decor.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "20px" }}>
               A Woodoo table changes the physics of a room. When someone sits down to play, the phone goes away. Eye contact happens. People who checked in twenty minutes apart are suddenly in a game together — while the rest of the lobby watches, then waits for their turn.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8" }}>
               That is not a fortunate accident. It is the architecture of the object. A 150-kilogram social anchor built to activate human interaction in physical spaces — and designed to be a permanent part of the room, not an installation for a season.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: "32px" }}>
             <div style={{ borderLeft: "1px solid rgba(242,238,229,0.12)", paddingLeft: "32px" }}>
               <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "56px", color: "#F2EEE5", lineHeight: 1, marginBottom: "8px" }}>83%</div>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.5)", lineHeight: "1.6", margin: 0 }}>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>
                 book a hotel after seeing photos posted by other travellers on social media.<br />
                 <em style={{ opacity: 0.6 }}>Amadeus Hospitality</em>
               </p>
             </div>
             <div style={{ borderLeft: "1px solid rgba(242,238,229,0.12)", paddingLeft: "32px" }}>
               <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "56px", color: "#F2EEE5", lineHeight: 1, marginBottom: "8px" }}>40%</div>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.5)", lineHeight: "1.6", margin: 0 }}>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>
                 of millennial travellers rank a hotel&apos;s &ldquo;Instagrammability&rdquo; as decisive — higher than local attractions.<br />
                 <em style={{ opacity: 0.6 }}>Millennial Travel Survey, UK</em>
               </p>
@@ -150,7 +150,7 @@ export default function ForBusinessHotelsPage() {
               <div key={item.stat} style={{ padding: "40px 32px", borderRight: index < 3 ? "1px solid rgba(242,238,229,0.1)" : "none" }}>
                 <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", display: "block", marginBottom: "20px" }}>{item.number}</span>
                 <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 400, fontStyle: "italic", fontSize: "24px", color: "#F2EEE5", margin: "0 0 16px" }}>{item.stat}</h3>
-                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.6)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
+                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
               </div>
             ))}
           </div>
@@ -190,7 +190,7 @@ export default function ForBusinessHotelsPage() {
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
               Your hotel&apos;s identity.<br /><em style={{ color: "var(--pine-on-dark)" }}>Cut right in.</em>
             </h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "20px" }}>
               The Stadium 11–11&apos;s integrated LED system is fully adjustable — colour, warmth, and intensity matched to your existing interior, day or evening. It is not a lighting fixture added to the table. It is part of the same design object.
             </p>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "28px" }}>
@@ -200,7 +200,7 @@ export default function ForBusinessHotelsPage() {
               <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "18px", color: "#F2EEE5", lineHeight: 1.4, margin: "0 0 12px" }}>
                 &ldquo;85% can recall the specific sender behind a branded physical object they have held in their hands.&rdquo;
               </p>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(242,238,229,0.35)", margin: 0 }}>ASI Research · Journal of Vision</p>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(242,238,229,0.6)", margin: 0 }}>ASI Research · Journal of Vision</p>
             </div>
           </div>
           <div>
@@ -213,7 +213,7 @@ export default function ForBusinessHotelsPage() {
                   <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", flexShrink: 0, paddingTop: "3px" }}>{method.number}</span>
                   <div>
                     <h3 style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F2EEE5", margin: "0 0 6px" }}>{method.title}</h3>
-                    <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.55)", lineHeight: "1.6", margin: 0 }}>{method.description}</p>
+                    <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>{method.description}</p>
                   </div>
                 </div>
               ))}
@@ -230,7 +230,7 @@ export default function ForBusinessHotelsPage() {
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
               Ownership —<br /><em style={{ color: "var(--pine-on-dark)" }}>or try it first.</em>
             </h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "32px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "32px" }}>
               Two ways in — both without long-term commitment if you would rather start small. We send full specifications and a first proposal within two working days.
             </p>
             <div style={{ border: "1px solid rgba(242,238,229,0.15)", overflow: "hidden" }}>
@@ -254,11 +254,11 @@ export default function ForBusinessHotelsPage() {
               {included.map((item) => (
                 <li key={item} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
                   <span style={{ color: "rgba(242,238,229,0.4)", flexShrink: 0, lineHeight: 1.6 }}>—</span>
-                  <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.65)", lineHeight: "1.6" }}>{item}</span>
+                  <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6" }}>{item}</span>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.4)", lineHeight: "1.7" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.7" }}>
               Delivery and installation within Denmark is included in the price. Outside Denmark, calculated separately by location.
             </p>
             <div style={{ marginTop: "32px" }}>

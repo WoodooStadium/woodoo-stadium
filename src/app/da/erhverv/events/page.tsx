@@ -36,9 +36,9 @@ const structuredData = {
 };
 
 const eventArguments = [
-  { number: "01", stat: "Opholdstid", description: "Gæster bliver længere. En fest-area bliver en destination, ikke blot et punkt på programmet. Folk vender tilbage til bordet — og tager vennerne med." },
+  { number: "01", stat: "Opholdstid", description: "Gæster bliver længere. Et gennemgangsområde bliver en destination. Folk vender tilbage til bordet — og tager vennerne med." },
   { number: "02", stat: "Organisk rækkevidde", description: "Bordet fotograferes og deles — på Instagram, LinkedIn og i gruppechats — inden nogen har beskrevet det med ord. Det rejser med billederne." },
-  { number: "03", stat: "Brandpermanens", description: "Jeres kundes logo skåret direkte i stålet. Ikke en folie. Ikke et klistermærke. En permanent del af objektet, synlig på hvert fotografi taget i rummet." },
+  { number: "03", stat: "Brandpermanens", description: "Jeres kundes logo skåret direkte i stålet. En permanent del af objektet, synlig på hvert fotografi taget i rummet." },
   { number: "04", stat: "Social aktivering", description: "Blikket mødes. Samtaler opstår uden anledning. Fremmede bliver holdkammerater. Det er ikke et trick — det er præcis det, I inviterede folk til." },
 ];
 
@@ -133,27 +133,27 @@ export default function DaErhvervEventsPage() {
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
               Ikke bare et arrangement.<br /><em style={{ color: "var(--pine-on-dark)" }}>Et samlingspunkt.</em>
             </h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "20px" }}>
               Skærme kræver opmærksomhed. Ethvert arrangement kan leje en skærm, en fotobooth eller en DJ. Det, der adskiller et event folk husker fra et event folk overværer, er et øjeblik af ægte fællesskab — og det opstår ikke af sig selv.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
-              Når en gæst sætter sig ned for at spille, lægger de telefonen. Blikket mødes. Kroppen er i bevægelse. Folk der ikke kendte hinanden tre minutter tidligere er nu holdkammerater. Alle i rummet stopper op og kigger med — ikke fordi de er bedt om det, men fordi de ikke kan lade være.
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "20px" }}>
+              Når folk gør sig klar til at spille, lægger de telefonen. Blikke mødes. Kroppen er i bevægelse. Mennesker der ikke kendte hinanden tre minutter tidligere er nu holdkammerater. Alle i rummet stopper op og kigger med — ikke fordi de bliver bedt om det, men fordi de ikke kan lade være.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8" }}>
               Det er ikke en tilfældig bivirkning. Det er en del af objektets arkitektur. Et socialt infrastrukturobjekt designet til at aktivere menneskelig interaktion i fysiske rum — uanset om det er en firmasommerfest, en branded kundeaktivering eller en international messestand.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: "32px" }}>
             <div style={{ borderLeft: "1px solid rgba(242,238,229,0.12)", paddingLeft: "32px" }}>
               <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "56px", color: "#F2EEE5", lineHeight: 1, marginBottom: "8px" }}>85%</div>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.5)", lineHeight: "1.6", margin: 0 }}>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>
                 kan huske en specifik afsender bag et brandet fysisk objekt, de har haft i hænderne.<br />
                 <em style={{ opacity: 0.6 }}>ASI Research · Journal of Vision</em>
               </p>
             </div>
             <div style={{ borderLeft: "1px solid rgba(242,238,229,0.12)", paddingLeft: "32px" }}>
               <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "56px", color: "#F2EEE5", lineHeight: 1, marginBottom: "8px" }}>5–12 min</div>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.5)", lineHeight: "1.6", margin: 0 }}>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>
                 gennemsnitlig opholdstid ved en interaktiv stand — mod kun sekunder ved en statisk en.<br />
                 <em style={{ opacity: 0.6 }}>Exhibitor Magazine</em>
               </p>
@@ -174,7 +174,7 @@ export default function DaErhvervEventsPage() {
               <div key={item.stat} style={{ padding: "40px 32px", borderRight: index < 3 ? "1px solid rgba(242,238,229,0.1)" : "none" }}>
                 <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", display: "block", marginBottom: "20px" }}>{item.number}</span>
                 <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 400, fontStyle: "italic", fontSize: "24px", color: "#F2EEE5", margin: "0 0 16px" }}>{item.stat}</h3>
-                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.6)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
+                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
               </div>
             ))}
           </div>
@@ -277,7 +277,7 @@ export default function DaErhvervEventsPage() {
               <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "18px", color: "#F2EEE5", lineHeight: 1.4, margin: "0 0 12px" }}>
                 "85% kan huske hvilken specifik afsender der stod bag et brandet fysisk objekt, de har haft i hænderne."
               </p>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(242,238,229,0.35)", margin: 0 }}>ASI Research · Journal of Vision</p>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(242,238,229,0.6)", margin: 0 }}>ASI Research · Journal of Vision</p>
             </div>
           </div>
           <div>
@@ -290,7 +290,7 @@ export default function DaErhvervEventsPage() {
                   <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", flexShrink: 0, paddingTop: "3px" }}>{method.number}</span>
                   <div>
                     <h3 style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F2EEE5", margin: "0 0 6px" }}>{method.title}</h3>
-                    <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.55)", lineHeight: "1.6", margin: 0 }}>{method.description}</p>
+                    <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>{method.description}</p>
                   </div>
                 </div>
               ))}
@@ -342,7 +342,7 @@ export default function DaErhvervEventsPage() {
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
               Adgang — <em style={{ color: "var(--pine-on-dark)" }}>uden binding.</em>
             </h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "32px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "32px" }}>
               Leje giver fuld adgang til Stadium 11–11, uden at binde kapital. Vi sender fuld specifikation og et første tilbud inden for to arbejdsdage.
             </p>
             <div style={{ border: "1px solid rgba(242,238,229,0.15)", overflow: "hidden" }}>
@@ -366,11 +366,11 @@ export default function DaErhvervEventsPage() {
               {included.map((item) => (
                 <li key={item} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
                   <span style={{ color: "rgba(242,238,229,0.4)", flexShrink: 0, lineHeight: 1.6 }}>—</span>
-                  <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.65)", lineHeight: "1.6" }}>{item}</span>
+                  <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6" }}>{item}</span>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.4)", lineHeight: "1.7" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.7" }}>
               Levering og opstilling tilkøbes særskilt — pris afhænger af lokation, dag og tid, og fremgår af det samlede tilbud.
             </p>
             <div style={{ marginTop: "32px" }}>

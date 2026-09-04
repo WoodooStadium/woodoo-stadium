@@ -121,27 +121,27 @@ export default function DaErhvervHotellerPage() {
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
               Ikke bare et møbel.<br /><em style={{ color: "var(--pine-on-dark)" }}>En destination.</em>
             </h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "20px" }}>
               De fleste hotellobbyer har det samme problem. Møblerne er designet til at sidde i — ikke til at skabe noget. En gæst tjekker ind, finder en plads, tager telefonen frem. Rummet fortsætter som indretning.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "20px" }}>
               Et Woodoo-bord ændrer rummets fysik. Når nogen sætter sig ned for at spille, forsvinder telefonen. Blikket mødes. Folk der tjekkede ind med tyve minutters mellemrum er pludselig i et spil — mens resten af lobbyen ser til og venter på sin tur.
             </p>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8" }}>
               Det er ikke et heldigt tilfælde. Det er en del af objektets arkitektur. Et socialt ankerpunkt på 150 kilo, designet til at aktivere menneskelig interaktion i fysiske rum — og bygget til at være en permanent del af rummet, ikke en sæsoninstallation.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: "32px" }}>
             <div style={{ borderLeft: "1px solid rgba(242,238,229,0.12)", paddingLeft: "32px" }}>
               <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "56px", color: "#F2EEE5", lineHeight: 1, marginBottom: "8px" }}>83%</div>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.5)", lineHeight: "1.6", margin: 0 }}>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>
                 booker et hotel efter at have set billeder postet af andre rejsende på sociale medier.<br />
                 <em style={{ opacity: 0.6 }}>Amadeus Hospitality</em>
               </p>
             </div>
             <div style={{ borderLeft: "1px solid rgba(242,238,229,0.12)", paddingLeft: "32px" }}>
               <div style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "56px", color: "#F2EEE5", lineHeight: 1, marginBottom: "8px" }}>40%</div>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.5)", lineHeight: "1.6", margin: 0 }}>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>
                 angiver hotellets »Instagrammability« som afgørende for valget — højere end lokale seværdigheder.<br />
                 <em style={{ opacity: 0.6 }}>Millennial Travel Survey, UK</em>
               </p>
@@ -162,7 +162,7 @@ export default function DaErhvervHotellerPage() {
               <div key={item.stat} style={{ padding: "40px 32px", borderRight: index < 3 ? "1px solid rgba(242,238,229,0.1)" : "none" }}>
                 <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", display: "block", marginBottom: "20px" }}>{item.number}</span>
                 <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 400, fontStyle: "italic", fontSize: "24px", color: "#F2EEE5", margin: "0 0 16px" }}>{item.stat}</h3>
-                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.6)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
+                <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.7", margin: 0 }}>{item.description}</p>
               </div>
             ))}
           </div>
@@ -202,7 +202,7 @@ export default function DaErhvervHotellerPage() {
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
               Jeres hotels identitet.<br /><em style={{ color: "var(--pine-on-dark)" }}>Skåret ind.</em>
             </h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "20px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "20px" }}>
               Bordets integrerede LED-belysning er fuldt tilpasselig — farve, styrke og udtryk designes til at spille sammen med jeres eksisterende interiør, dag og aften. Det er ikke et lyselement tilføjet til bordet. Det er en del af det samme designobjekt.
             </p>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "28px" }}>
@@ -212,7 +212,7 @@ export default function DaErhvervHotellerPage() {
               <p style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontStyle: "italic", fontSize: "18px", color: "#F2EEE5", lineHeight: 1.4, margin: "0 0 12px" }}>
                 "85% kan huske hvilken specifik afsender der stod bag et brandet fysisk objekt, de har haft i hænderne."
               </p>
-              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(242,238,229,0.35)", margin: 0 }}>ASI Research · Journal of Vision</p>
+              <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "10px", letterSpacing: "0.12em", color: "rgba(242,238,229,0.6)", margin: 0 }}>ASI Research · Journal of Vision</p>
             </div>
           </div>
           <div>
@@ -225,7 +225,7 @@ export default function DaErhvervHotellerPage() {
                   <span style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "rgba(242,238,229,0.3)", flexShrink: 0, paddingTop: "3px" }}>{method.number}</span>
                   <div>
                     <h3 style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F2EEE5", margin: "0 0 6px" }}>{method.title}</h3>
-                    <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.55)", lineHeight: "1.6", margin: 0 }}>{method.description}</p>
+                    <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6", margin: 0 }}>{method.description}</p>
                   </div>
                 </div>
               ))}
@@ -242,7 +242,7 @@ export default function DaErhvervHotellerPage() {
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
               Ejerskab —<br /><em style={{ color: "var(--pine-on-dark)" }}>eller prøv først.</em>
             </h2>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.65)", lineHeight: "1.8", marginBottom: "32px" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "32px" }}>
               To veje ind — begge uden langsigtet binding, hvis I vil starte i det små. Vi sender fuld specifikation og et første tilbud inden for to arbejdsdage.
             </p>
             <div style={{ border: "1px solid rgba(242,238,229,0.15)", overflow: "hidden" }}>
@@ -266,11 +266,11 @@ export default function DaErhvervHotellerPage() {
               {included.map((item) => (
                 <li key={item} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
                   <span style={{ color: "rgba(242,238,229,0.4)", flexShrink: 0, lineHeight: 1.6 }}>—</span>
-                  <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.65)", lineHeight: "1.6" }}>{item}</span>
+                  <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "14px", color: "rgba(242,238,229,0.75)", lineHeight: "1.6" }}>{item}</span>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.4)", lineHeight: "1.7" }}>
+            <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.7" }}>
               Levering og opstilling i Danmark er inkluderet i prisen. Uden for Danmark beregnes det separat efter lokation.
             </p>
             <div style={{ marginTop: "32px" }}>
