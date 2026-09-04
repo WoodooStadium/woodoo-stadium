@@ -56,7 +56,7 @@ const fallbackFaq = [
   },
   {
     question: "Is it suitable for a public space?",
-    answer: "Yes. The Stadium 11–11 is built for permanent placement in public spaces, parks, cultural venues, hotels, airports, and corporate lobbies. It requires no maintenance and no shelter. <a href='/for-business'>See sector placements →</a>",
+    answer: "Yes. The Stadium 11–11 is built for permanent placement in public spaces, parks, cultural venues, hotels, airports, and corporate lobbies. It requires no maintenance and no shelter. <a href='/for-business/public-space'>See sector placements →</a>",
     category: "Use & Placement",
   },
   {

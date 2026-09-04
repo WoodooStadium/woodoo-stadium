@@ -58,7 +58,7 @@ const faqItems = [
   },
   {
     question: "Er det egnet til et offentligt rum?",
-    answer: "Ja. Stadium 11–11 er bygget til permanent placering i offentlige rum, parker, kulturelle venues, hoteller, lufthavne og virksomhedslobbyer. Det kræver ingen vedligeholdelse og intet ly. <a href='/da/erhverv'>Se sektorplaceringer →</a>",
+    answer: "Ja. Stadium 11–11 er bygget til permanent placering i offentlige rum, parker, kulturelle venues, hoteller, lufthavne og virksomhedslobbyer. Det kræver ingen vedligeholdelse og intet ly. <a href='/da/erhverv/byrum'>Se sektorplaceringer →</a>",
     category: "Brug & Placering",
   },
   {
