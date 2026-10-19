@@ -26,14 +26,14 @@ const anatomyItems = [
 ];
 
 const specRows: [string, string][] = [
-  ["MATERIAL", "Bead-blasted stainless steel, 304"],
+  ["MATERIAL", "Bead-blasted stainless steel, 304 and 316"],
   ["WEIGHT", "150 kilograms"],
   ["HABITAT", "Indoor & outdoor, all seasons"],
   ["WARRANTY", "5-year warranty on the Stadium 11–11"],
   ["LIGHT", "Integrated LED — field & plate"],
   ["COMPONENTS", "732 individual parts"],
   ["ENGINEERING", "130 technical drawings"],
-  ["FINISH", "Brushed, not polished"],
+  ["FINISH", "Bead-blasted, not polished"],
   ["DIMENSIONS", "Confirmed at enquiry"],
 ];
 

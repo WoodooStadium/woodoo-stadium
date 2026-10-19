@@ -12,7 +12,7 @@ export const metadata: Metadata = buildPageMetadata({
 const faqItems = [
   {
     question: "Hvad er Woodoo Stadium 11–11?",
-    answer: "Et præcisionsingeniøreret socialt designobjekt. Ét bord, håndbygget i København af børstet rustfrit stål 304. Det vejer 150 kilogram, indeholder 732 enkeltkomponenter og er bygget til permanent inde- og udendørs brug. Det er ikke et spil med et designproblem løst — det er et socialt objekt der ændrer atmosfæren i et rum. <a href='/da/bordet'>Se den fulde specifikation →</a>",
+    answer: "Et præcisionsingeniøreret socialt designobjekt. Ét bord, håndbygget i København af glasblæst rustfrit stål 304 og 316. Det vejer 150 kilogram, indeholder 732 enkeltkomponenter og er bygget til permanent inde- og udendørs brug. Det er ikke et spil med et designproblem løst — det er et socialt objekt der ændrer atmosfæren i et rum. <a href='/da/bordet'>Se den fulde specifikation →</a>",
     category: "Objektet",
   },
   {
@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: "Hvad sker der når det regner?",
-    answer: "Ingenting. Bordet er bygget til det. Glasblæst rustfrit stål A304, svejset til ét sammenhængende objekt, forseglet til alt vejr. Det bliver, hvor det placeres. <a href='/da/bordet'>Læs mere om materialerne →</a>",
+    answer: "Ingenting. Bordet er bygget til det. Glasblæst rustfrit stål 304 og 316, svejset til ét sammenhængende objekt, forseglet til alt vejr. Det bliver, hvor det placeres. <a href='/da/bordet'>Læs mere om materialerne →</a>",
     category: "Brug & Placering",
   },
   {
@@ -122,7 +122,7 @@ const faqItems = [
   },
   {
     question: "Kan et bordfodboldsbord placeres på en taghave eller udendørs terrasse?",
-    answer: "De fleste kan ikke. Standardborde er bygget af træ, MDF eller malet metal — materialer der buler, ruster og nedbrydes i udendørs forhold. Stadium 11–11 er undtagelsen. Bygget af børstet rustfrit stål 304 og forseglet til permanent udendørs brug, kan det placeres på en taghave, terrasse, ved pool eller i en offentlig park. Det behøver ikke ly. Det er lavet til at forblive tilstede. <a href='/da/bordet'>Se den udendørs specifikation →</a>",
+    answer: "De fleste kan ikke. Standardborde er bygget af træ, MDF eller malet metal — materialer der buler, ruster og nedbrydes i udendørs forhold. Stadium 11–11 er undtagelsen. Bygget af glasblæst rustfrit stål (304 og 316) og forseglet til permanent udendørs brug, kan det placeres på en taghave, terrasse, ved pool eller i en offentlig park. Det behøver ikke ly. Det er lavet til at forblive tilstede. <a href='/da/bordet'>Se den udendørs specifikation →</a>",
     category: "For Erhverv",
   },
 ];

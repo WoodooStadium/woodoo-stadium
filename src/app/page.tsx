@@ -91,7 +91,7 @@ export default function Home() {
             Most objects are assembled. Parts arrive. Parts are joined. The result is a product. The Stadium 11–11 is different. It is welded, ground, and tuned. One hundred and fifty kilograms of bead-blasted stainless steel, formed in a single monocoque body. Sealed permanently. Built to stand outdoors in rain, heat, and cold without changing. It took 130 engineering drawings to describe it. It contains 732 individual parts. We make one table. This is it.
           </p>
           <div className="specs fade-up" data-delay="3">
-            <div className="specs__row"><span className="label">Material</span><span className="val">Bead-blasted stainless steel, 304</span></div>
+            <div className="specs__row"><span className="label">Material</span><span className="val">Bead-blasted stainless steel, 304 and 316</span></div>
             <div className="specs__row"><span className="label">Weight</span><span className="val">150 kilograms</span></div>
             <div className="specs__row"><span className="label">Habitat</span><span className="val">Indoor &amp; outdoor · all seasons</span></div>
             <div className="specs__row"><span className="label">Light</span><span className="val">Integrated LED · field &amp; plate</span></div>
@@ -119,7 +119,7 @@ export default function Home() {
           <div className="fade-up"><span className="kicker" data-index="N° 02">Craft</span></div>
           <h2 className="h2 fade-up" data-delay="1">732 decisions, <span className="serif-it">none of them loud.</span></h2>
           <p className="body fade-up" data-delay="2">
-            The Stadium is not assembled. It is built — welded, ground, brushed, lit, tuned. Three details we are quietly proud of.
+            The Stadium is not assembled. It is built — welded, ground, bead-blasted, lit, tuned. Three details we are quietly proud of.
           </p>
           <div className="craft__features fade-up" data-delay="3">
             <div className="feat">

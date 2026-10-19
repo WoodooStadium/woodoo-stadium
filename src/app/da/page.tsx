@@ -91,7 +91,7 @@ export default function DaHome() {
             De fleste objekter bliver samlet. Dele ankommer, dele forbindes og resultatet er et produkt. Bordfodboldbordet Stadium 11–11 er noget andet. Det bliver svejset, slebet og stemt. Hundrede og halvtreds kilo glasblæst rustfrit stål, konstrueret i én integreret struktur. Forseglet permanent. Bygget til at stå udendørs i regn, varme og kulde uden at forandre sig. Der skulle 130 tekniske tegninger til at beskrive det. Det rummer 732 enkeltdele. Vi laver ét bord. Det er det.
           </p>
           <div className="specs fade-up" data-delay="3">
-            <div className="specs__row"><span className="label">Materiale</span><span className="val">Glasblæst rustfrit stål, 304</span></div>
+            <div className="specs__row"><span className="label">Materiale</span><span className="val">Glasblæst rustfrit stål, 304 og 316</span></div>
             <div className="specs__row"><span className="label">Vægt</span><span className="val">150 kilogram</span></div>
             <div className="specs__row"><span className="label">Placering</span><span className="val">Inde &amp; ude · året rundt</span></div>
             <div className="specs__row"><span className="label">Lys</span><span className="val">Integreret LED · bane &amp; point-paneler</span></div>
