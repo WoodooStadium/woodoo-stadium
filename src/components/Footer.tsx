@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { SOCIAL_LINKS } from "@/lib/structured-data";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -102,7 +103,6 @@ export default function Footer() {
               <li><a href="/da/blog">Blog</a></li>
               <li><a href="/da/faq">FAQ</a></li>
               <li><a href="/da/showroom#kontakt">Kontakt</a></li>
-              <li><a href="#">Presse</a></li>
             </ul>
             <a href="mailto:contact@woodoo-stadium.com" className="footer__email">contact@woodoo-stadium.com</a>
           </div>
@@ -124,9 +124,9 @@ export default function Footer() {
             Privatliv &amp; Cookies
           </a>
           <div className="social">
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Pinterest</a>
+            <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
           </div>
         </div>
       </footer>
@@ -206,7 +206,6 @@ export default function Footer() {
             <li><a href="/blog">Blog</a></li>
             <li><a href="/faq">FAQ</a></li>
             <li><a href="/atelier#contact">Contact</a></li>
-            <li><a href="#">Press</a></li>
           </ul>
           <a href="mailto:contact@woodoo-stadium.com" className="footer__email">contact@woodoo-stadium.com</a>
         </div>
@@ -228,9 +227,9 @@ export default function Footer() {
           Privacy &amp; Cookies
         </a>
         <div className="social">
-          <a href="#">Instagram</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Pinterest</a>
+          <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
       </div>
     </footer>

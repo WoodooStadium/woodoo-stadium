@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import FaqClient from "@/app/faq/FaqClient";
+import { SITE_URL, buildBreadcrumbs, buildFaqPage, jsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "FAQ | Woodoo Stadium — Bordfodbold, bordfodboldbord & Stadium 11–11",
@@ -139,15 +140,7 @@ function groupFaq(items: Array<{ question: string; answer: string; category: str
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
+  "@graph": [buildBreadcrumbs("FAQ", `${SITE_URL}/da/faq`), buildFaqPage(faqItems)],
 };
 
 export default function DaFaqPage() {
@@ -184,7 +177,7 @@ export default function DaFaqPage() {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={jsonLd(structuredData)}
       />
     </>
   );

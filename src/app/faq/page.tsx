@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { FaqItem } from "@/lib/supabase-types";
 import { getFaqItems } from "@/lib/db";
 import FaqClient from "./FaqClient";
+import { SITE_URL, buildBreadcrumbs, buildFaqPage, jsonLd } from "@/lib/structured-data";
 
 const fallbackFaq = [
   {
@@ -257,15 +258,7 @@ export default async function FAQPage() {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
+    "@graph": [buildBreadcrumbs("FAQ", `${SITE_URL}/faq`), buildFaqPage(faqItems)],
   };
 
   return (
@@ -299,7 +292,7 @@ export default async function FAQPage() {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={jsonLd(structuredData)}
       />
     </>
   );

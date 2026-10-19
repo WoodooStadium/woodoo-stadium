@@ -45,14 +45,6 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Woodoo Stadium",
-  url: "https://woodoo-stadium.com",
-  logo: "https://woodoo-stadium.com/uploads/logo-light.png",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -63,10 +55,6 @@ export default function RootLayout({
       <body className="app-shell">
         <ClientLayout>{children}</ClientLayout>
         <CookieNotice />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
-        />
       </body>
     </html>
   );

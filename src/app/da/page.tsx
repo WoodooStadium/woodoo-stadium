@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildOrganization, jsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Bordfodboldbord i Rustfrit Stål | Woodoo Stadium 11–11",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function DaHome() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(buildOrganization("da"))} />
       <section className="hero-bleed">
         <div className="hero-bleed__media">
           <Image

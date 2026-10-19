@@ -1,6 +1,7 @@
 import DrawingViewer from "@/components/DrawingViewer";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { SITE_URL, buildBreadcrumbs, buildProduct, jsonLd } from "@/lib/structured-data";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
 
@@ -43,9 +44,15 @@ const keyFigures = [
 
 const SHOW_DELIVERIES = false; // TODO: flip to true once real delivery photos exist
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [buildBreadcrumbs("Bordet", `${SITE_URL}/da/bordet`), buildProduct("da")],
+};
+
 export default function DaBordetPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(structuredData)} />
       <section className="hero-bleed">
         <div className="hero-bleed__media">
           <Image
