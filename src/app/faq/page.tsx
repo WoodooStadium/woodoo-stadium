@@ -236,7 +236,7 @@ const fallbackFaq = [
 export const metadata: Metadata = buildPageMetadata({
   path: "/faq",
   title: "FAQ | Woodoo Stadium — Luxury Foosball Table, Table Football & Social Design Object",
-  description: "Everything about the Woodoo Stadium 11–11 — the world's finest foosball table. Questions about the sport, professional play, hotel amenities, office social spaces, and how to enquire.",
+  description: "Answers to the most common questions about the Woodoo Stadium 11–11 foosball table: materials, customisation, outdoor use and business editions.",
 });
 
 function groupFaq(items: Array<{ question: string; answer: string; category: string | null }>) {

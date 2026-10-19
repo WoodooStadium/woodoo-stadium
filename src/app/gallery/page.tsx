@@ -25,7 +25,7 @@ const images = [
   { src: "/uploads/woodoo_foosball_original_232dad1d.jfif", title: "Front profile — park", category: "Outdoors" },
   { src: "/uploads/woodoo_foosball_original_8227f7dc.jfif", title: "Three-quarter with trees", category: "Outdoors" },
   { src: "/uploads/woodoo_foosball_original_66369433.jfif", title: "Dramatic angle — shadow", category: "Outdoors" },
-  { src: "/uploads/woodoo_foosball_original_93dbeb38.jfif", title: "Top-down angle", category: "Outdoors" },
+  { src: "/uploads/woodoo_foosball_original_93dbeb38.jpg", title: "Top-down angle", category: "Outdoors" },
   { src: "/uploads/woodoo_foosball_original_9953d088.jfif", title: "Rain on steel — macro", category: "Detail" },
   { src: "/uploads/woodoo_stadium_side.png", title: "Side — wet steel detail", category: "Detail" },
   { src: "/uploads/woodoo_stadium_side_bespoke.png", title: "Side — bespoke edition", category: "Studio" },

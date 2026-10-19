@@ -36,14 +36,14 @@ export function buildOrganization(locale: Locale) {
 const productCopy: Record<Locale, { description: string; material: string; url: string }> = {
   en: {
     description:
-      "A foosball table handbuilt in Copenhagen from 150 kg of bead-blasted stainless steel 304, built for permanent indoor and outdoor use. Comes with a 5-year warranty.",
-    material: "Stainless steel 304, bead-blasted",
+      "A foosball table handbuilt in Copenhagen from 150 kg of bead-blasted stainless steel (304 and 316), built for permanent indoor and outdoor use. Comes with a 5-year warranty.",
+    material: "Stainless steel 304 and 316, bead-blasted",
     url: `${SITE_URL}/the-table`,
   },
   da: {
     description:
-      "Et bordfodboldbord håndbygget i København af 150 kg glasblæst rustfrit stål 304, bygget til permanent brug inde og ude. Leveres med 5 års garanti.",
-    material: "Rustfrit stål 304, glasblæst",
+      "Et bordfodboldbord håndbygget i København af 150 kg glasblæst rustfrit stål (304 og 316), bygget til permanent brug inde og ude. Leveres med 5 års garanti.",
+    material: "Rustfrit stål 304 og 316, glasblæst",
     url: `${SITE_URL}/da/bordet`,
   },
 };

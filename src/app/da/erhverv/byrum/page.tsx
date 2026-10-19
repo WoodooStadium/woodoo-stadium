@@ -65,7 +65,7 @@ export default function DaErhvervByrumPage() {
       <section className="hero-bleed">
         <div className="hero-bleed__media">
           <Image
-            src="/uploads/woodoo_foosball_original_93dbeb38.jfif"
+            src="/uploads/woodoo_foosball_original_93dbeb38.jpg"
             alt="Stadium 11-11 i byrum om dagen"
             fill
             sizes="100vw"

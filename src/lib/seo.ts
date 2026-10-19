@@ -25,7 +25,7 @@ export const OG_IMAGES = {
   customise: { path: "/uploads/woodoo_customise_hero.jpg", width: 1600, height: 900 },
   rain: { path: "/uploads/foosball_table_rain.jpg", width: 1813, height: 1813 },
   scoringSlider: { path: "/uploads/woodoo_scoring_slider.jpg", width: 1600, height: 900 },
-  publicSpace: { path: "/uploads/woodoo_foosball_original_93dbeb38.jfif", width: 1536, height: 2048 },
+  publicSpace: { path: "/uploads/woodoo_foosball_original_93dbeb38.jpg", width: 1536, height: 2048 },
   rental: { path: "/uploads/woodoo_rental_hero.jpg", width: 1600, height: 944 },
 } satisfies Record<string, OgImage>;
 

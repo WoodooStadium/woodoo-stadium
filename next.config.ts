@@ -4,6 +4,13 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  async headers() {
+    // Danish pages: /da and everything under it (incl. /da/blog/**)
+    return [
+      { source: "/da", headers: [{ key: "Content-Language", value: "da" }] },
+      { source: "/da/:path*", headers: [{ key: "Content-Language", value: "da" }] },
+    ];
+  },
   async redirects() {
     return [
       // Core pages
