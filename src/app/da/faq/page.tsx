@@ -56,8 +56,20 @@ const faqItems = [
     category: "Brug & Placering",
   },
   {
+    question: "Hvordan rengør og vedligeholder jeg bordet?",
+    anchor: "vedligeholdelse",
+    answer: "Bordet kræver meget lidt pleje. Nogle gange om året, eller efter en lang periode udendørs, tørrer du det af med en blød klud eller mikrofiberklud, lunkent vand og et par dråber mild opvaskemiddel. Skyl efter med rent vand og tør efter med en ren klud, så der ikke kommer vandpletter. Undgå ståluld, ståbørster og skuresvampe, og undgå blegemiddel og rengøringsmidler med klor, som kan skade den glasblæste overflade. Ved kysten, eller hvis der saltes veje i nærheden, bør du skylle bordet med ferskvand oftere.",
+    category: "Brug & Placering",
+  },
+  {
+    question: "Hvad er flyverust, og dækker garantien det?",
+    anchor: "flyverust",
+    answer: "Rustfrit stål kan af og til få små orangebrune pletter eller et let rustslør på overfladen. Det er ikke bordet, der ruster indefra. Det skyldes små jernpartikler fra omgivelserne, for eksempel fra slibe- eller byggearbejde i nærheden, støv fra jernbane og bremser eller værktøj, som lander på stålet og ruster. Det kaldes flyverust. Det sidder kun på overfladen og kan fjernes. De 5 års garanti dækker ikke flyverust, fordi det kommer fra omgivelserne og ikke fra materialet. Sådan fjerner du det: Vask bordet med lunkent vand og mild opvaskemiddel, og brug derefter et rengøringsmiddel til rustfrit stål efter producentens anvisning med en blød klud eller skånsom svamp. Prøv først på et lille, skjult sted. Skyl grundigt med rent vand og tør efter. Brug aldrig ståluld eller ståbørster, da de efterlader nye jernpartikler. Forsvinder pletterne ikke, så skriv til contact@woodoo-stadium.com, så hjælper vi dig.",
+    category: "Brug & Placering",
+  },
+  {
     question: "Er det egnet til et offentligt rum?",
-    answer: "Ja. Stadium 11–11 er bygget til permanent placering i offentlige rum, parker, kulturelle venues, hoteller, lufthavne og virksomhedslobbyer. Det kræver ingen vedligeholdelse og intet ly. <a href='/da/erhverv/byrum'>Se sektorplaceringer →</a>",
+    answer: "Ja. Stadium 11–11 er bygget til permanent placering i offentlige rum, parker, kulturelle venues, hoteller, lufthavne og virksomhedslobbyer. Det kræver minimal vedligeholdelse og intet ly. <a href='/da/erhverv/byrum'>Se sektorplaceringer →</a>",
     category: "Brug & Placering",
   },
   {
@@ -127,11 +139,11 @@ const faqItems = [
   },
 ];
 
-function groupFaq(items: Array<{ question: string; answer: string; category: string }>) {
-  return items.reduce<Record<string, Array<{ question: string; answer: string }>>>((groups, item) => {
+function groupFaq(items: Array<{ question: string; answer: string; category: string; anchor?: string }>) {
+  return items.reduce<Record<string, Array<{ question: string; answer: string; anchor?: string }>>>((groups, item) => {
     const key = item.category;
     groups[key] = groups[key] || [];
-    groups[key].push({ question: item.question, answer: item.answer });
+    groups[key].push({ question: item.question, answer: item.answer, anchor: item.anchor });
     return groups;
   }, {});
 }

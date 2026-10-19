@@ -25,11 +25,11 @@ const anatomyItems = [
   { title: "Folieprint & Lakering", description: "Et valgfrit lag. Trykt, påsat & aftagelig - eller påført, hærdet & permanent." },
 ];
 
-const specRows: [string, string][] = [
+const specRows: [string, React.ReactNode][] = [
   ["MATERIALE", "Glasblæst rustfrit stål, A304 + A316"],
   ["VÆGT", "ca. 150 kg."],
   ["PLACERING", "Inde & ude, alle årstider"],
-  ["GARANTI", "5 års garanti på Stadium 11–11"],
+  ["GARANTI", <>5 års garanti på Stadium 11–11 · <a href="/da/faq#flyverust" style={{ color: "inherit" }}>Flyverust og garantien</a></>],
   ["LYS", "Mulighed for integreret LED på bane, point og brandplader"],
   ["KOMPONENTER", "732 enkeltdele. Leveret i sin endelige helhed."],
   ["TEGNINGER", "130 tekniske tegninger. Én sides brugsvejledning."],

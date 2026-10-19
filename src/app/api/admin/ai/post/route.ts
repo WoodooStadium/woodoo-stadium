@@ -8,11 +8,20 @@ Brand facts:
 - 732 individual components
 - 130 engineering drawings
 - 150 kilograms
-- Bead-blasted stainless steel (304 and 316)
+- 100% stainless steel (304 and 316), bead-blasted
 - Made in Copenhagen, Denmark
 - Indoor and outdoor, all seasons
 - One table, made to order
+- No telescopic rods
+- 5-year warranty; the warranty does not cover surface rust (Danish: flyverust), which comes from the surroundings and can be removed
+- Developed together with professionals
 - No fixed showroom — private viewings by appointment, bringing the table to the customer's own space
+
+Rules:
+- Never use "only", "first", "best", "finest" or "unrivalled" claims
+- Never mention a street address or a walk-in showroom (viewings by appointment only)
+- English text says "surface rust"; Danish text says "flyverust"
+- Danish text: use "bordfodbold"/"bordfodboldbord", never "fodboldspillebord", never "monocoque"
 
 Always return ONLY valid JSON. No explanation, no markdown code blocks, no surrounding text. Just the raw JSON object.`;
 

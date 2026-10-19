@@ -341,7 +341,7 @@ export default function DaHome() {
             />
             <div className="overlay">
               <div className="overlay__label">
-               Stænger set fra siden<span className="meta">Uovertruffen præcision</span>
+               Stænger set fra siden<span className="meta">Udviklet sammen med professionelle</span>
               </div>
             </div>
           </a>

@@ -57,8 +57,20 @@ const fallbackFaq = [
     category: "Use & Placement",
   },
   {
+    question: "How do I clean and maintain the table?",
+    anchor: "care-and-maintenance",
+    answer: "The table needs very little care. A few times a year, or after a long period outdoors, wipe it down with a soft or microfibre cloth, lukewarm water and a few drops of mild washing-up liquid. Rinse with clean water and dry with a clean cloth to avoid water marks. Avoid steel wool, wire brushes and abrasive pads, and avoid bleach and cleaners containing chlorine, as they can damage the bead-blasted finish. In coastal areas, or where roads nearby are salted, rinse the table with fresh water more often.",
+    category: "Use & Placement",
+  },
+  {
+    question: "What is surface rust, and does the warranty cover it?",
+    anchor: "surface-rust",
+    answer: "Stainless steel can occasionally get small orange-brown spots or a light film of rust on the surface. This is not the table rusting from within. It is caused by tiny iron particles from the surroundings, for example from grinding or building work nearby, rail or brake dust, or tools, which land on the steel and rust. It sits on the surface only and can be removed. The 5-year warranty does not cover surface rust, because it comes from the surroundings and not from the material. To remove it: wash the table with lukewarm water and mild washing-up liquid, then use a cleaner made for stainless steel, following the product's instructions, with a soft cloth or non-scratch sponge. Test on a small, hidden spot first. Rinse thoroughly with clean water and dry. Never use steel wool or wire brushes, as they leave new iron particles behind. If the marks do not disappear, write to contact@woodoo-stadium.com and we will help.",
+    category: "Use & Placement",
+  },
+  {
     question: "Is it suitable for a public space?",
-    answer: "Yes. The Stadium 11–11 is built for permanent placement in public spaces, parks, cultural venues, hotels, airports, and corporate lobbies. It requires no maintenance and no shelter. <a href='/for-business/public-space'>See sector placements →</a>",
+    answer: "Yes. The Stadium 11–11 is built for permanent placement in public spaces, parks, cultural venues, hotels, airports, and corporate lobbies. It requires minimal maintenance and no shelter. <a href='/for-business/public-space'>See sector placements →</a>",
     category: "Use & Placement",
   },
   {
@@ -239,11 +251,11 @@ export const metadata: Metadata = buildPageMetadata({
   description: "Answers to the most common questions about the Woodoo Stadium 11–11 foosball table: materials, customisation, outdoor use and business editions.",
 });
 
-function groupFaq(items: Array<{ question: string; answer: string; category: string | null }>) {
-  return items.reduce<Record<string, Array<{ question: string; answer: string }>>>((groups, item) => {
+function groupFaq(items: Array<{ question: string; answer: string; category: string | null; anchor?: string }>) {
+  return items.reduce<Record<string, Array<{ question: string; answer: string; anchor?: string }>>>((groups, item) => {
     const key = item.category || "General";
     groups[key] = groups[key] || [];
-    groups[key].push({ question: item.question, answer: item.answer });
+    groups[key].push({ question: item.question, answer: item.answer, anchor: item.anchor });
     return groups;
   }, {});
 }

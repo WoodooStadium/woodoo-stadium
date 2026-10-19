@@ -25,11 +25,11 @@ const anatomyItems = [
   { title: "Foil print", description: "An optional layer. Printed, applied, removable." },
 ];
 
-const specRows: [string, string][] = [
+const specRows: [string, React.ReactNode][] = [
   ["MATERIAL", "Bead-blasted stainless steel, 304 and 316"],
   ["WEIGHT", "150 kilograms"],
   ["HABITAT", "Indoor & outdoor, all seasons"],
-  ["WARRANTY", "5-year warranty on the Stadium 11–11"],
+  ["WARRANTY", <>5-year warranty on the Stadium 11–11 · <a href="/faq#surface-rust" style={{ color: "inherit" }}>Surface rust and the warranty</a></>],
   ["LIGHT", "Integrated LED — field & plate"],
   ["COMPONENTS", "732 individual parts"],
   ["ENGINEERING", "130 technical drawings"],

@@ -1,13 +1,29 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 interface FaqClientProps {
-  groups: Record<string, Array<{ question: string; answer: string }>>;
+  groups: Record<string, Array<{ question: string; answer: string; anchor?: string }>>;
 }
 
 export default function FaqClient({ groups }: FaqClientProps) {
   const [search, setSearch] = useState("");
   const [openItems, setOpenItems] = useState<Set<string>>(new Set());
+
+  // Open the item whose anchor matches the URL hash (e.g. /faq#surface-rust).
+  useEffect(() => {
+    const openFromHash = () => {
+      const hash = decodeURIComponent(window.location.hash.slice(1));
+      for (const [category, items] of Object.entries(groups)) {
+        const item = items.find((i) => i.anchor && i.anchor === hash);
+        if (!item) continue;
+        setOpenItems((prev) => new Set(prev).add(`${category}-${item.question}`));
+        requestAnimationFrame(() => document.getElementById(hash)?.scrollIntoView());
+      }
+    };
+    openFromHash();
+    window.addEventListener("hashchange", openFromHash);
+    return () => window.removeEventListener("hashchange", openFromHash);
+  }, [groups]);
 
   const toggleItem = (key: string) => {
     setOpenItems(prev => {
@@ -21,7 +37,7 @@ export default function FaqClient({ groups }: FaqClientProps) {
   const filteredGroups = useMemo(() => {
     if (!search.trim()) return groups;
     const q = search.toLowerCase();
-    const result: Record<string, Array<{ question: string; answer: string }>> = {};
+    const result: Record<string, Array<{ question: string; answer: string; anchor?: string }>> = {};
     Object.entries(groups).forEach(([category, items]) => {
       const matched = items.filter(
         item =>
@@ -109,7 +125,7 @@ export default function FaqClient({ groups }: FaqClientProps) {
               const key = `${category}-${item.question}`;
               const isOpen = openItems.has(key);
               return (
-                <div key={key} style={{ borderBottom: "1px solid rgba(26,24,20,0.1)" }}>
+                <div key={key} id={item.anchor} style={{ borderBottom: "1px solid rgba(26,24,20,0.1)", scrollMarginTop: "100px" }}>
                   <button
                     onClick={() => toggleItem(key)}
                     style={{
