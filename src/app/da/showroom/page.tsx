@@ -136,7 +136,7 @@ export default function DaShowroomPage() {
               heading={<>Spil bør ikke begrænses<br /><em>af, hvor bordet står.</em></>}
             />
             <p className="body" style={{ marginTop: "32px", color: "var(--mid)" }}>
-              Traditionelle borde ender med at tilhøre ét rum. En kælder. En bar. Et spillerum. Stadium 11–11 er forseglet til permanent udendørs brug — i regn, saltluft, varme og kulde. Uanset om bordet placeres indendøres eller udendørs, kan bordet flyttes rundt med nemt tilgængelige redskaber. Det bevæger sig med livet i stedet for at bede livet om at bevæge sig rundt om det.
+              Traditionelle borde ender med at tilhøre ét rum. En kælder. En bar. Et spillerum. Stadium 11–11 er forseglet til permanent udendørs brug — i regn, saltluft, varme og kulde. Uanset om bordet placeres indendørs eller udendørs, kan bordet flyttes rundt med nemt tilgængelige redskaber. Det bevæger sig med livet i stedet for at bede livet om at bevæge sig rundt om det.
             </p>
             <p className="body" style={{ marginTop: "20px", color: "var(--mid)" }}>
               En sommeraften udenfor. Et offentligt rum. En terrasse. En lobby. En regnvejrsdag indendørs. Det samme bord. Den samme oplevelse. Altid tilstede. Altid klar.

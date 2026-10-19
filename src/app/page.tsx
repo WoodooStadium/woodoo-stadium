@@ -29,6 +29,9 @@ export default function Home() {
         <div className="hero-bleed__inner">
           <div className="hero-bleed__title fade-up" data-delay="1">
             <h1 className="h1">Every dream needs <em>a field.</em></h1>
+            <p className="lead" style={{ color: "var(--mid-on-dark)", marginTop: "28px" }}>
+              Woodoo is a Danish manufacturer of handbuilt stainless steel foosball tables, built in Copenhagen.
+            </p>
           </div>
 
           <div className="hero-bleed__bottom fade-up" data-delay="3">

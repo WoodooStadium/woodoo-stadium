@@ -98,6 +98,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
       alternates: { languages: { en: `${BASE}/for-business/hotels` } },
     },
+    {
+      url: `${BASE}/for-business/public-space`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: { languages: { da: `${BASE}/da/erhverv/byrum` } },
+    },
+    {
+      url: `${BASE}/da/erhverv/byrum`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: { languages: { en: `${BASE}/for-business/public-space` } },
+    },
 
     // Gallery / Galleri
     {

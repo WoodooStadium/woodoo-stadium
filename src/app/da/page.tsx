@@ -29,6 +29,9 @@ export default function DaHome() {
         <div className="hero-bleed__inner">
           <div className="hero-bleed__title fade-up" data-delay="1">
             <h1 className="h1">Alle drømme har <em>et mål.</em></h1>
+            <p className="lead" style={{ color: "var(--mid-on-dark)", marginTop: "28px" }}>
+              Woodoo er en dansk producent af håndbyggede bordfodboldborde i rustfrit stål. Hvert bord bygges i København.
+            </p>
           </div>
 
           <div className="hero-bleed__bottom fade-up" data-delay="3">
@@ -51,7 +54,7 @@ export default function DaHome() {
 
       <section className="attrib" aria-label="Kort fortalt">
         <div className="attrib__inner">
-          <span className="attrib__item"><span className="num">01</span>Bygget i København</span>
+          <span className="attrib__item"><span className="num">01</span>Bordfodbold bygget i København</span>
           <span className="attrib__item"><span className="num">02</span>Glasblæst rustfrit stål</span>
           <span className="attrib__item"><span className="num">03</span>Inde &amp; ude</span>
           <span className="attrib__item"><span className="num">04</span>150 kg · Fuldsvejst ramme</span>
@@ -85,7 +88,7 @@ export default function DaHome() {
             Ikke samlet. Bygget.
           </h2>
           <p className="body fade-up" data-delay="2">
-            De fleste objekter bliver samlet. Dele ankommer, dele forbindes og resultatet er et produkt. Stadium 11–11 er noget andet. Det bliver svejset, slebet og stemt. Hundrede og halvtreds kilo glasblæst rustfrit stål, konstrueret i én integreret struktur. Forseglet permanent. Bygget til at stå udendørs i regn, varme og kulde uden at forandre sig. Der skulle 130 tekniske tegninger til at beskrive det. Det rummer 732 enkeltdele. Vi laver ét bord. Det er det.
+            De fleste objekter bliver samlet. Dele ankommer, dele forbindes og resultatet er et produkt. Bordfodboldbordet Stadium 11–11 er noget andet. Det bliver svejset, slebet og stemt. Hundrede og halvtreds kilo glasblæst rustfrit stål, konstrueret i én integreret struktur. Forseglet permanent. Bygget til at stå udendørs i regn, varme og kulde uden at forandre sig. Der skulle 130 tekniske tegninger til at beskrive det. Det rummer 732 enkeltdele. Vi laver ét bord. Det er det.
           </p>
           <div className="specs fade-up" data-delay="3">
             <div className="specs__row"><span className="label">Materiale</span><span className="val">Glasblæst rustfrit stål, 304</span></div>
@@ -114,7 +117,7 @@ export default function DaHome() {
       <section className="section section--alt craft split">
         <div className="tt__content" style={{ padding: "24px var(--pad-x)", display: "flex", flexDirection: "column", gap: "32px", justifyContent: "center" }}>
           <div className="fade-up"><span className="kicker" data-index="N° 02">Håndværk</span></div>
-          <h2 className="h2 fade-up" data-delay="1">732 detaljer.<span className="serif-it">Ingen ubemærkede.</span></h2>
+          <h2 className="h2 fade-up" data-delay="1">732 detaljer.{" "}<span className="serif-it">Ingen ubemærkede.</span></h2>
           <p className="body fade-up" data-delay="2">
             Woodoo Stadium 11-11 bliver ikke samlet. Det bliver bygget — svejset, slebet, glasblæst, oplyst og stemt. Detaljer vi er stolte af.
           </p>
@@ -199,7 +202,7 @@ export default function DaHome() {
           <div className="cell">
             <span className="num">03.</span>
             <h3>Overalt. <span className="serif-it">Altid.</span></h3>
-            <p className="body">Forseglet til et liv indendøres såvel som udendørs. Regn, sol, saltluft, sne. Det lever i sit miljø - uanset hvor det står.</p>
+            <p className="body">Forseglet til et liv indendørs såvel som udendørs. Regn, sol, saltluft, sne. Det lever i sit miljø - uanset hvor det står.</p>
           </div>
           <div className="cell">
             <span className="num">04.</span>
@@ -330,7 +333,7 @@ export default function DaHome() {
           </a><a className="cell-photo" href="/da/galleri">
             <Image
               src="/uploads/foosball_table_concrete_3.jpg"
-              alt="Din beskrivelse"
+              alt="Stænger og mekanik set fra siden — Stadium 11–11"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               loading="lazy"
@@ -338,7 +341,7 @@ export default function DaHome() {
             />
             <div className="overlay">
               <div className="overlay__label">
-               Stænger fra siden <span className="meta">Uovertruffen præcision</span>
+               Stænger set fra siden<span className="meta">Uovertruffen præcision</span>
               </div>
             </div>
           </a>
@@ -346,7 +349,7 @@ export default function DaHome() {
           <a className="cell-photo" href="/da/galleri">
             <Image
               src="/uploads/hero.jpg"
-              alt="Din beskrivelse"
+              alt="Frontvisning af Stadium 11–11 i rustfrit stål"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               loading="lazy"
@@ -354,7 +357,7 @@ export default function DaHome() {
             />
             <div className="overlay">
               <div className="overlay__label">
-                Frontvisning<span className="meta">Stadium 11-11</span>
+                Frontvisning af Stadium 11–11<span className="meta">Fuldt overblik</span>
               </div>
             </div>
           </a>
@@ -365,7 +368,7 @@ export default function DaHome() {
         <div className="fade-up" style={{ display: "flex", justifyContent: "space-between", alignItems: "end", gap: "64px", flexWrap: "wrap", marginBottom: "64px" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
             <span className="kicker" data-index="N° 06">Erhverv</span>
-            <h2 className="h2">Spillet bør ikke begrænses <span className="serif-it">af, hvor bordet står.</span></h2>
+            <h2 className="h2">Bordfodbold bør ikke begrænses <span className="serif-it">af, hvor bordet står.</span></h2>
           </div>
           <p className="lead">Et signaturstykke til de rum, der beder om ét.</p>
         </div>
@@ -405,7 +408,7 @@ export default function DaHome() {
             Dit bord. Ét udtryk for ét objekt.
           </h2>
           <p className="body fade-up" data-delay="2">
-            Arenaen er altid den samme. Det, der ændrer sig, er hvordan du gør den til din. Konfigurér dit eget, eller få et foreslag fra os.
+            Arenaen er altid den samme. Det, der ændrer sig, er hvordan du gør den til din. Konfigurér dit eget, eller få et forslag fra os.
           </p>
         </div>
         <div className="cta-actions fade-up" data-delay="2">
