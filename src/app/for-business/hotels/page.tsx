@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/for-business/hotels",
   title: "Designer Furniture for Hotel Lobby | Woodoo Stadium",
   description: "A designer foosball table that transforms a hotel lobby into a destination — integrated lighting, logo etched into steel, handcrafted in Denmark.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/for-business/hotels",
-    languages: { da: "https://woodoo-stadium.com/da/erhverv/hoteller" },
-  },
-};
+});
 
 const structuredData = {
   "@context": "https://schema.org",

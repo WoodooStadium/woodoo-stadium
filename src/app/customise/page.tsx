@@ -1,16 +1,16 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/customise",
   title: "Custom Foosball Table | Design Your Own | Woodoo Stadium",
   description: "Discover the configurable elements of the Stadium 11–11 and begin your own expression.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/customise",
-    languages: { da: "https://woodoo-stadium.com/da/tilpas" },
-  },
-};
+  image: OG_IMAGES.customise,
+  imageAlt: "Stadium 11-11 — configurable detail",
+});
 
 const categories = [
   { number: "01", title: "Players", description: "Style, colour, finish — the figures that animate the field." },

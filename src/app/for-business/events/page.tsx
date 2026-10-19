@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/for-business/events",
   title: "Branded Foosball Table Hire for Corporate Events | Woodoo Stadium",
   description: "Bring the Stadium 11–11 to your next corporate event, trade show, or client activation. Custom-branded, built in Copenhagen for international placements.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/for-business/events",
-    languages: { da: "https://woodoo-stadium.com/da/erhverv/events" },
-  },
-};
+});
 
 const structuredData = {
   "@context": "https://schema.org",

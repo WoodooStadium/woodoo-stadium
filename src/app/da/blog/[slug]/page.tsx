@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAllPostSlugs, getAllPostSummaries, getPostBySlug } from "@/lib/blog-mdx";
+import { buildPageMetadata } from "@/lib/seo";
 
 const BASE = "https://woodoo-stadium.com";
 
@@ -24,21 +25,12 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   const post = await getPostBySlug(slug, "da");
   if (!post) return { title: "Artikel ikke fundet | Woodoo Stadium" };
 
-  return {
+  return buildPageMetadata({
+    path: `/da/blog/${slug}`,
     title: post.metaTitle ?? post.title,
     description: post.metaDescription ?? post.excerpt ?? "Noter fra Woodoo Stadium værkstedet.",
-    alternates: {
-      canonical: `${BASE}/da/blog/${slug}`,
-      ...(post.alternateSlug
-        ? { languages: { en: `${BASE}/blog/${post.alternateSlug}` } }
-        : {}),
-    },
-    openGraph: {
-      title: post.metaTitle ?? post.title,
-      description: post.metaDescription ?? post.excerpt ?? "",
-      images: post.featuredImage ? [{ url: post.featuredImage }] : [],
-    },
-  };
+    ...(post.featuredImage ? { image: { path: post.featuredImage }, imageAlt: post.title } : {}),
+  });
 }
 
 export default async function DaBlogPostPage({ params }: BlogPageProps) {

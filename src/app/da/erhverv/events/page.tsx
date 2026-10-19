@@ -1,14 +1,14 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/erhverv/events",
   title: "Bordfodbold til firmaevent & messestand | Woodoo Stadium",
   description: "Lej Stadium 11–11 til dit næste firmaevent, kundeaktivering eller messe. Brandet bordfodbold til firmaevent fra 3.500 kr./dag ekskl. moms. Håndbygget i København.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/erhverv/events",
-    languages: { en: "https://woodoo-stadium.com/for-business/events" },
-  },
-};
+  image: OG_IMAGES.scoringSlider,
+  imageAlt: "Stadium 11-11 — brandet scoringsslider med LED",
+});
 
 const structuredData = {
   "@context": "https://schema.org",

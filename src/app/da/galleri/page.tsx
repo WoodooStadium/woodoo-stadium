@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import GalleryClient from "@/app/gallery/GalleryClient";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/galleri",
   title: "Bordfodbold galleri | Billeder af Stadium 11–11",
   description: "Et fotografisk galleri af Stadium 11–11 i atelier, detalje og udendørs omgivelser.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/galleri",
-    languages: { en: "https://woodoo-stadium.com/gallery" },
-  },
-};
+});
 
 const images = [
   { src: "/uploads/foosball_table.jpg", title: "Stadium 11–11 — oplyst", category: "Studio" },

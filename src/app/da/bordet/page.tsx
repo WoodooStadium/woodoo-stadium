@@ -1,18 +1,18 @@
 import DrawingViewer from "@/components/DrawingViewer";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import { SITE_URL, buildBreadcrumbs, buildProduct, jsonLd } from "@/lib/structured-data";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/bordet",
   title: "Stadium 11–11 | Woodoo Stadium — Luksus rustfrit stål bordfodboldbord",
   description: "Stadium 11–11 er et præcisionsingeniøreret luksus bordfodboldbord. Håndbygget i København af glasblæst rustfrit stål. 732 komponenter. Inde og ude. Lavet til ordre.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/bordet",
-    languages: { en: "https://woodoo-stadium.com/the-table" },
-  },
-};
+  image: OG_IMAGES.fallback,
+  imageAlt: "Stadium 11-11 — X-ramme profil",
+});
 
 const anatomyItems = [
   { title: "Ramme", description: "Fuldsvejst ramme. Én konstruktion, ikke samlet. Strukturen er objektet." },

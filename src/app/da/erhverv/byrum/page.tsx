@@ -1,14 +1,14 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/erhverv/byrum",
   title: "Bordfodbold til byrum & offentlige arealer | Woodoo Stadium",
   description: "Stadium 11–11 forvandler byrum til bevægelsesrum. Håndbygget i 100% rustfrit stål, bygget til dansk vejr og intensiv offentlig brug. 5 års garanti.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/erhverv/byrum",
-    languages: { en: "https://woodoo-stadium.com/for-business/public-space" },
-  },
-};
+  image: OG_IMAGES.publicSpace,
+  imageAlt: "Stadium 11-11 i byrum om dagen",
+});
 
 const structuredData = {
   "@context": "https://schema.org",

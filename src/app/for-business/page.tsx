@@ -1,16 +1,16 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/for-business",
   title: "Corporate Foosball Table | For Business | Woodoo Stadium",
   description: "The Stadium 11–11 is a social infrastructure object. A precision-built branding platform for corporate, hospitality, and public spaces.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/for-business",
-    languages: { da: "https://woodoo-stadium.com/da/erhverv" },
-  },
-};
+  image: OG_IMAGES.fallback,
+  imageAlt: "Stadium 11-11 — illuminated in situ",
+});
 
 const sectors = [
   { number: "01", title: "Corporate HQ", description: "A lobby piece that does the work no furniture can. The first thing a visitor remembers — and the reason employees stay longer." },

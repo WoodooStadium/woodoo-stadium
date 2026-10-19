@@ -1,16 +1,16 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/erhverv",
   title: "Erhvervsbordfodbold til virksomheder | Woodoo Stadium",
   description: "Stadium 11–11 er et socialt infrastrukturobjekt. En præcisionsbygget brandingplatform til virksomheder, hoteller og offentlige rum.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/erhverv",
-    languages: { en: "https://woodoo-stadium.com/for-business" },
-  },
-};
+  image: OG_IMAGES.fallback,
+  imageAlt: "Stadium 11-11 — oplyst in situ",
+});
 
 const sectors = [
   { number: "01", title: "Virksomhedens HQ", description: "Et lobbystykke der gør det arbejde intet møbel kan. Det første en besøgende husker — og grunden til at medarbejderne bliver længere." },

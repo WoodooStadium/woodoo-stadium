@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/privacy",
   title: "Privacy & Cookies | Woodoo Stadium",
-  description:
-    "How Woodoo Stadium uses cookies and handles personal data submitted through enquiry forms.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/privacy",
-    languages: { da: "https://woodoo-stadium.com/da/privatliv" },
-  },
-};
+  description: "How Woodoo Stadium uses cookies and handles personal data submitted through enquiry forms.",
+});
 
 const kicker: React.CSSProperties = {
   display: "block",

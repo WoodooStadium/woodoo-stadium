@@ -1,16 +1,16 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/tilpas",
   title: "Specialbygget bordfodboldbord | Woodoo Stadium",
   description: "Specialbyg dit Stadium 11–11 bordfodboldbord — vælg spillere, finish, belysning og bane. Håndbygget i København til ordre.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/tilpas",
-    languages: { en: "https://woodoo-stadium.com/customise" },
-  },
-};
+  image: OG_IMAGES.customise,
+  imageAlt: "Stadium 11-11 — konfigurerbar detalje",
+});
 
 const categories = [
   { number: "01", title: "Spillere", description: "Stil, farve, finish — figurerne der animerer banen." },

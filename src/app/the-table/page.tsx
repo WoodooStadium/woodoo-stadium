@@ -1,18 +1,18 @@
 ﻿import DrawingViewer from "@/components/DrawingViewer";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import { SITE_URL, buildBreadcrumbs, buildProduct, jsonLd } from "@/lib/structured-data";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/the-table",
   title: "The Stadium 11–11 | Woodoo Stadium — Luxury Stainless Steel Foosball Table",
   description: "The Stadium 11–11 is a precision-engineered luxury foosball table. Handbuilt in Copenhagen from bead-blasted stainless steel. 732 components. Indoor and outdoor. Made to order.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/the-table",
-    languages: { da: "https://woodoo-stadium.com/da/bordet" },
-  },
-};
+  image: OG_IMAGES.fallback,
+  imageAlt: "Stadium 11-11 — X-frame profile",
+});
 
 const anatomyItems = [
   { title: "Frame", description: "A welded monocoque. One body, not assembled. The structure is the object." },

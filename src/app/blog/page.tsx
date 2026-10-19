@@ -1,16 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import { getAllPostSummaries } from "@/lib/blog-mdx";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/blog",
   title: "Atelier Journal | Woodoo Stadium",
   description: "Notes from the Woodoo Stadium workshop and stories from the production of the Stadium 11–11.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/blog",
-    languages: { da: "https://woodoo-stadium.com/da/blog" },
-  },
-};
+});
 
 function formatDate(date: string | null) {
   if (!date) return "";

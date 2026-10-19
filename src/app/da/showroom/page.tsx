@@ -1,16 +1,16 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/showroom",
   title: "Håndbygget bordfodboldbord — værksted | Woodoo Stadium",
   description: "Woodoo Stadium atelier i København — design og produktion af Stadium 11–11.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/showroom",
-    languages: { en: "https://woodoo-stadium.com/atelier" },
-  },
-};
+  image: OG_IMAGES.rain,
+  imageAlt: "Stadium 11-11 — regn på stål",
+});
 
 export default function DaShowroomPage() {
   return (

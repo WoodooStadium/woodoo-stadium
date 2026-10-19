@@ -1,15 +1,13 @@
 ﻿import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import { buildOrganization, jsonLd } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/",
   title: "Stainless Steel Foosball Table | Woodoo Stadium 11–11",
   description: "Handbuilt stainless steel foosball table from Denmark. Bead-blasted, weatherproof for indoor & outdoor use, year-round. Stadium 11–11 by Woodoo.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/",
-    languages: { da: "https://woodoo-stadium.com/da" },
-  },
-};
+});
 
 export default function Home() {
   return (

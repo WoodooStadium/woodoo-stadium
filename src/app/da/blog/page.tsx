@@ -1,16 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import { getAllPostSummaries } from "@/lib/blog-mdx";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/blog",
   title: "Atelier Journalen | Woodoo Stadium",
   description: "Nyheder fra Woodoo Stadium værkstedet og historier fra produktionen af Stadium 11–11.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/blog",
-    languages: { en: "https://woodoo-stadium.com/blog" },
-  },
-};
+});
 
 function formatDate(date: string | null) {
   if (!date) return "";

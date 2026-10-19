@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import FaqClient from "@/app/faq/FaqClient";
 import { SITE_URL, buildBreadcrumbs, buildFaqPage, jsonLd } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/faq",
   title: "FAQ | Woodoo Stadium — Bordfodbold, bordfodboldbord & Stadium 11–11",
   description: "Svar på de vigtigste spørgsmål om Woodoo Stadium 11–11 — objektet, materialer, tilpasning, udendørsbrug og erhvervseditioner.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/faq",
-    languages: { en: "https://woodoo-stadium.com/faq" },
-  },
-};
+});
 
 const faqItems = [
   {

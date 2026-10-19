@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/supabase-types";
 import { getFaqItems } from "@/lib/db";
 import FaqClient from "./FaqClient";
@@ -232,14 +233,11 @@ const fallbackFaq = [
   },
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/faq",
   title: "FAQ | Woodoo Stadium — Luxury Foosball Table, Table Football & Social Design Object",
   description: "Everything about the Woodoo Stadium 11–11 — the world's finest foosball table. Questions about the sport, professional play, hotel amenities, office social spaces, and how to enquire.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/faq",
-    languages: { da: "https://woodoo-stadium.com/da/faq" },
-  },
-};
+});
 
 function groupFaq(items: Array<{ question: string; answer: string; category: string | null }>) {
   return items.reduce<Record<string, Array<{ question: string; answer: string }>>>((groups, item) => {

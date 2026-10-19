@@ -1,15 +1,13 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import { buildOrganization, jsonLd } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da",
   title: "Bordfodboldbord i Rustfrit Stål | Woodoo Stadium 11–11",
   description: "Håndbygget bordfodboldbord i 100% rustfrit stål fra Danmark. Glasblæst, vejrbestandigt til inde- og udendørs brug året rundt. Stadium 11–11 fra Woodoo.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da",
-    languages: { en: "https://woodoo-stadium.com/" },
-  },
-};
+});
 
 export default function DaHome() {
   return (

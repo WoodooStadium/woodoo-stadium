@@ -1,15 +1,15 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import RentalForm from "@/components/RentalForm";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/udlejning",
   title: "Lej Stadium 11–11 | Udlejning af luksus bordfodboldbord | Woodoo Stadium",
-  description:
-    "Lej Stadium 11–11 til events eller langtidsplacering. Inkluderer levering, opsætning og forsikring. Vi leverer i hele Danmark.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/udlejning",
-  },
-};
+  description: "Lej Stadium 11–11 til events eller langtidsplacering. Inkluderer levering, opsætning og forsikring. Vi leverer i hele Danmark.",
+  image: OG_IMAGES.rental,
+  imageAlt: "Stadium 11–11 til udlejning",
+});
 
 const kicker: React.CSSProperties = {
   display: "block",

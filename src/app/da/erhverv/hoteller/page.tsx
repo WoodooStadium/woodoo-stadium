@@ -1,14 +1,12 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/da/erhverv/hoteller",
   title: "Designobjekt til hotellobby | Woodoo Stadium",
   description: "Stadium 11–11 forvandler en hotellobby til en destination. Unikt designobjekt med integreret belysning og logo skåret i glasblæst stål. Håndbygget i Danmark. 5 års garanti.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/da/erhverv/hoteller",
-    languages: { en: "https://woodoo-stadium.com/for-business/hotels" },
-  },
-};
+});
 
 const structuredData = {
   "@context": "https://schema.org",

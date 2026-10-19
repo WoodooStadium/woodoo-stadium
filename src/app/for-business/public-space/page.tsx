@@ -1,14 +1,14 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
+  path: "/for-business/public-space",
   title: "Table Football for Public Space & Urban Architecture | Woodoo Stadium",
   description: "Stadium 11–11 turns public space into a space that moves people. Handcrafted in 100% stainless steel, built for year-round outdoor use. 5-year warranty.",
-  alternates: {
-    canonical: "https://woodoo-stadium.com/for-business/public-space",
-    languages: { da: "https://woodoo-stadium.com/da/erhverv/byrum" },
-  },
-};
+  image: OG_IMAGES.publicSpace,
+  imageAlt: "Stadium 11-11 in public space by day",
+});
 
 const structuredData = {
   "@context": "https://schema.org",
