@@ -1,6 +1,7 @@
 "use client";
 
 import { type ChangeEvent, type FormEvent, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 const initialForm = {
   navn: "",
@@ -42,6 +43,7 @@ export default function RentalForm() {
       }
       setForm(initialForm);
       setSubmitted(true);
+      trackEvent("generate_lead", { form_name: "rental", language: "da" });
     } catch {
       setError("Der opstod en fejl. Tjek din forbindelse og prøv igen.");
     } finally {
@@ -203,6 +205,10 @@ export default function RentalForm() {
         >
           {loading ? "Sender…" : "Send forespørgsel"}
         </button>
+        <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(26,24,20,0.7)", lineHeight: "1.6", marginTop: "12px" }}>
+          Vi bruger dine oplysninger kun til at svare dig. Læs mere under{" "}
+          <a href="/da/privatliv" style={{ color: "inherit", textDecoration: "underline" }}>Privatliv</a>.
+        </p>
       </div>
     </form>
   );

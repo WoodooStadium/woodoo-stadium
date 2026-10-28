@@ -4,6 +4,30 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { SOCIAL_LINKS } from "@/lib/structured-data";
+import { clearConsent } from "@/lib/consent";
+import { trackEvent } from "@/lib/analytics";
+
+// Matches the Privacy link next to it; clearing the choice re-opens the cookie banner.
+const cookieSettingsButton: React.CSSProperties = {
+  fontFamily: "var(--sans)",
+  fontSize: "11px",
+  letterSpacing: "0.14em",
+  textTransform: "inherit",
+  color: "var(--faint-on-dark)",
+  background: "none",
+  border: "none",
+  padding: 0,
+  cursor: "pointer",
+  transition: "color 0.2s",
+};
+
+// Small note under the newsletter field (dark background, readable contrast).
+const newsletterNote: React.CSSProperties = {
+  fontSize: "12px",
+  lineHeight: 1.6,
+  color: "rgba(242,238,229,0.7)",
+  marginTop: "12px",
+};
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -19,11 +43,12 @@ export default function Footer() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    await fetch("/api/newsletter", {
+    const response = await fetch("/api/newsletter", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
     });
+    if (response.ok) trackEvent("newsletter_signup", { language: isDanish ? "da" : "en" });
     setEmail("");
     setSubmitted(true);
   };
@@ -66,6 +91,11 @@ export default function Footer() {
                 />
                 <button type="submit">Tilmeld →</button>
               </form>
+              <p style={newsletterNote}>
+                Du kan afmelde dig når som helst ved at skrive til{" "}
+                <a href="mailto:contact@woodoo-stadium.com" style={{ color: "inherit", textDecoration: "underline" }}>contact@woodoo-stadium.com</a>. Læs mere under{" "}
+                <a href="/da/privatliv" style={{ color: "inherit", textDecoration: "underline" }}>Privatliv</a>.
+              </p>
               {submitted && (
                 <p className="caption" style={{ marginTop: "18px" }}>
                   Tilmeldt ✓
@@ -110,19 +140,24 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <span>© MMXXVI · Woodoo · København</span>
-          <a
-            href="/da/privatliv"
-            style={{
-              fontFamily: "var(--sans)",
-              fontSize: "11px",
-              letterSpacing: "0.14em",
-              color: "var(--faint-on-dark)",
-              textDecoration: "none",
-              transition: "color 0.2s",
-            }}
-          >
-            Privatliv &amp; Cookies
-          </a>
+          <span style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
+            <a
+              href="/da/privatliv"
+              style={{
+                fontFamily: "var(--sans)",
+                fontSize: "11px",
+                letterSpacing: "0.14em",
+                color: "var(--faint-on-dark)",
+                textDecoration: "none",
+                transition: "color 0.2s",
+              }}
+            >
+              Privatliv &amp; Cookies
+            </a>
+            <button type="button" onClick={clearConsent} style={cookieSettingsButton}>
+              Cookieindstillinger
+            </button>
+          </span>
           <div className="social">
             <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -170,6 +205,11 @@ export default function Footer() {
               />
               <button type="submit">Subscribe →</button>
             </form>
+            <p style={newsletterNote}>
+              You can unsubscribe at any time by writing to{" "}
+              <a href="mailto:contact@woodoo-stadium.com" style={{ color: "inherit", textDecoration: "underline" }}>contact@woodoo-stadium.com</a>. Read more under{" "}
+              <a href="/privacy" style={{ color: "inherit", textDecoration: "underline" }}>Privacy</a>.
+            </p>
             {submitted && (
               <p className="caption" style={{ marginTop: "18px" }}>
                 Subscribed ✓
@@ -213,19 +253,24 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <span>© MMXXVI · Woodoo · Copenhagen</span>
-        <a
-          href="/privacy"
-          style={{
-            fontFamily: "var(--sans)",
-            fontSize: "11px",
-            letterSpacing: "0.14em",
-            color: "var(--faint-on-dark)",
-            textDecoration: "none",
-            transition: "color 0.2s",
-          }}
-        >
-          Privacy &amp; Cookies
-        </a>
+        <span style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
+          <a
+            href="/privacy"
+            style={{
+              fontFamily: "var(--sans)",
+              fontSize: "11px",
+              letterSpacing: "0.14em",
+              color: "var(--faint-on-dark)",
+              textDecoration: "none",
+              transition: "color 0.2s",
+            }}
+          >
+            Privacy &amp; Cookies
+          </a>
+          <button type="button" onClick={clearConsent} style={cookieSettingsButton}>
+            Cookie settings
+          </button>
+        </span>
         <div className="social">
           <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>

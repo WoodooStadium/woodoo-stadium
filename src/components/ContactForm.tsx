@@ -2,6 +2,7 @@
 
 import { type ChangeEvent, type FormEvent, useState } from "react";
 import { usePathname } from "next/navigation";
+import { trackEvent } from "@/lib/analytics";
 
 const initialForm = {
   name: "",
@@ -29,6 +30,9 @@ const copy = {
     submitting: "Sending…",
     genericError: "Something went wrong. Please try again.",
     submitted: "Thank you. Your enquiry has been received. We will be in touch within two working days.",
+    privacyNote: "We use your details only to reply to you. Read more under ",
+    privacyLink: "Privacy",
+    privacyHref: "/privacy",
   },
   da: {
     name: "Navn",
@@ -47,6 +51,9 @@ const copy = {
     submitting: "Sender…",
     genericError: "Der opstod en fejl. Prøv venligst igen.",
     submitted: "Tak. Din forespørgsel er modtaget. Vi vender tilbage inden for to arbejdsdage.",
+    privacyNote: "Vi bruger dine oplysninger kun til at svare dig. Læs mere under ",
+    privacyLink: "Privatliv",
+    privacyHref: "/da/privatliv",
   },
 };
 
@@ -84,6 +91,7 @@ export default function ContactForm() {
       }
       setForm(initialForm);
       setSubmitted(true);
+      trackEvent("generate_lead", { form_name: "contact", language: isDanish ? "da" : "en" });
     } catch {
       setError(t.genericError);
     } finally {
@@ -154,9 +162,15 @@ export default function ContactForm() {
           />
         </div>
 
-        <button className="btn btn--filled" type="submit" disabled={loading}>
-          {loading ? t.submitting : t.submit}
-        </button>
+        <div>
+          <button className="btn btn--filled" type="submit" disabled={loading}>
+            {loading ? t.submitting : t.submit}
+          </button>
+          <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "12px", color: "rgba(26,24,20,0.7)", lineHeight: "1.6", marginTop: "12px" }}>
+            {t.privacyNote}
+            <a href={t.privacyHref} style={{ color: "inherit", textDecoration: "underline" }}>{t.privacyLink}</a>.
+          </p>
+        </div>
       </form>
 
       {error && (

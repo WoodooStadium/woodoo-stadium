@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Inter_Tight, JetBrains_Mono } from "next/font/googl
 import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
 import CookieNotice from "@/components/CookieNotice";
+import Analytics from "@/components/Analytics";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export default function RootLayout({
       <body className="app-shell">
         <ClientLayout>{children}</ClientLayout>
         <CookieNotice />
+        <Analytics />
       </body>
     </html>
   );
