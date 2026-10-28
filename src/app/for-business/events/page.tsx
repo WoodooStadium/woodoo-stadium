@@ -68,7 +68,7 @@ const pricingRows = [
 
 const included = [
   "Insurance for the full placement period",
-  "Deposit (refunded on return)",
+  "Payment in advance, no deposit",
 ];
 
 const SHOW_CASE_STUDIES = false; // TODO: flip to true once real case studies are ready

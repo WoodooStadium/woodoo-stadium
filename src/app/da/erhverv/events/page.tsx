@@ -5,7 +5,7 @@ import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   path: "/da/erhverv/events",
   title: "Bordfodbold til firmaevent & messestand | Woodoo Stadium",
-  description: "Lej Stadium 11–11 til dit næste firmaevent, kundeaktivering eller messe. Brandet bordfodbold til firmaevent fra 3.500 kr./dag ekskl. moms. Håndbygget i København.",
+  description: "Lej Stadium 11–11 til dit næste firmaevent, kundeaktivering eller messe. Brandet bordfodbold til firmaevent fra 1.800 kr./dag ekskl. moms. Håndbygget i København.",
   image: OG_IMAGES.scoringSlider,
   imageAlt: "Stadium 11-11 — brandet scoringsslider med LED",
 });
@@ -28,8 +28,10 @@ const structuredData = {
       provider: { "@type": "Organization", name: "Woodoo Stadium", url: "https://woodoo-stadium.com" },
       areaServed: { "@type": "Country", name: "DK" },
       offers: [
-        { "@type": "Offer", name: "1 dag (op til 23 timer)", price: "3500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 3500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
-        { "@type": "Offer", name: "2 dage / weekend", price: "5000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 5000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "1 dag", price: "1800", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 1800, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "3 dage", price: "5000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 5000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "1 uge", price: "7500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 7500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "1 måned", price: "12500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 12500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
       ],
     },
   ],
@@ -69,8 +71,10 @@ const brandingMethods = [
 ];
 
 const pricingRows = [
-  { label: "1 DAG (op til 23 timer)", price: "3.500 kr.", note: "ekskl. moms" },
-  { label: "2 DAGE / WEEKEND", price: "5.000 kr.", note: "ekskl. moms" },
+  { label: "1 DAG", price: "1.800 kr.", note: "ekskl. moms" },
+  { label: "3 DAGE", price: "5.000 kr.", note: "ekskl. moms" },
+  { label: "1 UGE", price: "7.500 kr.", note: "ekskl. moms" },
+  { label: "1 MÅNED", price: "12.500 kr.", note: "ekskl. moms" },
   { label: "FAST PLACERING (3+ MDR.)", price: "Kontakt for pris", note: "" },
   { label: "BRANDING (plader + spilleflade)", price: "Efter aftale", note: "" },
 ];
@@ -78,7 +82,7 @@ const pricingRows = [
 const included = [
   "Selvafhentning i Storkøbenhavn (gratis)",
   "Forsikring i hele lejeperioden",
-  "Depositum (refunderes ved aflevering)",
+  "Betaling forud, intet depositum",
 ];
 
 const SHOW_CASE_STUDIES = false; // TODO: flip to true once real case studies are ready

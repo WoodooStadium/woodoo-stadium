@@ -5,8 +5,8 @@ import RentalForm from "@/components/RentalForm";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/da/udlejning",
-  title: "Lej Stadium 11–11 | Udlejning af luksus bordfodboldbord | Woodoo Stadium",
-  description: "Lej Stadium 11–11 til events eller langtidsplacering. Inkluderer levering, opsætning og forsikring. Vi leverer i hele Danmark.",
+  title: "Lej Stadium 11–11 | Udlejning af bordfodboldbord | Woodoo Stadium",
+  description: "Lej Stadium 11–11 til fest, event eller langtidsplacering. Fra 2.250 kr. pr. dag inkl. moms. Vi leverer i hele Danmark.",
   image: OG_IMAGES.rental,
   imageAlt: "Stadium 11–11 til udlejning",
 });
@@ -17,8 +17,18 @@ const kicker: React.CSSProperties = {
   fontSize: "11px",
   letterSpacing: "0.28em",
   textTransform: "uppercase",
-  color: "rgba(242,238,229,0.4)",
+  color: "rgba(242,238,229,0.72)",
   marginBottom: "16px",
+};
+
+// Small note under tables (dark sections)
+const note: React.CSSProperties = {
+  fontFamily: "Inter Tight, sans-serif",
+  fontSize: "11px",
+  color: "rgba(242,238,229,0.6)",
+  letterSpacing: "0.04em",
+  lineHeight: "1.6",
+  marginTop: "16px",
 };
 
 const kickerLight: React.CSSProperties = {
@@ -51,7 +61,7 @@ function TableHeader({ cols }: { cols: string[] }) {
             fontSize: "9px",
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "rgba(242,238,229,0.35)",
+            color: "rgba(242,238,229,0.72)",
             textAlign: col !== cols[0] ? "right" : undefined,
           }}
         >
@@ -89,13 +99,15 @@ function TableRow({
       >
         {cols[0]}
       </span>
+      {/* First price column (inkl. moms) is prominent, the second (ekskl. moms) secondary */}
       {cols.slice(1).map((val, i) => (
         <span
           key={i}
           style={{
             fontFamily: "Inter Tight, sans-serif",
             fontSize: "13px",
-            color: i === 0 ? "rgba(242,238,229,0.62)" : "#F2EEE5",
+            fontWeight: i === 0 ? 500 : 400,
+            color: i === 0 ? "#F2EEE5" : "rgba(242,238,229,0.72)",
             textAlign: "right",
             whiteSpace: "nowrap",
           }}
@@ -110,7 +122,7 @@ function TableRow({
 const faqItems = [
   {
     q: "Hvor lang tid varer en eventleje?",
-    a: "En dag regnes som op til 23 timer. Weekendleje dækker to dage. Har du brug for en anden varighed, aftaler vi det.",
+    a: "En dag regnes som op til 23 timer. Du kan leje i 1 dag, 3 dage, 1 uge eller 1 måned. Har du brug for en anden periode, giver vi dig gerne et tilbud.",
   },
   {
     q: "Kan jeg få mit logo på bordet til et event?",
@@ -126,15 +138,19 @@ const faqItems = [
   },
   {
     q: "Hvad sker der, hvis bordet bliver beskadiget?",
-    a: "Bordet er forsikret. Et depositum opkræves ved leje og refunderes, når bordet returneres i samme stand.",
+    a: "Bordet er forsikret under hele lejeperioden. Kunden hæfter dog for skader, der skyldes forkert brug eller hærværk.",
   },
   {
     q: "Hvor leverer I?",
-    a: "I hele Danmark. Se priser pr. landsdel ovenfor. Du kan også selv afhente i Storkøbenhavn uden beregning.",
+    a: "I hele Danmark. Se priser pr. landsdel ovenfor. Du kan også selv afhente i Storkøbenhavn uden beregning, hvis du henter bordet i en bil med lift.",
   },
   {
     q: "Hvordan booker jeg?",
-    a: "Udfyld forespørgselsformularen nedenfor. Vi vender tilbage med tilgængelighed og et samlet tilbud inden for to hverdage.",
+    a: "Udfyld forespørgselsformularen nedenfor. Vi vender tilbage med tilgængelighed og et samlet tilbud inden for to hverdage. Bordet er først reserveret, når du har accepteret tilbuddet, og vi tager forbehold for, at bordet kan være udlejet.",
+  },
+  {
+    q: "Kan jeg leje bordet til en privat fest?",
+    a: "Ja. Både private og virksomheder kan leje Stadium 11–11 til fødselsdage, bryllupper, konfirmationer, havefester og firmaevents. Private betaler forud, og der opkræves intet depositum.",
   },
 ];
 
@@ -193,7 +209,7 @@ export default function UdlejningPage() {
           >
             <div className="col-meta">
               <span className="label" style={{ color: "rgba(242,238,229,0.62)" }}>
-                Erhverv
+                Privat &amp; erhverv
               </span>
               <span
                 className="val"
@@ -320,7 +336,7 @@ export default function UdlejningPage() {
                   marginBottom: "32px",
                 }}
               >
-                Et standard Stadium 11–11 til dit event. Leveret, sat op, klar til spil.
+                Et standard Stadium 11–11 til dit event eller din fest. Klar til spil.
               </p>
               <div
                 style={{
@@ -328,11 +344,16 @@ export default function UdlejningPage() {
                   overflow: "hidden",
                 }}
               >
-                <TableHeader cols={["", "Ekskl. moms", "Inkl. moms"]} />
-                <TableRow cols={["1 dag (op til 23 timer)", "3.500 kr.", "4.375 kr."]} />
-                <TableRow cols={["2 dage / weekend", "5.000 kr.", "6.250 kr."]} />
-                <TableRow cols={["Ekstra dag (fra dag 3)", "1.200 kr./dag", "1.500 kr./dag"]} last />
+                <TableHeader cols={["", "Inkl. moms", "Ekskl. moms"]} />
+                <TableRow cols={["1 dag", "2.250 kr.", "1.800 kr."]} />
+                <TableRow cols={["3 dage", "6.250 kr.", "5.000 kr."]} />
+                <TableRow cols={["1 uge", "9.375 kr.", "7.500 kr."]} />
+                <TableRow cols={["1 måned", "15.625 kr.", "12.500 kr."]} />
+                <TableRow cols={["Ekstra dag (fra dag 4)", "1.875 kr./dag", "1.500 kr./dag"]} last />
               </div>
+              <p style={note}>
+                Lejepriserne er uden levering. Ekstra dage koster aldrig mere end ugeprisen. Levering på Sjælland er gratis ved leje fra 1 uge. Har du brug for en anden periode? Du kan altid få et tilbud.
+              </p>
             </div>
 
             {/* Kort B — Langtidsleje */}
@@ -386,10 +407,12 @@ export default function UdlejningPage() {
                   marginBottom: "20px",
                 }}
               >
-                <TableHeader cols={["", "Ekskl. moms", "Inkl. moms"]} />
-                <TableRow cols={["Pr. måned (min. 3 mdr.)", "9.500 kr./md", "11.875 kr./md"]} />
-                <TableRow cols={["Opsætning af branding", "7.500 kr.", "9.375 kr."]} last />
+                <TableHeader cols={["", "Inkl. moms", "Ekskl. moms"]} />
+                <TableRow cols={["Pr. måned (min. 3 mdr.)", "11.875 kr./md", "9.500 kr./md"]} last />
               </div>
+              <p style={{ ...note, marginTop: 0 }}>
+                Branding tilbydes ved langtidsleje (min. 3 måneder), og tilbuddet gives individuelt. Eksempel: 3 måneder med brandingplader: 36.000 kr. ekskl. moms, levering på Sjælland inkluderet.
+              </p>
               <p
                 style={{
                   fontFamily: "Inter Tight, sans-serif",
@@ -397,9 +420,16 @@ export default function UdlejningPage() {
                   color: "rgba(242,238,229,0.6)",
                   letterSpacing: "0.04em",
                   lineHeight: "1.6",
+                  marginTop: "8px",
                 }}
               >
                 Minimum 3 måneders leje. Branding udføres efter dit visuelle udtryk.
+              </p>
+              <p style={{ ...note, marginTop: "8px" }}>
+                Hvis du lejer og beslutter at købe, trækkes den leje, du allerede har betalt, fra købsprisen. Det endelige tilbud gives ved henvendelse.
+              </p>
+              <p style={{ ...note, marginTop: "8px" }}>
+                Ved langtidsleje og branding opkræves 20 % i forudbetaling, som trækkes fra den samlede pris.
               </p>
             </div>
           </div>
@@ -422,7 +452,7 @@ export default function UdlejningPage() {
                   marginBottom: "12px",
                 }}
               >
-                Alt er inkluderet i lejen.
+                Det er med i lejen.
               </h2>
               <p
                 style={{
@@ -433,7 +463,7 @@ export default function UdlejningPage() {
                   marginTop: "24px",
                 }}
               >
-                Et depositum opkræves ved leje og refunderes ved returnering af bordet i samme stand.
+                Private betaler forud, og der opkræves intet depositum. Ved langtidsleje og branding opkræves 20 % i forudbetaling.
               </p>
             </div>
             <div
@@ -443,11 +473,9 @@ export default function UdlejningPage() {
               }}
             >
               {[
-                "Levering",
-                "Opsætning",
-                "Forsikring",
+                "Forsikring under hele lejeperioden",
                 "Support under hele lejeperioden",
-                "Afhentning",
+                "Levering, opsætning og afhentning: prisen afhænger af landsdel, gratis på Sjælland ved leje fra 1 uge",
               ].map((item, i, arr) => (
                 <div
                   key={item}
@@ -538,7 +566,7 @@ export default function UdlejningPage() {
               maxWidth: "56ch",
             }}
           >
-            Vi leverer, sætter op og henter igen — i hele landet. Prisen afhænger af landsdel og er inkluderet i det samlede tilbud.
+            Vi leverer, sætter op og henter igen — i hele landet. Prisen afhænger af landsdel og lægges til lejeprisen. Levering på Sjælland er gratis ved leje fra 1 uge.
           </p>
           <div
             style={{
@@ -546,13 +574,13 @@ export default function UdlejningPage() {
               overflow: "hidden",
             }}
           >
-            <TableHeader cols={["Landsdel", "Ekskl. moms", "Inkl. moms"]} />
-            <TableRow cols={["Sjælland", "1.500 kr.", "1.875 kr."]} />
-            <TableRow cols={["Lolland & Falster", "2.200 kr.", "2.750 kr."]} />
-            <TableRow cols={["Fyn", "2.800 kr.", "3.500 kr."]} />
-            <TableRow cols={["Syd-Jylland", "3.400 kr.", "4.250 kr."]} />
-            <TableRow cols={["Midt-Jylland", "3.900 kr.", "4.875 kr."]} />
-            <TableRow cols={["Nord-Jylland", "4.500 kr.", "5.625 kr."]} />
+            <TableHeader cols={["Landsdel", "Inkl. moms", "Ekskl. moms"]} />
+            <TableRow cols={["Sjælland", "1.875 kr.", "1.500 kr."]} />
+            <TableRow cols={["Lolland & Falster", "2.750 kr.", "2.200 kr."]} />
+            <TableRow cols={["Fyn", "3.500 kr.", "2.800 kr."]} />
+            <TableRow cols={["Syd-Jylland", "4.250 kr.", "3.400 kr."]} />
+            <TableRow cols={["Midt-Jylland", "4.875 kr.", "3.900 kr."]} />
+            <TableRow cols={["Nord-Jylland", "5.625 kr.", "4.500 kr."]} />
             <TableRow cols={["Selvafhentning (Storkøbenhavn)", "Gratis", "Gratis"]} last />
           </div>
           <p
@@ -566,6 +594,9 @@ export default function UdlejningPage() {
             }}
           >
             Prisen dækker levering, opsætning og afhentning. Fyn og Jylland inkluderer broafgift.
+          </p>
+          <p style={{ ...note, marginTop: "8px" }}>
+            Selvafhentning i Storkøbenhavn er gratis, hvis du henter bordet i en bil med lift (bordet vejer 150 kg).
           </p>
         </div>
       </section>
@@ -674,6 +705,17 @@ export default function UdlejningPage() {
               }}
             >
               Udfyld formularen, så vender vi tilbage med tilgængelighed og et samlet tilbud inden for to hverdage.
+            </p>
+            <p
+              style={{
+                fontFamily: "Inter Tight, sans-serif",
+                fontSize: "13px",
+                color: "rgba(26,24,20,0.65)",
+                lineHeight: "1.7",
+                marginBottom: "16px",
+              }}
+            >
+              En forespørgsel er ikke en booking. Bordet er først reserveret, når du har accepteret vores tilbud, og vi tager forbehold for, at bordet kan være udlejet.
             </p>
             <p
               style={{
