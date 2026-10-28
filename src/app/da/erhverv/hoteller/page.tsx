@@ -28,7 +28,10 @@ const structuredData = {
       offers: [
         { "@type": "Offer", name: "Standardbord, fuldt ejerskab", price: "79000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 79000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
         { "@type": "Offer", name: "Langtidsleje (min. 3 mdr.)", price: "9500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 9500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
-        { "@type": "Offer", name: "Test på stedet (2 dage)", price: "5000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 5000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "1 dag", price: "1800", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 1800, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "3 dage", price: "5000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 5000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "1 uge", price: "7500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 7500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "1 måned", price: "12500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 12500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
       ],
     },
   ],
@@ -59,7 +62,10 @@ const brandingMethods = [
 const pricingRows = [
   { label: "STANDARDBORD, FULDT EJERSKAB", price: "79.000 kr.", note: "ekskl. moms" },
   { label: "LANGTIDSLEJE (min. 3 mdr.)", price: "9.500 kr./md.", note: "ekskl. moms" },
-  { label: "TEST PÅ STEDET (2 dage)", price: "5.000 kr.", note: "ekskl. moms" },
+  { label: "1 DAG", price: "1.800 kr.", note: "ekskl. moms · uden levering" },
+  { label: "3 DAGE", price: "5.000 kr.", note: "ekskl. moms · uden levering" },
+  { label: "1 UGE", price: "7.500 kr.", note: "ekskl. moms · uden levering" },
+  { label: "1 MÅNED", price: "12.500 kr.", note: "ekskl. moms · uden levering" },
   { label: "BRANDING (plader + lys + spilleflade)", price: "Efter aftale", note: "" },
 ];
 
@@ -238,10 +244,10 @@ export default function DaErhvervHotellerPage() {
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>PRIS &amp; PRAKTISK</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
-              Ejerskab —<br /><em style={{ color: "var(--pine-on-dark)" }}>eller prøv først.</em>
+              Ejerskab —<br /><em style={{ color: "var(--pine-on-dark)" }}>eller lej først.</em>
             </h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "32px" }}>
-              To veje ind — begge uden langsigtet binding, hvis I vil starte i det små. Vi sender fuld specifikation og et første tilbud inden for to arbejdsdage.
+              Køb bordet, eller lej det fra 1 dag til flere måneder. Vi sender fuld specifikation og et første tilbud inden for to arbejdsdage.
             </p>
             <div style={{ border: "1px solid rgba(242,238,229,0.15)", overflow: "hidden" }}>
               {pricingRows.map(({ label, price, note }, i) => (
@@ -269,7 +275,7 @@ export default function DaErhvervHotellerPage() {
               ))}
             </ul>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.7" }}>
-              Levering og opstilling i Danmark er inkluderet i prisen. Uden for Danmark beregnes det separat efter lokation.
+              Levering og opstilling er ikke nødvendigvis inkluderet i prisen. Du får et individuelt tilbud.
             </p>
             <div style={{ marginTop: "32px" }}>
               <a

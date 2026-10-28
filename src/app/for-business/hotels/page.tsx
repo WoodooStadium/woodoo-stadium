@@ -27,6 +27,10 @@ const structuredData = {
       offers: [
         { "@type": "Offer", name: "Standard table, full ownership", price: "79000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 79000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
         { "@type": "Offer", name: "Long-term lease (min. 3 months)", price: "9500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 9500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "1 day", price: "1800", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 1800, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "3 days", price: "5000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 5000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "1 week", price: "7500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 7500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "1 month", price: "12500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 12500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
       ],
     },
   ],
@@ -57,6 +61,10 @@ const brandingMethods = [
 const pricingRows = [
   { label: "STANDARD TABLE, FULL OWNERSHIP", price: "DKK 79,000", note: "excl. VAT" },
   { label: "LONG-TERM LEASE (min. 3 months)", price: "DKK 9,500/mo.", note: "excl. VAT" },
+  { label: "1 DAY", price: "DKK 1,800", note: "excl. VAT · excl. delivery" },
+  { label: "3 DAYS", price: "DKK 5,000", note: "excl. VAT · excl. delivery" },
+  { label: "1 WEEK", price: "DKK 7,500", note: "excl. VAT · excl. delivery" },
+  { label: "1 MONTH", price: "DKK 12,500", note: "excl. VAT · excl. delivery" },
   { label: "BRANDING (plates + lighting + surface)", price: "By arrangement", note: "" },
 ];
 
@@ -226,10 +234,10 @@ export default function ForBusinessHotelsPage() {
           <div>
             <span style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "11px", letterSpacing: "0.28em", textTransform: "uppercase", color: "rgba(242,238,229,0.4)", display: "block", marginBottom: "24px" }}>PRICING &amp; PRACTICAL</span>
             <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300, fontSize: "clamp(32px, 3.5vw, 52px)", color: "#F2EEE5", lineHeight: 1.1, marginBottom: "32px" }}>
-              Ownership —<br /><em style={{ color: "var(--pine-on-dark)" }}>or try it first.</em>
+              Ownership —<br /><em style={{ color: "var(--pine-on-dark)" }}>or rent first.</em>
             </h2>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "15px", color: "rgba(242,238,229,0.75)", lineHeight: "1.8", marginBottom: "32px" }}>
-              Two ways in — both without long-term commitment if you would rather start small. We send full specifications and a first proposal within two working days.
+              Buy the table, or rent it from one day to several months. We send full specifications and a first proposal within two working days.
             </p>
             <div style={{ border: "1px solid rgba(242,238,229,0.15)", overflow: "hidden" }}>
               {pricingRows.map(({ label, price, note }, i) => (
@@ -257,7 +265,7 @@ export default function ForBusinessHotelsPage() {
               ))}
             </ul>
             <p style={{ fontFamily: "Inter Tight, sans-serif", fontSize: "13px", color: "rgba(242,238,229,0.75)", lineHeight: "1.7" }}>
-              Delivery and installation within Denmark is included in the price. Outside Denmark, calculated separately by location.
+              Delivery and installation are not necessarily included in the price. You will receive an individual quote.
             </p>
             <div style={{ marginTop: "32px" }}>
               <a
