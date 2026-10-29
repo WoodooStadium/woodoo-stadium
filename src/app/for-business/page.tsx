@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/for-business",
@@ -206,6 +207,17 @@ export default function ForBusinessPage() {
           </CardGrid>
         </div>
       </section>
+
+      <GuideLinks
+        lang="en"
+        tone="light"
+        slugs={[
+          "foosball-table-for-office",
+          "corporate-foosball-table",
+          "commercial-foosball-table-guide",
+          "foosball-vs-pool-table-social",
+        ]}
+      />
 
       {/* CTA */}
       <section style={{ background: "#0B0A08", padding: "96px var(--pad-x-editorial)" }}>

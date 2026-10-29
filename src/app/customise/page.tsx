@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/customise",
@@ -101,6 +102,17 @@ export default function CustomisePage() {
           </CardGrid>
         </div>
       </section>
+
+      <GuideLinks
+        lang="en"
+        tone="light"
+        slugs={[
+          "bespoke-foosball-table",
+          "branded-foosball-table",
+          "custom-foosball-table",
+          "designer-foosball-table",
+        ]}
+      />
 
       <section className="section--dark cta-row" style={{ borderTop: "none" }}>
         <div className="cta-copy">

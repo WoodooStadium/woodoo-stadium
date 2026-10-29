@@ -5,6 +5,7 @@ import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import { SITE_URL, buildBreadcrumbs, buildProduct, jsonLd } from "@/lib/structured-data";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/da/bordet",
@@ -209,6 +210,19 @@ export default function DaBordetPage() {
           </div>
         </section>
       )}
+
+      <GuideLinks
+        lang="da"
+        tone="dark"
+        slugs={[
+          "rustfrit-staal-304-vs-316",
+          "rustfrit-staal-vs-pulverlakeret-staal",
+          "specifikationer-bordfodboldbord",
+          "itsf-standarder-forklaret",
+          "salt-regn-og-frost-dansk-klima-bordfodbold",
+          "vedligeholdelsesguide-udendoers-spil",
+        ]}
+      />
 
       <section className="cta-row">
         <div className="cta-copy">

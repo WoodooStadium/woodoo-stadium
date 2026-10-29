@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/for-business/events",
@@ -62,7 +63,7 @@ const brandingMethods = [
 ];
 
 const pricingRows = [
-  { label: "FIXED PLACEMENT (3+ months)", price: "Contact for pricing", note: "" },
+  { label: "FIXED PLACEMENT", price: "Contact for pricing", note: "" },
   { label: "BRANDING (plates + playing field)", price: "By arrangement", note: "" },
 ];
 
@@ -365,6 +366,16 @@ export default function ForBusinessEventsPage() {
           </div>
         </div>
       </section>
+
+      <GuideLinks
+        lang="en"
+        tone="graphite"
+        slugs={[
+          "brand-activation-foosball-table",
+          "branded-foosball-table",
+          "outdoor-foosball-table-commercial",
+        ]}
+      />
 
       {/* CTA row */}
       <section className="cta-row">

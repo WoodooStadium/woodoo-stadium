@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import RentalForm from "@/components/RentalForm";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/da/udlejning",
@@ -126,7 +127,7 @@ const faqItems = [
   },
   {
     q: "Kan jeg få mit logo på bordet til et event?",
-    a: "Branding er en del af langtidsleje. Til kortvarige events udlejer vi standardbordet uden branding — kontakt os, hvis du har et særligt ønske.",
+    a: "Branding tilbydes ved leje i minimum 3 måneder. Til kortvarige events udlejer vi standardbordet uden branding — kontakt os, hvis du har et særligt ønske.",
   },
   {
     q: "Hvad kræver bordet på stedet?",
@@ -408,10 +409,10 @@ export default function UdlejningPage() {
                 }}
               >
                 <TableHeader cols={["", "Inkl. moms", "Ekskl. moms"]} />
-                <TableRow cols={["Pr. måned (min. 3 mdr.)", "11.875 kr./md", "9.500 kr./md"]} last />
+                <TableRow cols={["Pr. måned", "11.875 kr./md", "9.500 kr./md"]} last />
               </div>
               <p style={{ ...note, marginTop: 0 }}>
-                Branding tilbydes ved langtidsleje (min. 3 måneder), og tilbuddet gives individuelt. Eksempel: 3 måneder med brandingplader: 36.000 kr. ekskl. moms, levering på Sjælland inkluderet.
+                Branding tilbydes ved leje i minimum 3 måneder, og tilbuddet gives individuelt. Eksempel: 3 måneder med brandingplader: 36.000 kr. ekskl. moms, levering på Sjælland inkluderet.
               </p>
               <p
                 style={{
@@ -423,7 +424,7 @@ export default function UdlejningPage() {
                   marginTop: "8px",
                 }}
               >
-                Minimum 3 måneders leje. Branding udføres efter dit visuelle udtryk.
+                Branding kræver minimum 3 måneders leje og udføres efter dit visuelle udtryk.
               </p>
               <p style={{ ...note, marginTop: "8px" }}>
                 Hvis du lejer og beslutter at købe, trækkes den leje, du allerede har betalt, fra købsprisen. Det endelige tilbud gives ved henvendelse.
@@ -674,6 +675,22 @@ export default function UdlejningPage() {
           </div>
         </div>
       </section>
+
+      <GuideLinks
+        lang="da"
+        tone="dark"
+        slugs={[
+          "leje-af-professionelt-bordfodbold-i-koebenhavn",
+          "leje-af-bordfodbold-til-events-i-aarhus",
+          "leje-af-bordfodbold-til-events-i-odense",
+          "leje-af-bordfodbold-til-events-i-aalborg",
+          "leje-af-bordfodbold-til-events-i-esbjerg",
+          "leje-af-bordfodbold-til-events-i-herning",
+          "leje-af-bordfodbold-til-firmafest",
+          "leje-af-bordfodbold-til-messer",
+          "koeb-vs-leje-vs-leasing-af-professionelt-bordfodbold",
+        ]}
+      />
 
       {/* ── Kontakt / enquiry ──────────────────────────────────── */}
       <section

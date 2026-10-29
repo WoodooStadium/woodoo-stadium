@@ -5,6 +5,7 @@ import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import { SITE_URL, buildBreadcrumbs, buildProduct, jsonLd } from "@/lib/structured-data";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/the-table",
@@ -210,6 +211,18 @@ export default function TheTablePage() {
           </div>
         </section>
       )}
+
+      <GuideLinks
+        lang="en"
+        tone="dark"
+        slugs={[
+          "stainless-steel-foosball-table",
+          "weatherproof-foosball-table",
+          "commercial-foosball-table-guide",
+          "luxury-foosball-table",
+          "handmade-foosball-table",
+        ]}
+      />
 
       <section className="cta-row">
         <div className="cta-copy">

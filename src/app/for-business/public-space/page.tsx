@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/for-business/public-space",
@@ -213,6 +214,18 @@ export default function ForBusinessPublicSpacePage() {
           ))}
         </div>
       </section>
+
+      <GuideLinks
+        lang="en"
+        tone="graphite"
+        slugs={[
+          "outdoor-foosball-table-commercial",
+          "outdoor-foosball-table-buying-guide",
+          "outdoor-table-football-year-round",
+          "weatherproof-foosball-table",
+          "commercial-foosball-table-guide",
+        ]}
+      />
 
       <section className="cta-row">
         <div className="cta-copy">

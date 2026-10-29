@@ -3,6 +3,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/supabase-types";
 import { getFaqItems } from "@/lib/db";
 import FaqClient from "./FaqClient";
+import GuideLinks from "@/components/GuideLinks";
 import { SITE_URL, buildBreadcrumbs, buildFaqPage, jsonLd } from "@/lib/structured-data";
 
 const fallbackFaq = [
@@ -286,6 +287,19 @@ export default async function FAQPage() {
       </section>
 
       <FaqClient groups={groups} />
+
+      <GuideLinks
+        lang="en"
+        tone="light"
+        slugs={[
+          "what-is-a-foosball-table",
+          "foosball-rules-official-guide",
+          "table-soccer-complete-guide",
+          "outdoor-table-football-year-round",
+          "who-invented-foosball-history",
+          "snake-shot-foosball",
+        ]}
+      />
 
       <section className="cta-row">
         <div className="cta-copy">

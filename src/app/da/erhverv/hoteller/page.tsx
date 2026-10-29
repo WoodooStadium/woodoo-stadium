@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/da/erhverv/hoteller",
@@ -27,7 +28,7 @@ const structuredData = {
       areaServed: [{ "@type": "Country", name: "DK" }, { "@type": "Country", name: "DE" }, { "@type": "Country", name: "SE" }],
       offers: [
         { "@type": "Offer", name: "Standardbord, fuldt ejerskab", price: "79000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 79000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
-        { "@type": "Offer", name: "Langtidsleje (min. 3 mdr.)", price: "9500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 9500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "Langtidsleje", price: "9500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 9500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
         { "@type": "Offer", name: "1 dag", price: "1800", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 1800, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
         { "@type": "Offer", name: "3 dage", price: "5000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 5000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
         { "@type": "Offer", name: "1 uge", price: "7500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 7500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
@@ -61,7 +62,7 @@ const brandingMethods = [
 
 const pricingRows = [
   { label: "STANDARDBORD, FULDT EJERSKAB", price: "79.000 kr.", note: "ekskl. moms" },
-  { label: "LANGTIDSLEJE (min. 3 mdr.)", price: "9.500 kr./md.", note: "ekskl. moms" },
+  { label: "LANGTIDSLEJE", price: "9.500 kr./md.", note: "ekskl. moms" },
   { label: "1 DAG", price: "1.800 kr.", note: "ekskl. moms · uden levering" },
   { label: "3 DAGE", price: "5.000 kr.", note: "ekskl. moms · uden levering" },
   { label: "1 UGE", price: "7.500 kr.", note: "ekskl. moms · uden levering" },
@@ -290,6 +291,17 @@ export default function DaErhvervHotellerPage() {
       </section>
 
       {/* CTA row */}
+      <GuideLinks
+        lang="da"
+        tone="graphite"
+        slugs={[
+          "bordfodbold-til-hotel",
+          "udendoers-bordfodbold-til-campingpladser-og-feriecentre",
+          "udendoers-bordfodbold-til-kystnaere-miljoeer",
+          "spil-til-kontor-lounge",
+        ]}
+      />
+
       <section className="cta-row">
         <div className="cta-copy">
           <div className="fade-up"><span className="kicker">Klar</span></div>

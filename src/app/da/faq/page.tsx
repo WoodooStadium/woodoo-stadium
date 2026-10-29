@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import FaqClient from "@/app/faq/FaqClient";
+import GuideLinks from "@/components/GuideLinks";
 import { SITE_URL, buildBreadcrumbs, buildFaqPage, jsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -171,6 +172,19 @@ export default function DaFaqPage() {
       </section>
 
       <FaqClient groups={groups} />
+
+      <GuideLinks
+        lang="da"
+        tone="light"
+        slugs={[
+          "faq-udendoers-bordfodbold",
+          "vedligeholdelsesguide-udendoers-spil",
+          "fejlfinding-paa-bordfodboldbord",
+          "serviceaftale-for-udendoers-bordfodbold",
+          "sikker-placering-udendoers-aktivitetsudstyr",
+          "tilgaengelighed-ved-bordfodbold",
+        ]}
+      />
 
       <section className="cta-row">
         <div className="cta-copy">

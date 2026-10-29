@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/da/erhverv/byrum",
@@ -213,6 +214,19 @@ export default function DaErhvervByrumPage() {
           ))}
         </div>
       </section>
+
+      <GuideLinks
+        lang="da"
+        tone="graphite"
+        slugs={[
+          "udendoers-bordfodbold-til-kommuner-og-byrum",
+          "kravspecifikation-udendoers-bordfodbold-til-skoler",
+          "haervaerksstaerkt-bordfodbold",
+          "dimensioner-og-frizoner-bordfodbold",
+          "fritstaaende-eller-fastgjort-bordfodbold",
+          "fonde-og-puljer-til-udendoers-aktivitetsudstyr",
+        ]}
+      />
 
       <section className="cta-row">
         <div className="cta-copy">

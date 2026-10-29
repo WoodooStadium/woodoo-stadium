@@ -1165,6 +1165,73 @@ h1, h2, h3, h4 {
 .footer__bottom .social a { transition: color 0.25s ease; color: rgba(242,238,229,0.7); }
 .footer__bottom .social a:hover { color: var(--pine-on-dark); }
 
+/* ---------- GUIDE LINKS ---------- */
+/* Hand-picked blog links above the closing CTA on core pages. Tone matches the section above. */
+.guide-links { padding: 96px var(--pad-x-editorial); }
+.guide-links--dark     { background: #0B0A08; }
+.guide-links--graphite { background: #1A1814; }
+.guide-links--light    { background: #F2EEE5; }
+.guide-links__inner { max-width: 1400px; margin: 0 auto; }
+.guide-links__head { margin-bottom: 56px; }
+.guide-links__kicker {
+  display: block;
+  margin-bottom: 16px;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(242,238,229,0.4);
+}
+.guide-links__title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-size: clamp(32px, 3.5vw, 56px);
+  line-height: 1.1;
+  color: #F2EEE5;
+}
+.guide-links__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 64px;
+  border-top: 1px solid rgba(242,238,229,0.1);
+}
+.guide-links__item { padding: 32px 0; border-bottom: 1px solid rgba(242,238,229,0.1); }
+.guide-links__name {
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.25;
+}
+.guide-links__name a { color: #E6E3DA; text-decoration: none; transition: color 0.2s ease; }
+.guide-links__name a:hover,
+.guide-links__name a:focus-visible { color: #52915F; }
+.guide-links__excerpt {
+  margin: 0;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(242,238,229,0.7);
+}
+.guide-links--light .guide-links__kicker { color: rgba(26,24,20,0.4); }
+.guide-links--light .guide-links__title,
+.guide-links--light .guide-links__name a { color: #1A1814; }
+.guide-links--light .guide-links__name a:hover,
+.guide-links--light .guide-links__name a:focus-visible { color: #3D6B4A; }
+.guide-links--light .guide-links__excerpt { color: rgba(26,24,20,0.65); }
+.guide-links--light .guide-links__list,
+.guide-links--light .guide-links__item { border-color: rgba(26,24,20,0.12); }
+@media (max-width: 768px) {
+  .guide-links { padding: 64px 20px; }
+  .guide-links__head { margin-bottom: 40px; }
+  .guide-links__list { grid-template-columns: 1fr; }
+  .guide-links__item { padding: 24px 0; }
+}
+
 /* ---------- COOKIE NOTICE ---------- */
 /* Mobile: slim bar at the bottom. Wider screens: compact box in the bottom-left corner. No overlay. */
 .cookie-notice {

@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { buildOrganization, jsonLd } from "@/lib/structured-data";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/da",
@@ -400,6 +401,16 @@ export default function DaHome() {
           <a className="tlink" href="/da/erhverv">Udforsk Erhverv <span className="arrow">→</span></a>
         </div>
       </section>
+
+      <GuideLinks
+        lang="da"
+        tone="light"
+        slugs={[
+          "7-steder-til-udendoers-bordfodbold",
+          "pris-paa-rustfrit-udendoers-bordfodbold",
+          "dansk-producent-af-rustfrit-bordfodbold",
+        ]}
+      />
 
       <section className="section cta-row">
         <div className="cta-copy">

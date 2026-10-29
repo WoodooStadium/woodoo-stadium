@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/da/erhverv/events",
@@ -390,6 +391,19 @@ export default function DaErhvervEventsPage() {
       </section>
 
       {/* CTA row */}
+      <GuideLinks
+        lang="da"
+        tone="graphite"
+        slugs={[
+          "bordfodbold-til-stadioner-og-events",
+          "leje-af-bordfodbold-til-firmafest",
+          "leje-af-bordfodbold-til-messer",
+          "leje-af-professionelt-bordfodbold-i-koebenhavn",
+          "leje-af-bordfodbold-til-events-i-aarhus",
+          "leje-af-bordfodbold-til-events-i-odense",
+        ]}
+      />
+
       <section className="cta-row">
         <div className="cta-copy">
           <div className="fade-up"><span className="kicker">Klar</span></div>

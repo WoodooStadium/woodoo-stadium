@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { buildPageMetadata, OG_IMAGES } from "@/lib/seo";
 import SectionHeading from "@/components/SectionHeading";
 import { CardGrid, Card } from "@/components/CardGrid";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/da/erhverv",
@@ -206,6 +207,18 @@ export default function DaErhvervPage() {
           </CardGrid>
         </div>
       </section>
+
+      <GuideLinks
+        lang="da"
+        tone="light"
+        slugs={[
+          "koeb-udendoers-bordfodboldbord-til-virksomhed",
+          "bordfodbold-til-kontorer",
+          "business-case-for-udendoers-bordfodbold",
+          "leasing-og-finansiering-af-bordfodbold",
+          "branding-paa-aktivitetsudstyr",
+        ]}
+      />
 
       {/* CTA */}
       <section style={{ background: "#0B0A08", padding: "96px var(--pad-x-editorial)" }}>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/for-business/hotels",
@@ -26,7 +27,7 @@ const structuredData = {
       areaServed: [{ "@type": "Country", name: "DK" }, { "@type": "Country", name: "DE" }, { "@type": "Country", name: "SE" }],
       offers: [
         { "@type": "Offer", name: "Standard table, full ownership", price: "79000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 79000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
-        { "@type": "Offer", name: "Long-term lease (min. 3 months)", price: "9500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 9500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
+        { "@type": "Offer", name: "Long-term lease", price: "9500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 9500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
         { "@type": "Offer", name: "1 day", price: "1800", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 1800, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
         { "@type": "Offer", name: "3 days", price: "5000", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 5000, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
         { "@type": "Offer", name: "1 week", price: "7500", priceCurrency: "DKK", priceSpecification: { "@type": "PriceSpecification", price: 7500, priceCurrency: "DKK", valueAddedTaxIncluded: false } },
@@ -60,7 +61,7 @@ const brandingMethods = [
 
 const pricingRows = [
   { label: "STANDARD TABLE, FULL OWNERSHIP", price: "DKK 79,000", note: "excl. VAT" },
-  { label: "LONG-TERM LEASE (min. 3 months)", price: "DKK 9,500/mo.", note: "excl. VAT" },
+  { label: "LONG-TERM LEASE", price: "DKK 9,500/mo.", note: "excl. VAT" },
   { label: "1 DAY", price: "DKK 1,800", note: "excl. VAT · excl. delivery" },
   { label: "3 DAYS", price: "DKK 5,000", note: "excl. VAT · excl. delivery" },
   { label: "1 WEEK", price: "DKK 7,500", note: "excl. VAT · excl. delivery" },
@@ -278,6 +279,16 @@ export default function ForBusinessHotelsPage() {
           </div>
         </div>
       </section>
+
+      <GuideLinks
+        lang="en"
+        tone="graphite"
+        slugs={[
+          "foosball-table-for-hotel",
+          "best-foosball-table-hotels",
+          "foosball-vs-pool-table-social",
+        ]}
+      />
 
       {/* CTA row */}
       <section className="cta-row">

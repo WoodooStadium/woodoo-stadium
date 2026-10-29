@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { buildOrganization, jsonLd } from "@/lib/structured-data";
+import GuideLinks from "@/components/GuideLinks";
 
 export const metadata: Metadata = buildPageMetadata({
   path: "/",
@@ -402,6 +403,17 @@ export default function Home() {
           <a className="tlink" href="/for-business">Explore For Business <span className="arrow">→</span></a>
         </div>
       </section>
+
+      <GuideLinks
+        lang="en"
+        tone="light"
+        slugs={[
+          "luxury-foosball-table",
+          "foosball-table-made-in-denmark",
+          "outdoor-foosball-table-buying-guide",
+          "handmade-foosball-table",
+        ]}
+      />
 
       <section className="section cta-row">
         <div className="cta-copy">
